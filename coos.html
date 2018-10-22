@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>COOS</title>
+		<meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
+
+		<script src='http://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
+		<script class='remove'>
+			var respecConfig = {
+				specStatus: "CG-DRAFT",
+				shortName: "COOS",
+				subtitle: "A Core Ontology for Official Statistics",
+				editors: [
+					{ name: "Franck Cotton", company: "INSEE", companyURL: "http://www.insee.fr/" }
+				],
+				wg: "Semantic Statistics Community Group",
+				wgURI: "https://www.w3.org/community/semstats/",
+				wgPatentURI: "http://creativecommons.org/licenses/by/4.0/",
+				processVersion: 2018,
+				edDraftURI: "https://github.com/linked-statistics/COOS",
+				githubAPI: "https://api.github.com/repos/linked-statistics/COOS"
+			};
+		</script>
+	</head>
+	<body>
+		<section id='abstract'>
+			<p>The abstract will go there.
+		</p>
+		</section>
+		<section id='sotd'>
+			<p>This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
+		</section>
+		<section>
+			<h2>Background and Motivation</h2>
+
+			<p>As more and more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on our international core models to establish common foundations on which the different works can develop in a coherent way. This should be done using a formal framework that allows interoperability, activation and globally unique identification.</p>
+
+			<p>This paper proposes a first try at a base OWL vocabulary for Official Statistics. It suggests formal representations for the core concepts used in our domain. It builds on a set of well-known OWL vocabularies, namely SKOS, PROV, ORG, DCAT and the Dublin Core.</p>
+
+			<p>In the following sections, we stay at a very general model and deal with the following domains: statistical activities, products and actors. For more precise definitions like those that can be found in the GSIM or in CSPA, we refer to previous works: http://ceur-ws.org/Vol-1654/article-03.pdf and http://ceur-ws.org/Vol-1654/article-06.pdf respectively.</p>
+
+			<div class="issue">
+				<p>Transform links into biblio entries.</p>
+			</div>
+		</section>
+
+		<section id="intro">
+			<h2>Introduction</h2>
+			<p>The ontology covers statististical activities, organizations and products.</p>
+		</section>
+
+		<section id="overview">
+			<h2>Overview</h2>
+			<p>TBD.</p>
+		</section>
+
+		<section id="nsvoc">
+			<h2>COOS Namespace and Vocabulary</h2>
+			<p>The COOS namespace URI is:</p>
+			<ul>
+				<li><strong>http://id.unece.org/def/coos#</strong></li>
+			</ul>
+			<div class="issue">
+				<p>Validate namespace.</p>
+			</div>
+			<p>The prefix <code>coos</code> will be associated to this namespace in all this document.</p>
+			<p>The COOS vocabulary is a set of URIs, given in the left-hand column in the table below. The right hand column indicates in which section below the corresponding term is explained in more detail.</p>
+			<table class="simple">
+				<caption>Table 1. COOS Vocabulary</caption>
+				<thead>
+					<tr>
+						<th>URI</th>
+						<th>Definition</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>coos:StatisticalActivity</td>
+						<td><a href="#activities">Section x. Activities</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="issue">
+				<p>Complete list.</p>
+			</div>
+
+			<p>Other vocabularies used in this document are listed in the table below, with their namespaces and associated prefixes.</p>
+			<table class="simple">
+				<caption>Table 2. Other vocabularies used in this document</caption>
+				<thead>
+					<tr>
+						<th>Prefix</th>
+						<th>URI</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>dcat</td>
+						<td>http://www.w3.org/ns/dcat#</td>
+						<td>Data Catalog Vocabulary ([[!vocab-dcat]])</td>
+					</tr>
+					<tr>
+						<td>dcterms</td>
+						<td>http://purl.org/dc/terms/</td>
+						<td>Dublin Core Metadata Initiative Metadata Terms ([[!DCTERMS]])</td>
+					</tr>
+					<tr>
+						<td>dqv</td>
+						<td>http://www.w3.org/ns/dqv#</td>
+						<td>Data Quality Vocabulary ([[vocab-dqv]])</td>
+					</tr>
+					<tr>
+						<td>foaf</td>
+						<td>http://xmlns.com/foaf/spec/</td>
+						<td>FOAF Vocabulary Specification 0.99 ([[!FOAF]])</td>
+					</tr>
+					<tr>
+						<td>prov</td>
+						<td>http://www.w3.org/ns/prov#</td>
+						<td>PROV-O: The PROV Ontology ([[!prov-o]])</td>
+					</tr>
+					<tr>
+						<td>qb</td>
+						<td>http://purl.org/linked-data/cube#</td>
+						<td>The RDF Data Cube Vocabulary ([[!vocab-data-cube]])</td>
+					</tr>
+					<tr>
+						<td>skos</td>
+						<td>http://www.w3.org/2004/02/skos/core#</td>
+						<td>Simple Knowledge Organization System</td>
+					</tr>
+					<tr>
+						<td>time</td>
+						<td>http://www.w3.org/2006/time#</td>
+						<td>Time Ontology in OWL ([[owl-time]])</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>RDF, RDFS and OWL vocabularies are also used, with their usual URIs and prefixes.</p>
+			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[!turtle]]. Unless otherwise specified, these examples use http://example.org/ns/ as a base namespace; resource names between angle brackets represent URIs in this namespace. Note however that individual resource names used as examples are entirely fictitious.</p>
+		</section>
+
+		<section id="activities">
+			<h2>Activities</h2>
+			<section id="activities-gsbpm">
+				<h3>Base GSBPM model</h3>
+				<p>A first approach to modeling statistical activities, based on the GSBPM, is presented in http://ceur-ws.org/Vol-1551/article-06.pdf. Basically, three classes are defined in this GSBPM ontology, which are depicted in the following figure.</p>
+				<p><code>StatisticalProductionActivity</code> is a subclass of both <code>prov:Activity</code> and <code>skos:Concept</code>. Using SKOS allows us to organize the activities in schemes, like GSBPM or GAMSO. Using PROV allows us to specify who undertakes an activity and what entities it consumes or produces.</p>
+
+				<p><code>Phase</code> and <code>SubProcess</code> are both subclasses of <code>StatisticalProductionActivity</code> and represent respectively the concepts of a GSBPM phase and GSBPM sub-process.</p>
+
+				<p>The ontology also defines an individual for each GSBPM phase or subprocess, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and subprocesses), and <code>StatisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
+
+				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>StatisticalProductionProcess</code> individual.</p>
+			</section>
+
+			<section id="activities-gamso">
+				<h3>Adding GAMSO</h3>
+				<p>Introducing GAMSO in this framework is not very difficult, but raises a few interesting questions. If we look at the terminology used in GAMSO, we find that the main concepts used are activity and activity area.</p>
+
+				<p>For the concept of activity, the simpler idea is to introduce a <code>StatisticalActivity</code> class that would be a daughter of <code>prov:Activity</code> and a mother of <code>StatisticalProductionActivity</code>. All second-level GAMSO activities would be instances of this <code>StatisticalActivity</code> class.</p>
+
+				<p>For the activity areas, the question is a bit more tricky: are these really activities, or just boxes where we classify the second-level activities? In the first case, activity areas will be themselves instances of <code>StatisticalActivity</code>, in the second case (represented below) they will just be instances of <code>skos:Concept</code> or of a specific <code>StatisticalActivityArea</code> sub-class. The answer can in fact be different for each GAMSO activity area: that does not change the global structure of the ontology.</p>
+
+				<p>As previously for the GSBPM, individuals would be defined for each activity and activity area, and the GAMSO itself would be a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it.</p>
+
+				<p>A few points should be studied further:</p>
+				<ul>
+					<li>The notes of the second-level GAMSO activities are very well structured, so it would be possible to replace (or double) them with lists of individual concepts for third-level activities. For example, activity 2.1.1 ('Identify disruptions and capability improvements') would be added in the figure above with a <code>skso:broader</code> link to the activity 2.1.</li>
+					<li>We could refine the model by introducing more specific classes, for example <code>StatisticalSupportActivity</code>, <code>StatisticalStategicActivity</code>, etc. That should be justified by well-defined use cases.</li>
+					<li>The relation between the GSBPM as a concept scheme and as an activity area has to be precised. For now we can use a simple <code>rdf:seeAlso</code> property, but in a totally integrated view, all GSBPM and GAMSO artefacts would go in a single <code>skos:ConceptScheme</code> (the GAMSO) and the GSBPM would not be a concept scheme anymore: it would be an instance of both <code>StatisticalArea</code> and <code>StatisticalProductionActivity</code>.</li>
+					<li>There is a remaining question about the over-arching processes of the GSBPM. They probably should be viewed as components of the GSBPM concept scheme, and instances of class <code>StatisticalProductionActivity</code> which are not phases or sub-processes; an additional <code>OverArchingProcess</code> (or <code>TransverseActivity</code>, etc.) class could be created.</li>
+					<li>Some clarification should be made on the relations between similar GSBPM over-arching processes and GAMSO activities, notably 'Quality Management' (GSBPM) and 'Manage Quality' (GAMSO 3.10).</li>
+				</ul>
+
+				<p>The previous definitions stay in the framework of the GAMSO/GSBPM, but more precise notions will be needed by the NSIs for the modelization of their statistical activities. For example, Insee created in its base ontology (https://github.com/InseeFr/Ontologies/blob/master/insee-base.ttl) the <code>StatisticalOperation</code> class which can be grouped into series and families.</p>
+
+				<p>As an illustration, the Census is a family of operations, with the general census (until 1999) and the rolling census (that replaced it) being two series, and each census a statistical operation. The inclusion links (series → family, operation → series) are rendered by the standard Dublin Core <code>dcterms:hasPart</code>/<code>dcterms:isPartOf</code> properties.</p>
+
+				<p>It is clear that this model can be anchored to the GAMSO/GSBPM framework, or even included to form a more comprehensive model, by declaring <code>StatisticalOperation</code> a subclass of <code>StatisticalProductionActivity</code>.</p>
+			</section>
+		</section>
+
+		<section id="organizations">
+			<h2>Organizations</h2>
+			<p>The following classes are defined in Insee’s base ontology and could be moved to international level:</p>
+
+			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
+
+			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
+		</section>
+
+		<section id="products">
+			<h2>Products</h2>
+			<p>Among the classes defined by Insee (see figure below), at least <code>StatisticalProduct</code> and <code>StatisticalDataset</code> could be moved to an international base ontology.</p>
+
+			<p>Here again, the PROV vocabulary is useful, in particular to provide provenance information on products and to link them to activities and organizations (for example <code>prov:wasGeneratedBy</code> from a product to an activity).</p>
+
+			<p>The <code>StatisticalDataset</code> class is also declared as a daughter of <code>dcat:Dataset</code>, which allows to reuse the DCAT (or StatDCAT-AP) possibilities, in particular to document datasets and their different distributions, group them in catalogues, etc.</p>
+		</section>
+
+		<section id="conclusion">
+			<h2>Conclusion</h2>
+			<p>This paper proposes a collection of core concepts for official statistics, expressed as OWL classes backed by constructs of well-known standard vocabularies. Work still needs to be done on the precise definition of these concepts, on their properties and on their identification.</p>
+
+			<p>More effort is also needed to articulate this base ontology with more sectorial and in-depth works existing on GSIM, CSPA or the SIMS model for quality metadata.</p>
+
+			<p>The management and governance of these different initiatives need also to be established.</p>
+		</section>
+
+		<section class='appendix'>
+			<h2>Acknowledgements</h2>
+			<p>This is a placeholder for now.</p>
+		</section>
+
+		<section class="appendix">
+			<h2>Full copyright</h2>
+			<p>Copyright © 2018 Unece, <i>All Rights Reserved</i><br/><a href="http://www.unece.org/">http://www.unece.org/</a></p>
+			<p>Content of this document is licensed under a Creative Commons License:<br/>Attribution 4.0 International (CC BY 4.0)</p>
+			<p>This is a human-readable summary of the Legal Code (the full license).<br/><a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
+			<p>You are free to:</p>
+			<ul>
+				<li>Share - copy and redistribute the material in any medium or format</li>
+				<li>Remix - remix, transform, and build upon the material</li>
+			</ul>
+			<p>for any purpose, even commercially.</p>
+			<p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p>
+			<p>Under the following terms:</p>
+			<ul>
+				<li>Attribution. You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li>
+				<li>No additional restrictions. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</li>
+			</ul>
+			<div style="font-size:80%; margin-top:40px; margin-bottom:40px">
+				<p>Disclaimer</p>
+				<p>This deed highlights only some of the key features and terms of the actual license. It is not a license and has no legal value. You should carefully review all of the terms and conditions of the actual license before using the licensed material.</p>
+				<p>Creative Commons is not a law firm and does not provide legal services. Distributing, displaying, or linking to this deed or the license that it summarizes does not create a lawyer-client or any other relationship.</p>
+			</div>
+			<p>Legal Code:<br/><a href="http://creativecommons.org/licenses/by/4.0/legalcode">http://creativecommons.org/licenses/by/4.0/legalcode</a></p>
+		</section>
+	</body>
+</html>
