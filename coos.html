@@ -4,7 +4,7 @@
 		<title>COOS</title>
 		<meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
 
-		<script src='http://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
+		<script src='https://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
 		<script class='remove'>
 			var respecConfig = {
 				specStatus: "CG-DRAFT",
@@ -150,9 +150,16 @@
 
 				<p><code>Phase</code> and <code>SubProcess</code> are both subclasses of <code>StatisticalProductionActivity</code> and represent respectively the concepts of a GSBPM phase and GSBPM sub-process.</p>
 
-				<p>The ontology also defines an individual for each GSBPM phase or subprocess, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and subprocesses), and <code>StatisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
+				<p>The ontology also defines an individual for each GSBPM phase or subprocess, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and subprocesses), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
 
-				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>StatisticalProductionProcess</code> individual.</p>
+				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
+
+				<p>The following figure summarizes the vocabulary terms defined until now.</p>
+				<figure id="image-map">
+					<img src="img/coos-gsbpm.png" alt="GSBPM vocabulary overview" title="GSBPM vocabulary overview"/>
+					<figcaption>GSBPM vocabulary overview</figcaption>
+				</figure>
+
 			</section>
 
 			<section id="activities-gamso">
