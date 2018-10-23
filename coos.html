@@ -155,7 +155,7 @@
 				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
 
 				<p>The following figure summarizes the vocabulary terms defined until now.</p>
-				<figure id="image-map">
+				<figure id="image-gsbpm">
 					<img src="img/coos-gsbpm.png" alt="GSBPM vocabulary overview" title="GSBPM vocabulary overview"/>
 					<figcaption>GSBPM vocabulary overview</figcaption>
 				</figure>
@@ -192,6 +192,11 @@
 		<section id="organizations">
 			<h2>Organizations</h2>
 			<p>The following classes are defined in Insee’s base ontology and could be moved to international level:</p>
+
+			<figure id="image-org">
+				<img src="img/coos-org.png" alt="Organization vocabulary overview" title="Organization vocabulary overview"/>
+				<figcaption>Organization vocabulary overview</figcaption>
+			</figure>
 
 			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
 
