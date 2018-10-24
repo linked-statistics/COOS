@@ -188,6 +188,11 @@
 
 				<p>The previous definitions stay in the framework of the GAMSO/GSBPM, but more precise notions will be needed by the NSIs for the modelization of their statistical activities. For example, Insee created in its base ontology (https://github.com/InseeFr/Ontologies/blob/master/insee-base.ttl) the <code>StatisticalOperation</code> class which can be grouped into series and families.</p>
 
+				<figure id="image-ops">
+					<img src="img/coos-ops.png" alt="Operations vocabulary overview" title="Operations vocabulary overview"/>
+					<figcaption>Operations vocabulary overview</figcaption>
+				</figure>
+
 				<p>As an illustration, the Census is a family of operations, with the general census (until 1999) and the rolling census (that replaced it) being two series, and each census a statistical operation. The inclusion links (series → family, operation → series) are rendered by the standard Dublin Core <code>dcterms:hasPart</code>/<code>dcterms:isPartOf</code> properties.</p>
 
 				<p>It is clear that this model can be anchored to the GAMSO/GSBPM framework, or even included to form a more comprehensive model, by declaring <code>StatisticalOperation</code> a subclass of <code>StatisticalProductionActivity</code>.</p>
@@ -199,8 +204,8 @@
 			<p>The following classes are defined in Insee’s base ontology and could be moved to international level:</p>
 
 			<figure id="image-org">
-				<img src="img/coos-org.png" alt="Organization vocabulary overview" title="Organization vocabulary overview"/>
-				<figcaption>Organization vocabulary overview</figcaption>
+				<img src="img/coos-org.png" alt="Organizations vocabulary overview" title="Organizations vocabulary overview"/>
+				<figcaption>Organizations vocabulary overview</figcaption>
 			</figure>
 
 			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
