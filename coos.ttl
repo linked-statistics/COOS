@@ -1,0 +1,141 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix coos: <http://id.unece.org/def/coos#> .
+
+
+#################################################################
+# Ontology
+#################################################################
+
+<http://id.unece.org/def/coos> a owl:Ontology, voaf:Vocabulary ;
+dc:title "COOS: a core ontology for Official Statistics"@en , "COOS : une ontologie centrale pour la Statistique Officielle"@fr ;
+dc:contributor "Guillaume Duffes" , "Dan Gillman" , "Flavio Rizzolo" , "Francine Kalonji" ;
+dc:creator "Franck Cotton" ;
+vann:preferredNamespacePrefix "coos" ;
+vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
+dc:rights "Copyright © 2019 Unece" ;
+cc:license <http://creativecommons.org/licenses/by/4.0/> ;
+voaf:classNumber "9"^^xsd:integer ;
+voaf:propertyNumber "0"^^xsd:integer ;
+owl:versionInfo "Version 0.1 - 2019-04-04"  .
+
+
+#################################################################
+# Classes
+#################################################################
+
+# Classes related to the 'activity' domain
+
+coos:Activity a rdfs:Class , owl:Class ;
+rdfs:label "Activity"@en , "Activité"@fr ;
+rdfs:comment "An activity as defined by the GAMSO."@en , "Une activité telle que définie par le GAMSO."@fr ;
+rdfs:subClassOf skos:Concept , prov:Activity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:ActivityArea a rdfs:Class , owl:Class ;
+rdfs:label "Activity area"@en , "Secteur d'activité"@fr ;
+rdfs:comment "An activity area as defined by the GAMSO."@en , "Un secteur d'activité telle que définie par le GAMSO."@fr ;
+rdfs:subClassOf skos:Concept ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:StatisticalActivity a rdfs:Class , owl:Class ;
+rdfs:label "Statistical activity"@en , "Activité statistique"@fr ;
+rdfs:comment "Generic statistical activity."@en , "Activité statistique générique."@en ;
+rdfs:subClassOf coos:Activity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:StatisticalProductionActivity a rdfs:Class , owl:Class ;
+rdfs:label "Statistical production activity"@en , "Activité de production statistique"@fr ;
+rdfs:comment "Statistical production activity covered by the GSBPM."@en , "Activité de production statistique couverte par le GSBPM."@fr ;
+rdfs:subClassOf coos:StatisticalActivity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:OverarchingActivity a rdfs:Class , owl:Class ;
+rdfs:label "Overarching statistical production activity"@en , "Activité de production statistique transverse"@fr ;
+rdfs:comment "Activity defined as overarching process by the GSBPM."@en , "Activité définie comme processus transverse par le GSBPM."@fr ;
+rdfs:subClassOf coos:StatisticalProductionActivity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:Phase a rdfs:Class , owl:Class ;
+rdfs:label "Statistical production process phase"@en , "Phase du processus de production statistique"@fr ;
+rdfs:comment "Process phase as defined by the GSBPM."@en , "Phase du processus telle que définie par le GSBPM."@fr ;
+rdfs:subClassOf coos:StatisticalProductionActivity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:SubProcess a rdfs:Class , owl:Class ;
+rdfs:label "Statistical production sub-process"@en , "Sous-processus de production statistique"@fr ;
+rdfs:comment "Sub-process as defined by the GSBPM."@en , "Sous-processus tel que défini par le GSBPM."@fr ;
+rdfs:subClassOf coos:StatisticalProductionActivity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:StatisticalProgram a rdfs:Class , owl:Class ;
+rdfs:label "Statistical program"@en , "Programme statistique"@fr ;
+rdfs:comment "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr ;
+rdfs:subClassOf coos:Activity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
+rdfs:label "Statistical program cycle"@en , "Cycle de programme statistique"@fr ;
+rdfs:comment "Sub-process as defined by the GSBPM."@en , "Sous-processus telle que défini par le GSBPM."@fr ;
+rdfs:subClassOf coos:Activity ;
+rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+
+#################################################################
+# Annotation properties
+#################################################################
+
+# No annotation properties in this version of the ontology
+
+
+#################################################################
+# Data properties
+#################################################################
+
+# No data properties in this version of the ontology
+
+
+#################################################################
+# Object properties
+#################################################################
+
+# No object properties in this version of the ontology
+
+
+#################################################################
+# Individuals
+#################################################################
+
+# Do we want to create an individual for the offical statistics activity?
+
+# The statistical production process
+
+# The GAMSO activities and activity areas
+
+# The GSBPM phases and sub-process
+
+<http://id.unece.org/activity/phase/1> a coos:Phase ; skos:notation "1"	; skos:prefLabel "Specify Needs"@en .
+<http://id.unece.org/activity/phase/2> a coos:Phase ; skos:notation "2"	; skos:prefLabel "Design"@en .
+<http://id.unece.org/activity/phase/3> a coos:Phase ; skos:notation "3"	; skos:prefLabel "Build"@en .
+<http://id.unece.org/activity/phase/4> a coos:Phase ; skos:notation "4"	; skos:prefLabel "Collect"@en .
+<http://id.unece.org/activity/phase/5> a coos:Phase ; skos:notation "5"	; skos:prefLabel "Process"@en .
+<http://id.unece.org/activity/phase/6> a coos:Phase ; skos:notation "6" ; skos:prefLabel "Analyse"@en .
+<http://id.unece.org/activity/phase/7> a coos:Phase ; skos:notation "7"	; skos:prefLabel "Disseminate"@en .
+<http://id.unece.org/activity/phase/8> a coos:Phase ; skos:notation "8"	; skos:prefLabel "Evaluate"@en .
+
+<http://id.unece.org/activity/subProcess/1.1> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.1" ; skos:prefLabel "Identify needs"@en .
+<http://id.unece.org/activity/subProcess/1.2> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.2" ; skos:prefLabel "Consult and confirm needs"@en .
+<http://id.unece.org/activity/subProcess/1.3> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.3" ; skos:prefLabel "Establish output objectives"@en .
+<http://id.unece.org/activity/subProcess/1.4> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.4" ; skos:prefLabel "Identify concepts"@en .
+<http://id.unece.org/activity/subProcess/1.5> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.5" ; skos:prefLabel "Check data availability"@en .
+<http://id.unece.org/activity/subProcess/1.6> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.6" ; skos:prefLabel "Prepare and submit business case"@en .
