@@ -86,7 +86,7 @@ rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
 rdfs:label "Statistical program cycle"@en , "Cycle de programme statistique"@fr ;
-rdfs:comment "Sub-process as defined by the GSBPM."@en , "Sous-processus telle que défini par le GSBPM."@fr ;
+rdfs:comment "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr ;
 rdfs:subClassOf coos:Activity ;
 rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -120,6 +120,10 @@ rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # The statistical production process
 
+<http://id.unece.org/activity/statisticalProductionProcess> a coos:StatisticalProductionActivity ;
+    skos:notation "SPP"	;
+	skos:prefLabel "Statistical Production Process"@en , "Processus de Production Statistique"@fr .
+
 # The GAMSO activities and activity areas
 
 # The GSBPM phases and sub-process
@@ -139,3 +143,5 @@ rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 <http://id.unece.org/activity/subProcess/1.4> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.4" ; skos:prefLabel "Identify concepts"@en .
 <http://id.unece.org/activity/subProcess/1.5> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.5" ; skos:prefLabel "Check data availability"@en .
 <http://id.unece.org/activity/subProcess/1.6> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.6" ; skos:prefLabel "Prepare and submit business case"@en .
+
+# The GAMSO/GSBPM concept scheme
