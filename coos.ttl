@@ -116,7 +116,11 @@ rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 # Individuals
 #################################################################
 
-# Do we want to create an individual for the offical statistics activity?
+# The offical statistics activity
+
+<http://id.unece.org/activity/officialStatistics> a coos:Activity ;
+    skos:notation "OS"	;
+	skos:prefLabel "Official Statistics"@en , "Statistique Publique"@fr .
 
 # The statistical production process
 
