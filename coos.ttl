@@ -126,6 +126,12 @@ rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # The GAMSO activities and activity areas
 
+# The GSBPM overarching processes
+
+<http://id.unece.org/activity/overarchingActivity/0.1> a coos:OverarchingActivity ; skos:notation "0.1"	; skos:prefLabel "Quality Management"@en .
+<http://id.unece.org/activity/overarchingActivity/0.2> a coos:OverarchingActivity ; skos:notation "0.2"	; skos:prefLabel "Metadata Management"@en .
+<http://id.unece.org/activity/overarchingActivity/0.3> a coos:OverarchingActivity ; skos:notation "0.3"	; skos:prefLabel "Data Management"@en .
+
 # The GSBPM phases and sub-process
 
 <http://id.unece.org/activity/phase/1> a coos:Phase ; skos:notation "1"	; skos:prefLabel "Specify Needs"@en .
