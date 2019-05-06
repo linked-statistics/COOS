@@ -138,9 +138,9 @@ rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # The GSBPM phases and sub-process
 
-<http://id.unece.org/activity/phase/1> a coos:Phase ; skos:notation "1"	; skos:prefLabel "Specify Needs"@en .
-<http://id.unece.org/activity/phase/2> a coos:Phase ; skos:notation "2"	; skos:prefLabel "Design"@en .
-<http://id.unece.org/activity/phase/3> a coos:Phase ; skos:notation "3"	; skos:prefLabel "Build"@en .
+<http://id.unece.org/activity/phase/1> a coos:Phase ; skos:notation "1"	; skos:prefLabel "Specify Needs"@en ; skos:narrower <http://id.unece.org/activity/subProcess/1.1> , <http://id.unece.org/activity/subProcess/1.2> , <http://id.unece.org/activity/subProcess/1.3> , <http://id.unece.org/activity/subProcess/1.4> , <http://id.unece.org/activity/subProcess/1.5> , <http://id.unece.org/activity/subProcess/1.6> .
+<http://id.unece.org/activity/phase/2> a coos:Phase ; skos:notation "2"	; skos:prefLabel "Design"@en ; skos:narrower <http://id.unece.org/activity/subProcess/2.1> , <http://id.unece.org/activity/subProcess/2.2> , <http://id.unece.org/activity/subProcess/2.3> , <http://id.unece.org/activity/subProcess/2.4> , <http://id.unece.org/activity/subProcess/2.5> , <http://id.unece.org/activity/subProcess/2.6> .
+<http://id.unece.org/activity/phase/3> a coos:Phase ; skos:notation "3"	; skos:prefLabel "Build"@en ; skos:narrower <http://id.unece.org/activity/subProcess/3.1> , <http://id.unece.org/activity/subProcess/3.2> , <http://id.unece.org/activity/subProcess/3.3> , <http://id.unece.org/activity/subProcess/3.4> , <http://id.unece.org/activity/subProcess/3.5> , <http://id.unece.org/activity/subProcess/3.6> , <http://id.unece.org/activity/subProcess/3.7> .
 <http://id.unece.org/activity/phase/4> a coos:Phase ; skos:notation "4"	; skos:prefLabel "Collect"@en .
 <http://id.unece.org/activity/phase/5> a coos:Phase ; skos:notation "5"	; skos:prefLabel "Process"@en .
 <http://id.unece.org/activity/phase/6> a coos:Phase ; skos:notation "6" ; skos:prefLabel "Analyse"@en .
@@ -153,5 +153,20 @@ rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 <http://id.unece.org/activity/subProcess/1.4> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.4" ; skos:prefLabel "Identify concepts"@en .
 <http://id.unece.org/activity/subProcess/1.5> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.5" ; skos:prefLabel "Check data availability"@en .
 <http://id.unece.org/activity/subProcess/1.6> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/1> ; skos:notation "1.6" ; skos:prefLabel "Prepare and submit business case"@en .
+
+<http://id.unece.org/activity/subProcess/2.1> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/2> ; skos:notation "2.1" ; skos:prefLabel "Design outputs"@en .
+<http://id.unece.org/activity/subProcess/2.2> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/2> ; skos:notation "2.2" ; skos:prefLabel "Design variable descriptions"@en .
+<http://id.unece.org/activity/subProcess/2.3> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/2> ; skos:notation "2.3" ; skos:prefLabel "Design collection"@en .
+<http://id.unece.org/activity/subProcess/2.4> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/2> ; skos:notation "2.4" ; skos:prefLabel "Design frame and sample"@en .
+<http://id.unece.org/activity/subProcess/2.5> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/2> ; skos:notation "2.5" ; skos:prefLabel "Design processing and analysis"@en .
+<http://id.unece.org/activity/subProcess/2.6> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/2> ; skos:notation "2.6" ; skos:prefLabel "Design production systems and workflow"@en .
+
+<http://id.unece.org/activity/subProcess/3.1> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/3> ; skos:notation "3.1" ; skos:prefLabel "Reuse or build collection instruments"@en .
+<http://id.unece.org/activity/subProcess/3.2> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/3> ; skos:notation "3.2" ; skos:prefLabel "Reuse or build analysis components"@en .
+<http://id.unece.org/activity/subProcess/3.3> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/3> ; skos:notation "3.3" ; skos:prefLabel "Reuse or build dissemination components"@en .
+<http://id.unece.org/activity/subProcess/3.4> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/3> ; skos:notation "3.4" ; skos:prefLabel "Configure workflows"@en .
+<http://id.unece.org/activity/subProcess/3.5> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/3> ; skos:notation "3.5" ; skos:prefLabel "Test production systems"@en .
+<http://id.unece.org/activity/subProcess/3.6> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/3> ; skos:notation "3.6" ; skos:prefLabel "Test statistical business process"@en .
+<http://id.unece.org/activity/subProcess/3.7> a coos:SubProcess ; skos:broader <http://id.unece.org/activity/phase/3> ; skos:notation "3.7" ; skos:prefLabel "Finalise production systems"@en .
 
 # The GAMSO/GSBPM concept scheme
