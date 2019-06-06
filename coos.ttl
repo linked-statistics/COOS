@@ -4,7 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> ;
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -121,16 +121,42 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
 # The offical statistics activity
 
 <http://id.unece.org/activity/officialStatistics> a coos:Activity ;
-    skos:notation "OS"	;
-    skos:prefLabel "Official Statistics"@en , "Statistique Publique"@fr .
+    skos:notation "OS" ;
+    skos:prefLabel "Official Statistics"@en , "Statistique Publique"@fr ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:topConceptOf <http://id.unece.org/activity/gamso> ;
+    skos:narrower <http://id.unece.org/activity/activityArea/1> , <http://id.unece.org/activity/activityArea/2> , <http://id.unece.org/activity/activityArea/3> , <http://id.unece.org/activity/activityArea/4> .
 
 # The statistical production process
 
 <http://id.unece.org/activity/statisticalProductionProcess> a coos:StatisticalProductionActivity ;
     skos:notation "SPP"	;
-    skos:prefLabel "Statistical Production Process"@en , "Processus de Production Statistique"@fr .
+    skos:prefLabel "Statistical Production Process"@en , "Processus de Production Statistique"@fr ;
+    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
+    skos:topConceptOf <http://id.unece.org/activity/gsbpm> ;
+    skos:narrower <http://id.unece.org/activity/phase/1> , <http://id.unece.org/activity/phase/2> , <http://id.unece.org/activity/phase/3> , <http://id.unece.org/activity/phase/4> , <http://id.unece.org/activity/phase/5> , <http://id.unece.org/activity/phase/6> , <http://id.unece.org/activity/phase/7> , <http://id.unece.org/activity/phase/8> .
 
 # The GAMSO activities and activity areas
+
+<http://id.unece.org/activity/activityArea/1> a coos:ActivityArea ;
+    skos:prefLabel "Strategy and Leadership"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/officialStatistics> .
+
+<http://id.unece.org/activity/activityArea/2> a coos:ActivityArea ;
+    skos:prefLabel "Capability Development"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/officialStatistics> .
+
+<http://id.unece.org/activity/activityArea/3> a coos:ActivityArea ;
+    skos:prefLabel "Corporate Support"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/officialStatistics> .
+
+<http://id.unece.org/activity/activityArea/4> a coos:ActivityArea ;
+    skos:prefLabel "Production"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/officialStatistics> .
 
 # The GSBPM overarching processes
 
@@ -251,15 +277,17 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
 # The GAMSO/GSBPM concept schemes (see issue 2)
 
 <http://id.unece.org/activity/gamso> a skos:ConceptScheme ;
-    skos: prefLabel "Generic Activity Model for Statistical Organisations"@en ;
+    skos:prefLabel "Generic Activity Model for Statistical Organisations"@en ;
     skos:notation "GAMSO" ;
     pav:version  "v1.2" ;
-    foar:homePage <https://statswiki.unece.org/display/GAMSO/GAMSO+v1.2> ;
-    dcterms:hasPart <http://id.unece.org/activity/gsbpm> .
+    foaf:homePage <https://statswiki.unece.org/display/GAMSO/GAMSO+v1.2> ;
+    dcterms:hasPart <http://id.unece.org/activity/gsbpm> ;
+    skos:hasTopConcept <http://id.unece.org/activity/officialStatistics> .
 
 <http://id.unece.org/activity/gsbpm> a skos:ConceptScheme ;
-    skos: prefLabel "Generic Statistical Business Process Model"@en ;
+    skos:prefLabel "Generic Statistical Business Process Model"@en ;
     skos:notation "GSBPM" ;
     pav:version  "v5.1" ;
-    foar:homePage <https://statswiki.unece.org/display/GSBPM/GSBPM+v5.1> ;
-    dcterms:isPartOf <http://id.unece.org/activity/gamso> .
+    foaf:homePage <https://statswiki.unece.org/display/GSBPM/GSBPM+v5.1> ;
+    dcterms:isPartOf <http://id.unece.org/activity/gamso> ;
+    skos:hasTopConcept <http://id.unece.org/activity/statisticalProductionProcess> .
