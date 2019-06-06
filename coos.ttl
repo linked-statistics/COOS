@@ -7,6 +7,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
@@ -90,6 +91,18 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
     rdfs:label "Statistical program cycle"@en , "Cycle de programme statistique"@fr ;
     rdfs:comment "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr ;
     rdfs:subClassOf coos:Activity ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:StatisticalProduct a rdfs:Class , owl:Class ;
+    rdfs:label "Statistical product"@en , "Produit statistique"@fr ;
+    rdfs:comment "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:StatisticalDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Statistical dataset"@en , "Jeu de données statistiques"@fr ;
+    rdfs:comment "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr ;
+    rdfs:subClassOf coos:StatisticalProduct , dcat:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 
