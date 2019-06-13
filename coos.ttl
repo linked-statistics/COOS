@@ -147,29 +147,140 @@ coos:StatisticalDataset a rdfs:Class , owl:Class ;
     skos:prefLabel "Statistical Production Process"@en , "Processus de Production Statistique"@fr ;
     skos:inScheme <http://id.unece.org/activity/gsbpm> ;
     skos:topConceptOf <http://id.unece.org/activity/gsbpm> ;
+    skos:exactMatch <http://id.unece.org/activity/activityArea/4> ;
     skos:narrower <http://id.unece.org/activity/phase/1> , <http://id.unece.org/activity/phase/2> , <http://id.unece.org/activity/phase/3> , <http://id.unece.org/activity/phase/4> , <http://id.unece.org/activity/phase/5> , <http://id.unece.org/activity/phase/6> , <http://id.unece.org/activity/phase/7> , <http://id.unece.org/activity/phase/8> .
 
 # The GAMSO activities and activity areas
 
 <http://id.unece.org/activity/activityArea/1> a coos:ActivityArea ;
+    skos:notation "1" ;
     skos:prefLabel "Strategy and Leadership"@en ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> .
+    skos:broader <http://id.unece.org/activity/officialStatistics> ;
+    skos:narrower <http://id.unece.org/activity/activity/1.1> , <http://id.unece.org/activity/activity/1.2> , <http://id.unece.org/activity/activity/1.3> .
 
 <http://id.unece.org/activity/activityArea/2> a coos:ActivityArea ;
+    skos:notation "2" ;
     skos:prefLabel "Capability Development"@en ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> .
+    skos:broader <http://id.unece.org/activity/officialStatistics> ;
+    skos:narrower <http://id.unece.org/activity/activity/2.1> , <http://id.unece.org/activity/activity/2.2> , <http://id.unece.org/activity/activity/2.3> , <http://id.unece.org/activity/activity/2.4> .
 
 <http://id.unece.org/activity/activityArea/3> a coos:ActivityArea ;
+    skos:notation "3" ;
     skos:prefLabel "Corporate Support"@en ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> .
+    skos:broader <http://id.unece.org/activity/officialStatistics> ;
+    skos:narrower <http://id.unece.org/activity/activity/3.1> , <http://id.unece.org/activity/activity/3.2> , <http://id.unece.org/activity/activity/3.3> , <http://id.unece.org/activity/activity/3.4> , <http://id.unece.org/activity/activity/3.5> , <http://id.unece.org/activity/activity/3.6> , <http://id.unece.org/activity/activity/3.7> , <http://id.unece.org/activity/activity/3.8> , <http://id.unece.org/activity/activity/3.9> , <http://id.unece.org/activity/activity/3.10> .
 
 <http://id.unece.org/activity/activityArea/4> a coos:ActivityArea ;
+    skos:notation "4" ;
     skos:prefLabel "Production"@en ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> .
+    skos:broader <http://id.unece.org/activity/officialStatistics> ;
+    skos:exactMatch <http://id.unece.org/activity/statisticalProductionProcess> .
+
+<http://id.unece.org/activity/activity/1.1> a coos:Activity ;
+    skos:notation "1.1" ;
+    skos:prefLabel "Define Vision"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/1> .
+
+<http://id.unece.org/activity/activity/1.2> a coos:Activity ;
+    skos:notation "1.2" ;
+    skos:prefLabel "Govern and Lead"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/1> .
+
+<http://id.unece.org/activity/activity/1.3> a coos:Activity ;
+    skos:notation "1.3" ;
+    skos:prefLabel "Manage Strategic Collaboration and Cooperation"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/1> .
+
+<http://id.unece.org/activity/activity/2.1> a coos:Activity ;
+    skos:notation "2.1" ;
+    skos:prefLabel "Plan Capability Improvements"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/2> .
+
+<http://id.unece.org/activity/activity/2.2> a coos:Activity ;
+    skos:notation "2.2" ;
+    skos:prefLabel "Develop Capability Improvements"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/2> .
+
+<http://id.unece.org/activity/activity/2.3> a coos:Activity ;
+    skos:notation "2.3" ;
+    skos:prefLabel "Monitor Capability Improvements"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/2> .
+
+<http://id.unece.org/activity/activity/2.4> a coos:Activity ;
+    skos:notation "2.4" ;
+    skos:prefLabel "Transfer Support of Capability Improvements"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/2> .
+
+<http://id.unece.org/activity/activity/3.1> a coos:Activity ;
+    skos:notation "3.1" ;
+    skos:prefLabel "Manage Business Performance and Legislation"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.2> a coos:Activity ;
+    skos:notation "3.2" ;
+    skos:prefLabel "Manage Statistical Methodology"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.3> a coos:Activity ;
+    skos:notation "3.3" ;
+    skos:prefLabel "Manage Quality"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.4> a coos:Activity ;
+    skos:notation "3.4" ;
+    skos:prefLabel "Manage Information and Knowledge"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.5> a coos:Activity ;
+    skos:notation "3.5" ;
+    skos:prefLabel "Manage Consumers"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.6> a coos:Activity ;
+    skos:notation "3.6" ;
+    skos:prefLabel "Manage Data Suppliers"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.7> a coos:Activity ;
+    skos:notation "3.7" ;
+    skos:prefLabel "Manage Finances"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.8> a coos:Activity ;
+    skos:notation "3.8" ;
+    skos:prefLabel "Manage Human Resources"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.9> a coos:Activity ;
+    skos:notation "3.9" ;
+    skos:prefLabel "Manage Information Technology (IT)"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
+
+<http://id.unece.org/activity/activity/3.10> a coos:Activity ;
+    skos:notation "3.10" ;
+    skos:prefLabel "Manage Buildings and Physical Space"@en ;
+    skos:inScheme <http://id.unece.org/activity/gamso> ;
+    skos:broader <http://id.unece.org/activity/activityArea/3> .
 
 # The GSBPM overarching processes
 
