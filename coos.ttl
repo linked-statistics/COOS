@@ -29,7 +29,7 @@
     vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
     dc:rights "Copyright © 2019 Unece" ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    voaf:classNumber "9"^^xsd:integer ;
+    voaf:classNumber "14"^^xsd:integer ;
     voaf:propertyNumber "0"^^xsd:integer ;
     owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" .
 
@@ -85,7 +85,7 @@ coos:SubProcess a rdfs:Class , owl:Class ;
 coos:StatisticalProgram a rdfs:Class , owl:Class ;
     rdfs:label "Statistical program"@en , "Programme statistique"@fr ;
     rdfs:comment "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr ;
-    rdfs:subClassOf coos:Activity ;
+    rdfs:subClassOf coos:StatisticalActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
