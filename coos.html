@@ -18,14 +18,24 @@
 				wgPatentURI: "http://creativecommons.org/licenses/by/4.0/",
 				processVersion: 2018,
 				edDraftURI: "https://github.com/linked-statistics/COOS",
-				githubAPI: "https://api.github.com/repos/linked-statistics/COOS"
+				githubAPI: "https://api.github.com/repos/linked-statistics/COOS",
+				localBiblio: {
+					"PAV": {
+						"date": "2015-03-16",
+						"href": "https://pav-ontology.github.io/pav/",
+						"authors": [
+							"Paolo Ciccarese",
+							"Stian Soiland-Reyes"
+						],
+						"title": "PAV ontology: provenance, authoring and versioning"
+					}
+				}
 			};
 		</script>
 	</head>
 	<body>
 		<section id='abstract'>
-			<p>The abstract will go there.
-		</p>
+			<p>The abstract will go there.</p>
 		</section>
 		<section id='sotd'>
 			<p>This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
@@ -60,9 +70,6 @@
 			<ul>
 				<li><strong>http://id.unece.org/def/coos#</strong></li>
 			</ul>
-			<div class="issue">
-				<p>Validate namespace.</p>
-			</div>
 			<p>The prefix <code>coos</code> will be associated to this namespace in all this document.</p>
 			<p>The COOS vocabulary is a set of URIs, given in the left-hand column in the table below. The right hand column indicates in which section below the corresponding term is explained in more detail.</p>
 			<table class="simple">
@@ -110,11 +117,32 @@
 						<td>coos:StatisticalProgramCycle</td>
 						<td><a href="#activities">Section x. Activities</a></td>
 					</tr>
+					<tr>
+						<td>coos:StatisticalProduct</td>
+						<td><a href="#activities">Section y. Products</a></td>
+					</tr>
+					<tr>
+						<td>coos:StatisticalDataset</td>
+						<td><a href="#activities">Section y. Products</a></td>
+					</tr>
+					<tr>
+						<td>coos:StatisticalOrganization</td>
+						<td><a href="#activities">Section y. Organizations</a></td>
+					</tr>
+					<tr>
+						<td>coos:NationalStatisticalInstitute</td>
+						<td><a href="#activities">Section y. Organizations</a></td>
+					</tr>
+					<tr>
+						<td>coos:InternationalAgency</td>
+						<td><a href="#activities">Section y. Organizations</a></td>
+					</tr>
 				</tbody>
 			</table>
 			<div class="issue">
-				<p>Complete list.</p>
+				<p>Pending: Task class in 'activities' area.</p>
 			</div>
+			<p>COOS also defines a number of individuals which are instances of the classes above: those are described in more detail in the relevant sections.</p>
 
 			<p>Other vocabularies used in this document are listed in the table below, with their namespaces and associated prefixes.</p>
 			<table class="simple">
@@ -128,6 +156,11 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>dc</td>
+						<td>http://purl.org/dc/elements/1.1/</td>
+						<td>Dublin Core Metadata Element Set, Version 1.1([[!DC11]])</td>
+					</tr>
+					<tr>
 						<td>dcat</td>
 						<td>http://www.w3.org/ns/dcat#</td>
 						<td>Data Catalog Vocabulary ([[!vocab-dcat]])</td>
@@ -138,14 +171,19 @@
 						<td>Dublin Core Metadata Initiative Metadata Terms ([[!DCTERMS]])</td>
 					</tr>
 					<tr>
-						<td>dqv</td>
-						<td>http://www.w3.org/ns/dqv#</td>
-						<td>Data Quality Vocabulary ([[vocab-dqv]])</td>
+						<td>foaf</td>
+						<td>http://xmlns.com/foaf/0.1/ </td>
+						<td>FOAF Vocabulary Specification 0.99 ([[!FOAF]])</td>
 					</tr>
 					<tr>
-						<td>foaf</td>
-						<td>http://xmlns.com/foaf/spec/</td>
-						<td>FOAF Vocabulary Specification 0.99 ([[!FOAF]])</td>
+						<td>org</td>
+						<td>http://www.w3.org/ns/org#</td>
+						<td>The Organization Ontology ([[!vocab-org]])</td>
+					</tr>
+					<tr>
+						<td>pav</td>
+						<td>http://purl.org/pav/</td>
+						<td>PAV - Provenance, Authoring and Versioning ([[!PAV]])</</td>
 					</tr>
 					<tr>
 						<td>prov</td>
@@ -153,24 +191,14 @@
 						<td>PROV-O: The PROV Ontology ([[!prov-o]])</td>
 					</tr>
 					<tr>
-						<td>qb</td>
-						<td>http://purl.org/linked-data/cube#</td>
-						<td>The RDF Data Cube Vocabulary ([[!vocab-data-cube]])</td>
-					</tr>
-					<tr>
-						<td>skos</td>
+						<td>skos-reference</td>
 						<td>http://www.w3.org/2004/02/skos/core#</td>
-						<td>Simple Knowledge Organization System</td>
-					</tr>
-					<tr>
-						<td>time</td>
-						<td>http://www.w3.org/2006/time#</td>
-						<td>Time Ontology in OWL ([[owl-time]])</td>
+						<td>SKOS Simple Knowledge Organization System Reference ([[!skos-reference]])</td>
 					</tr>
 				</tbody>
 			</table>
 			<p>RDF, RDFS and OWL vocabularies are also used, with their usual URIs and prefixes.</p>
-			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[!turtle]]. Unless otherwise specified, these examples use http://example.org/ns/ as a base namespace; resource names between angle brackets represent URIs in this namespace. Note however that individual resource names used as examples are entirely fictitious.</p>
+			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[turtle]]. Unless otherwise specified, these examples use http://example.org/ns/ as a base namespace; resource names between angle brackets represent URIs in this namespace. Note however that individual resource names used as examples are entirely fictitious.</p>
 		</section>
 
 		<section id="activities">
