@@ -7,6 +7,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -30,14 +31,14 @@
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
     voaf:classNumber "9"^^xsd:integer ;
     voaf:propertyNumber "0"^^xsd:integer ;
-    owl:versionInfo "Version 0.1 - 2019-04-04"  .
+    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" .
 
 
 #################################################################
 # Classes
 #################################################################
 
-# Classes related to the 'activity' domain
+# Classes related to the 'activities' domain
 
 coos:Activity a rdfs:Class , owl:Class ;
     rdfs:label "Activity"@en , "Activité"@fr ;
@@ -93,6 +94,8 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+# Classes related to the 'products' domain
+
 coos:StatisticalProduct a rdfs:Class , owl:Class ;
     rdfs:label "Statistical product"@en , "Produit statistique"@fr ;
     rdfs:comment "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr ;
@@ -105,6 +108,24 @@ coos:StatisticalDataset a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:StatisticalProduct , dcat:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+# Classes related to the 'organizations' domain
+
+coos:StatisticalOrganization a rdfs:Class , owl:Class ;
+    rdfs:label "Statistical organization"@en , "Organization statistique"@fr ;
+    rdfs:subClassOf org:Organization , prov:Organization ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:NationalStatisticalInstitute a rdfs:Class , owl:Class ;
+    rdfs:label "National statistical institute"@en , "Institut national de statistiques"@fr ;
+    rdfs:subClassOf coos:StatisticalOrganization ;
+    owl:disjointWith coos:InternationalAgency ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:InternationalAgency a rdfs:Class , owl:Class ;
+    rdfs:label "International agency"@en , "Agence internationale"@fr ;
+    rdfs:subClassOf coos:StatisticalOrganization ;
+    owl:disjointWith coos:NationalStatisticalInstitute ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 #################################################################
 # Annotation properties
