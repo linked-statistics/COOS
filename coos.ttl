@@ -30,8 +30,8 @@
     dc:rights "Copyright © 2019 Unece" ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
     voaf:classNumber "14"^^xsd:integer ;
-    voaf:propertyNumber "0"^^xsd:integer ;
-    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" .
+    voaf:propertyNumber "2"^^xsd:integer ;
+    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" .
 
 
 #################################################################
@@ -145,7 +145,21 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
 # Object properties
 #################################################################
 
-# No object properties in this version of the ontology
+# Links between GSBPM activities and GAMSO activities
+
+coos:uses a rdfs:Property , owl:ObjectProperty ;
+    rdfs:label "uses"@en , "utilise"@fr ;
+    rdfs:domain coos:StatisticalProductionActivity ;
+    rdfs:range coos:Activity ;
+    owl:inverseOf coos:supports ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:supports a rdfs:Property , owl:ObjectProperty ;
+    rdfs:label "supports"@en , "supporte"@fr ;
+    rdfs:domain coos:Activity ;
+    rdfs:range coos:StatisticalProductionActivity ;
+    owl:inverseOf coos:uses ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 
 #################################################################
@@ -259,7 +273,8 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
     skos:notation "3.3" ;
     skos:prefLabel "Manage Quality"@en ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:broader <http://id.unece.org/activity/activityArea/3> ;
+    coos:supports <http://id.unece.org/activity/overarchingActivity/0.1> .
 
 <http://id.unece.org/activity/activity/3.4> a coos:Activity ;
     skos:notation "3.4" ;
@@ -305,9 +320,18 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
 
 # The GSBPM overarching processes
 
-<http://id.unece.org/activity/overarchingActivity/0.1> a coos:OverarchingActivity ; skos:notation "0.1"	; skos:prefLabel "Quality Management"@en .
-<http://id.unece.org/activity/overarchingActivity/0.2> a coos:OverarchingActivity ; skos:notation "0.2"	; skos:prefLabel "Metadata Management"@en .
-<http://id.unece.org/activity/overarchingActivity/0.3> a coos:OverarchingActivity ; skos:notation "0.3"	; skos:prefLabel "Data Management"@en .
+<http://id.unece.org/activity/overarchingActivity/0.1> a coos:OverarchingActivity ;
+    skos:notation "0.1"	;
+    skos:prefLabel "Quality Management"@en , "Gestion de la qualité"@fr ;
+    coos:uses <http://id.unece.org/activity/activity/3.3> .
+
+<http://id.unece.org/activity/overarchingActivity/0.2> a coos:OverarchingActivity ;
+    skos:notation "0.2"	;
+    skos:prefLabel "Metadata Management"@en , "Gestion des métadonnées"@fr .
+
+<http://id.unece.org/activity/overarchingActivity/0.3> a coos:OverarchingActivity ;
+    skos:notation "0.3"	;
+    skos:prefLabel "Data Management"@en , "Gestion des données"@fr .
 
 # The GSBPM phases and sub-process
 
