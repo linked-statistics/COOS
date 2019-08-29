@@ -249,7 +249,7 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
     skos:broader <http://id.unece.org/activity/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.2> a coos:Activity ;
+<http://id.unece.org/activity/activity/3.2> a coos:Activity , coos:StatisticalActivity ;
     skos:notation "3.2" ;
     skos:prefLabel "Manage Statistical Methodology"@en ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
@@ -273,7 +273,7 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
     skos:broader <http://id.unece.org/activity/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.6> a coos:Activity ;
+<http://id.unece.org/activity/activity/3.6> a coos:Activity , coos:StatisticalActivity ;
     skos:notation "3.6" ;
     skos:prefLabel "Manage Data Suppliers"@en ;
     skos:inScheme <http://id.unece.org/activity/gamso> ;
