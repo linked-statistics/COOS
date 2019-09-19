@@ -94,6 +94,13 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+coos:Task a rdfs:Class , owl:Class ;
+    rdfs:label "Task"@en , "Tâche"@fr ;
+    skos:definition "Statistical activity scoped by a given GSBPM sub-process"@en , "Activité statistique incluse dans un sous-processu GSBPM donné"@fr ;
+    rdfs:comment "Tasks can be more or less fine-grained and form hierarchies"@en , "Les tâches peuvent être de granularité plus ou moins fine et former des hiérarchies"@fr ;
+    rdfs:subClassOf coos:StatisticalActivity ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 # Classes related to the 'products' domain
 
 coos:StatisticalProduct a rdfs:Class , owl:Class ;
