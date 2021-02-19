@@ -154,6 +154,10 @@
 						<td><a href="#activities">Section x. Activities</a></td>
 					</tr>
 					<tr>
+						<td>coos:Task</td>
+						<td><a href="#activities">Section x. Activities</a></td>
+					</tr>
+					<tr>
 						<td>coos:Phase</td>
 						<td><a href="#activities">Section x. Activities</a></td>
 					</tr>
@@ -191,9 +195,11 @@
 					</tr>
 				</tbody>
 			</table>
+
 			<div class="issue">
-				<p>Pending: Task class in 'activities' area.</p>
+				<p>Add VOAF, VANN and CC.</p>
 			</div>
+
 			<p>COOS also defines a number of individuals which are instances of the classes above: those are described in more detail in the relevant sections.</p>
 
 			<p>Other vocabularies used in this document are listed in the table below, with their namespaces and associated prefixes.</p>
@@ -243,13 +249,13 @@
 						<td>PROV-O: The PROV Ontology ([[!prov-o]])</td>
 					</tr>
 					<tr>
-						<td>skos-reference</td>
+						<td>skos</td>
 						<td>http://www.w3.org/2004/02/skos/core#</td>
 						<td>SKOS Simple Knowledge Organization System Reference ([[!skos-reference]])</td>
 					</tr>
 				</tbody>
 			</table>
-			<p>RDF, RDFS and OWL vocabularies are also used, with their usual URIs and prefixes.</p>
+			<p>RDF, RDFS, OWL and XSD vocabularies or namespaces are also used, with their usual URIs and prefixes.</p>
 			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[turtle]]. Unless otherwise specified, these examples use http://example.org/ns/ as a base namespace; resource names between angle brackets represent URIs in this namespace. Note however that individual resource names used as examples are entirely fictitious.</p>
 		</section>
 
@@ -313,21 +319,33 @@
 
 		<section id="organizations">
 			<h2>Organizations</h2>
-			<p>The following classes are defined in Insee’s base ontology and could be moved to international level:</p>
+			<p>The following classes are defined:</p>
 
 			<figure id="image-org">
 				<img src="img/coos-org.png" alt="Organizations vocabulary overview" title="Organizations vocabulary overview"/>
 				<figcaption>Organizations vocabulary overview</figcaption>
 			</figure>
 
+			<div class="issue">
+				<p>Provide textual definition of National Statistical Institute and International Agency.</p>
+			</div>
+
 			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
 
 			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
+
+			<div class="issue">
+				<p>Is there a list of international agencies and NSIs?</p>
+			</div>
 		</section>
 
 		<section id="products">
 			<h2>Products</h2>
-			<p>Among the classes defined by Insee (see figure below), at least <code>StatisticalProduct</code> and <code>StatisticalDataset</code> could be moved to an international base ontology.</p>
+			<p>The COOS ontology defines two base classes in the "Products" domain: <code>StatisticalProduct</code> and <code>StatisticalDataset</code>.</p>
+
+			<div class="issue">
+				<p>Provide textual definition of Statistical Product and Statistical Dataset.</p>
+			</div>
 
 			<p>Here again, the PROV vocabulary is useful, in particular to provide provenance information on products and to link them to activities and organizations (for example <code>prov:wasGeneratedBy</code> from a product to an activity).</p>
 
@@ -356,7 +374,7 @@
 
 		<section class="appendix">
 			<h2>Full copyright</h2>
-			<p>Copyright © 2018 Unece, <i>All Rights Reserved</i><br/><a href="http://www.unece.org/">http://www.unece.org/</a></p>
+			<p>Copyright © 2021 Unece, <i>All Rights Reserved</i><br/><a href="http://www.unece.org/">http://www.unece.org/</a></p>
 			<p>Content of this document is licensed under a Creative Commons License:<br/>Attribution 4.0 International (CC BY 4.0)</p>
 			<p>This is a human-readable summary of the Legal Code (the full license).<br/><a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
 			<p>You are free to:</p>
