@@ -196,10 +196,6 @@
 				</tbody>
 			</table>
 
-			<div class="issue">
-				<p>Add VOAF, VANN and CC.</p>
-			</div>
-
 			<p>COOS also defines a number of individuals which are instances of the classes above: those are described in more detail in the relevant sections.</p>
 
 			<p>Other vocabularies used in this document are listed in the table below, with their namespaces and associated prefixes.</p>
@@ -255,6 +251,11 @@
 					</tr>
 				</tbody>
 			</table>
+
+			<div class="issue">
+				<p>Add VOAF, VANN and CC.</p>
+			</div>
+
 			<p>RDF, RDFS, OWL and XSD vocabularies or namespaces are also used, with their usual URIs and prefixes.</p>
 			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[turtle]]. Unless otherwise specified, these examples use http://example.org/ns/ as a base namespace; resource names between angle brackets represent URIs in this namespace. Note however that individual resource names used as examples are entirely fictitious.</p>
 		</section>
@@ -295,6 +296,10 @@
 
 				<p>As previously for the GSBPM, individuals would be defined for each activity and activity area, and the GAMSO itself would be a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it.</p>
 
+				<div class="issue">
+					<p>Add descriptions of uses/supports properties.</p>
+				</div>
+
 				<p>A few points should be studied further:</p>
 				<ul>
 					<li>The notes of the second-level GAMSO activities are very well structured, so it would be possible to replace (or double) them with lists of individual concepts for third-level activities. For example, activity 2.1.1 ('Identify disruptions and capability improvements') would be added in the figure above with a <code>skso:broader</code> link to the activity 2.1.</li>
@@ -303,17 +308,16 @@
 					<li>There is a remaining question about the over-arching processes of the GSBPM. They probably should be viewed as components of the GSBPM concept scheme, and instances of class <code>StatisticalProductionActivity</code> which are not phases or sub-processes; an additional <code>OverArchingProcess</code> (or <code>TransverseActivity</code>, etc.) class could be created.</li>
 					<li>Some clarification should be made on the relations between similar GSBPM over-arching processes and GAMSO activities, notably 'Quality Management' (GSBPM) and 'Manage Quality' (GAMSO 3.10).</li>
 				</ul>
+			</section>
 
-				<p>The previous definitions stay in the framework of the GAMSO/GSBPM, but more precise notions will be needed by the NSIs for the modelization of their statistical activities. For example, Insee created in its base ontology (https://github.com/InseeFr/Ontologies/blob/master/insee-base.ttl) the <code>StatisticalOperation</code> class which can be grouped into series and families.</p>
+			<section id="activities-task">
+				<h3>More detailed activities</h3>
+				<p>The previous definitions stay in the framework of the GAMSO/GSBPM, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less fine-grained and form hierarchies.</p>
 
-				<figure id="image-ops">
-					<img src="img/coos-ops.png" alt="Operations vocabulary overview" title="Operations vocabulary overview"/>
-					<figcaption>Operations vocabulary overview</figcaption>
-				</figure>
+				<div class="issue">
+					<p>Include examples of tasks.</p>
+				</div>
 
-				<p>As an illustration, the Census is a family of operations, with the general census (until 1999) and the rolling census (that replaced it) being two series, and each census a statistical operation. The inclusion links (series → family, operation → series) are rendered by the standard Dublin Core <code>dcterms:hasPart</code>/<code>dcterms:isPartOf</code> properties.</p>
-
-				<p>It is clear that this model can be anchored to the GAMSO/GSBPM framework, or even included to form a more comprehensive model, by declaring <code>StatisticalOperation</code> a subclass of <code>StatisticalProductionActivity</code>.</p>
 			</section>
 		</section>
 
@@ -335,7 +339,7 @@
 			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
 
 			<div class="issue">
-				<p>Is there a list of international agencies and NSIs?</p>
+				<p>Is there an "official" list of international agencies and NSIs?</p>
 			</div>
 		</section>
 
