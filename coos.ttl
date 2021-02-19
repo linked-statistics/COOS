@@ -41,13 +41,13 @@
 
 coos:Activity a rdfs:Class , owl:Class ;
     rdfs:label "Activity"@en , "Activité"@fr ;
-    rdfs:comment "An activity as defined by the GAMSO."@en , "Une activité telle que définie par le GAMSO."@fr ;
+    rdfs:comment "Activity as defined by the GAMSO."@en , "Activité telle que définie par le GAMSO."@fr ;
     rdfs:subClassOf skos:Concept , prov:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:ActivityArea a rdfs:Class , owl:Class ;
     rdfs:label "Activity area"@en , "Secteur d'activité"@fr ;
-    rdfs:comment "An activity area as defined by the GAMSO."@en , "Un secteur d'activité tel que défini par le GAMSO."@fr ;
+    rdfs:comment "Activity area as defined by the GAMSO."@en , "Secteur d'activité tel que défini par le GAMSO."@fr ;
     rdfs:subClassOf skos:Concept ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
