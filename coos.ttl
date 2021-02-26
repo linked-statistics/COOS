@@ -84,13 +84,13 @@ coos:SubProcess a rdfs:Class , owl:Class ;
 coos:StatisticalProgram a rdfs:Class , owl:Class ;
     rdfs:label "Statistical program"@en , "Programme statistique"@fr ;
     rdfs:comment "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr ;
-    rdfs:subClassOf coos:StatisticalActivity ;
+    rdfs:subClassOf coos:StatisticalActivity , coos:GSIMClass ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
     rdfs:label "Statistical program cycle"@en , "Cycle de programme statistique"@fr ;
     rdfs:comment "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr ;
-    rdfs:subClassOf coos:Activity ;
+    rdfs:subClassOf coos:Activity , coos:GSIMClass ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:Task a rdfs:Class , owl:Class ;
@@ -99,6 +99,13 @@ coos:Task a rdfs:Class , owl:Class ;
     rdfs:comment "Tasks can be more or less fine-grained and form hierarchies"@en , "Les tâches peuvent être de granularité plus ou moins fine et former des hiérarchies"@fr ;
     rdfs:subClassOf coos:StatisticalActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+# Additional useful elements from GSIM
+
+coos:GSIMClass a rdfs:Class , owl:Class ;
+    rdfs:label "GSIM class"@en , "Classe GSIM"@fr ;
+	rdfs:comment "Mother of all classes defined in GSIM."@en , "Mère de toutes les classes définies par le GSIM."@fr ;
+	rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Classes related to the 'products' domain
 
