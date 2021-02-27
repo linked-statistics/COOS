@@ -107,6 +107,12 @@ coos:GSIMClass a rdfs:Class , owl:Class ;
 	rdfs:comment "Mother of all classes defined in GSIM."@en , "Mère de toutes les classes définies par le GSIM."@fr ;
 	rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+coos:GSIMObject a owl:Class ;
+    rdfs:label "GSIM object"@en , "Objet GSIM"@fr ;
+	rdfs:comment "Term traditionally used in GSIM, but class should be used instead."@en , "Terme utilisé traditionnellement dans GSIM, mais classe devrait être utilisé à la place."@fr ;
+	owl:equivalentClass coos:GSIMClass ;
+	rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 # Classes related to the 'products' domain
 
 coos:StatisticalProduct a rdfs:Class , owl:Class ;
