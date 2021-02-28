@@ -109,9 +109,15 @@ coos:GSIMClass a rdfs:Class , owl:Class ;
 
 coos:GSIMObject a owl:Class ;
     rdfs:label "GSIM object"@en , "Objet GSIM"@fr ;
-	rdfs:comment "Term traditionally used in GSIM, but class should be used instead."@en , "Terme utilisé traditionnellement dans GSIM, mais classe devrait être utilisé à la place."@fr ;
-	owl:equivalentClass coos:GSIMClass ;
-	rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+    rdfs:comment "Term traditionally used in GSIM, but class should be used instead."@en , "Terme utilisé traditionnellement dans GSIM, mais classe devrait être utilisé à la place."@fr ;
+    owl:equivalentClass coos:GSIMClass ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:GSIMEntity a rdfs:Class , owl:Class ;
+    rdfs:label "GSIM entity"@en , "Entité GSIM"@fr ;
+    rdfs:definition "Statistical entity, in the sense of PROV."@en , "Entité statistique, au sens de PROV."@fr ;
+    rdfs:subClassOf coos:GSIMClass , prov:Entity ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Classes related to the 'products' domain
 
