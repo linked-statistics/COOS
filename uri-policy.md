@@ -5,7 +5,11 @@ This document contains rules and guidelines for the identification and naming of
 
 ## General rules
 
-All the artifacts defined by the ontology have URIs starting with ```http://id.unece.org/```.
+The following rules apply for the identification of all COOS constructs:
+
+  * All COOS components are identified by URIs using US-ASCII characters (no percent-encoding, no IRIs)
+  * All the artifacts defined by the ontology have URIs starting with ```http://id.unece.org/```.
+  * American English spelling is used (e. g. "organization ")
 
 
 ## OWL classes and properties
@@ -20,7 +24,7 @@ Regarding the fragment part, COOS uses:
   * Upper camel case for classes, for example ```StatisticalActivity```
   * Lower camel case for properties, for example ```supports```
 
-Note that non-alphabetic characters are ignored when camel casing expressions, for example ```SubProcess```.
+Note that non-alphanumeric characters are ignored when camel casing expressions, for example ```SubProcess```.
 
 
 ## Instances
@@ -44,6 +48,7 @@ The following specificities apply:
 
   * When the resource is well-known enough in the ```domain``` context, the ```type``` part can be omitted: ```http://id.unece.org/activity/gamso```
   * When no standard identifier exist, a pseudo identifier will be constructed from the usual name: ```http://id.unece.org/activity/officialStatistics```
+  * Acronyms can be used for the ```type``` segment when there is no ambiguity: ```http://id.unece.org/organization/nsi/gus```
 
 
 ## Notes
