@@ -53,7 +53,7 @@ coos:ActivityArea a rdfs:Class , owl:Class ;
 
 coos:StatisticalActivity a rdfs:Class , owl:Class ;
     rdfs:label "Statistical activity"@en , "Activité statistique"@fr , "Actividad estadítstica"@es ;
-    rdfs:comment "Generic statistical activity."@en , "Activité statistique générique."@en "Actividad estadística genérica."@es ;
+    rdfs:comment "Generic statistical activity."@en , "Activité statistique générique."@fr , "Actividad estadística genérica."@es ;
     rdfs:subClassOf coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -115,7 +115,7 @@ coos:GSIMObject a owl:Class ;
 
 coos:GSIMEntity a rdfs:Class , owl:Class ;
     rdfs:label "GSIM entity"@en , "Entité GSIM"@fr , "Entidad GSIM"@es ;
-    rdfs:definition "Statistical entity, in the sense of PROV."@en , "Entité statistique, au sens de PROV."@fr "Entidad estadística, en un sentido de PROV."@es ;
+    rdfs:definition "Statistical entity, in the sense of PROV."@en , "Entité statistique, au sens de PROV."@fr , "Entidad estadística, en un sentido de PROV."@es ;
     rdfs:subClassOf coos:GSIMClass , prov:Entity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -352,11 +352,11 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activity/overarchingActivity/0.2> a coos:OverarchingActivity ;
     skos:notation "0.2"	;
-    skos:prefLabel "Metadata Management"@en , "Gestion des métadonnées"@fr "Administración de Metadatos"@es .
+    skos:prefLabel "Metadata Management"@en , "Gestion des métadonnées"@fr , "Administración de Metadatos"@es .
 
 <http://id.unece.org/activity/overarchingActivity/0.3> a coos:OverarchingActivity ;
     skos:notation "0.3"	;
-    skos:prefLabel "Data Management"@en , "Gestion des données"@fr "Administración de Datos"@es .
+    skos:prefLabel "Data Management"@en , "Gestion des données"@fr , "Administración de Datos"@es .
 
 # The GSBPM phases and sub-process
 
