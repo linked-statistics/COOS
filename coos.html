@@ -298,9 +298,12 @@
 
 				<p>As previously for the GSBPM, individuals would be defined for each activity and activity area, and the GAMSO itself would be a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it.</p>
 
-				<div class="issue">
-					<p>Add descriptions of uses/supports properties.</p>
-				</div>
+				<p>In addition, we need to properties to describe how Activities relate to Statistical Production Activities:</p>
+				<ul>
+					<li><code>supports</code>: to enable to perform or function. Activities, e.g. GAMOS Manage Statistical Methods, support Statistical Production Activities, e.g. GSBPM Phases.</li>
+					<li></code>uses</code>: to require to perform or function. Statistical Production Activities, e.g. GSBPM Overarching Processes, use Activities, e.g. Manage IT.</li>
+				</ul>
+				<p>Uses and supports are inverses of each other. They are weaker (looser) forms of dependencies than partitive relationships: uses/supports are about function whereas part/whole are about constitution.</p>
 
 				<p>A few points should be studied further:</p>
 				<ul>
