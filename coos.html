@@ -81,11 +81,13 @@
 		<section>
 			<h2>Background and Motivation</h2>
 
-			<p>The Official Statistics community has been collaborating for some years in order to define business models aiming at building common representations of its processes and information. These work were mostly conducted under the auspices of the Unece.</p>
-
-			<div class="issue">
-				<p>Add brief history and description of main models.</p>
-			</div>
+			<p>The Official Statistics community has been collaborating for some years in order to define business models aiming at building common representations of its processes and information. These works, mostly conducted under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics (ModernStats), include the Generic Statistical Business Process Model (GSBPM), the Generic Statistical Information Model (GSIM), and the Generic Activity Model for Statistical Organisation (GAMSO).</p>
+				
+			<p>GSBPM provides a framework to describe the building blocks of statistical production in terms of sub-processes. Its main goal is to help statistical organizations standardize their statistical production processes. It was the first ModernStats model to be published, back in 2008, and has been widely used by national and international statistical agencies since then.</p> 
+				
+			<p>GAMSO provides a framework to describe the building blocks of statistical production in terms of activities. It complements the GSBPM in two ways: (i) by covering areas beyond the scope of GSBPM, and (ii) by providing a business capability view of statistical production itself.</p> 
+				
+			<p>GSIM complements both GSBPM and GAMSO by providing a catalogue of information objects to describe statistical data and metadata. It functions as a reference framework consisting of a set of standardised information objects to be used in statistical production.</p>
 
 			<p>As more and more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on our international core models to establish common foundations on which the different works can develop in a coherent way. This should be done using a formal framework that allows interoperability, activation and globally unique identification.</p>
 
@@ -296,9 +298,12 @@
 
 				<p>As previously for the GSBPM, individuals would be defined for each activity and activity area, and the GAMSO itself would be a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it.</p>
 
-				<div class="issue">
-					<p>Add descriptions of uses/supports properties.</p>
-				</div>
+				<p>In addition, we need two properties to describe how an <code>Activity</code> relates to a <code>StatisticalProductionActivity</code>:</p>
+				<ul>
+					<li><code>supports</code>: it means to enable to perform or function. We say that an <code>Activity</code>, e.g. GAMOS Manage Statistical Methods, <code>supports</code> a <code>StatisticalProductionActivity</code>, e.g. a GSBPM Phase.</li>
+					<li><code>uses</code>: it means to require to perform or function. We say that a <code>StatisticalProductionActivity</code>, e.g. GSBPM Overarching Processes, <code>uses</code> an <code>Activity</code>, e.g. Manage IT.</li>
+				</ul>
+				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They are weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas <code>part/whole</code> are about constitution.</p>
 
 				<p>A few points should be studied further:</p>
 				<ul>
@@ -329,11 +334,12 @@
 				<img src="img/coos-org.png" alt="Organizations vocabulary overview" title="Organizations vocabulary overview"/>
 				<figcaption>Organizations vocabulary overview</figcaption>
 			</figure>
-
-			<div class="issue">
-				<p>Provide textual definition of National Statistical Institute and International Agency.</p>
-			</div>
-
+			
+			<ul>
+				<li><code>NationalStatisticalInstitute</code>: The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system. The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc.</li>
+				<li><code>InternationalAgency</code>: A body with an international membership, scope, or presence whose primary role is the production of official statistics. There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations.</li>
+			</ul>	
+			
 			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
 
 			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
