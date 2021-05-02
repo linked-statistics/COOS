@@ -193,463 +193,463 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
 
 # The Offical Statistics activity
 
-<http://id.unece.org/activity/officialStatistics> a coos:Activity ;
+<http://id.unece.org/activities/officialStatistics> a coos:Activity ;
     skos:notation "OS" ;
     skos:prefLabel "Official Statistics"@en , "Statistique Publique"@fr , "Estadísticas oficiales"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:topConceptOf <http://id.unece.org/activity/gamso> ;
-    skos:narrower <http://id.unece.org/activity/activityArea/1> , <http://id.unece.org/activity/activityArea/2> , <http://id.unece.org/activity/activityArea/3> , <http://id.unece.org/activity/activityArea/4> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:topConceptOf <http://id.unece.org/activities/gamso> ;
+    skos:narrower <http://id.unece.org/activities/activityArea/1> , <http://id.unece.org/activities/activityArea/2> , <http://id.unece.org/activities/activityArea/3> , <http://id.unece.org/activities/activityArea/4> .
 
 # The statistical production process
 
-<http://id.unece.org/activity/statisticalProductionProcess> a coos:StatisticalProductionActivity ;
+<http://id.unece.org/activities/statisticalProductionProcess> a coos:StatisticalProductionActivity ;
     skos:notation "SPP"	;
     skos:prefLabel "Statistical Production Process"@en , "Processus de Production Statistique"@fr , "Proceso de Producción Estadística"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:topConceptOf <http://id.unece.org/activity/gsbpm> ;
-    skos:exactMatch <http://id.unece.org/activity/activityArea/4> ;
-    skos:narrower <http://id.unece.org/activity/phase/1> , <http://id.unece.org/activity/phase/2> , <http://id.unece.org/activity/phase/3> , <http://id.unece.org/activity/phase/4> , <http://id.unece.org/activity/phase/5> , <http://id.unece.org/activity/phase/6> , <http://id.unece.org/activity/phase/7> , <http://id.unece.org/activity/phase/8> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:topConceptOf <http://id.unece.org/activities/gsbpm> ;
+    skos:exactMatch <http://id.unece.org/activities/activityArea/4> ;
+    skos:narrower <http://id.unece.org/activities/phase/1> , <http://id.unece.org/activities/phase/2> , <http://id.unece.org/activities/phase/3> , <http://id.unece.org/activities/phase/4> , <http://id.unece.org/activities/phase/5> , <http://id.unece.org/activities/phase/6> , <http://id.unece.org/activities/phase/7> , <http://id.unece.org/activities/phase/8> .
 
 # The GAMSO activities and activity areas
 
-<http://id.unece.org/activity/activityArea/1> a coos:ActivityArea ;
+<http://id.unece.org/activities/activityArea/1> a coos:ActivityArea ;
     skos:notation "1" ;
     skos:prefLabel "Strategy and Leadership"@en , "Estrategia y liderazgo"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> ;
-    skos:narrower <http://id.unece.org/activity/activity/1.1> , <http://id.unece.org/activity/activity/1.2> , <http://id.unece.org/activity/activity/1.3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/officialStatistics> ;
+    skos:narrower <http://id.unece.org/activities/activity/1.1> , <http://id.unece.org/activities/activity/1.2> , <http://id.unece.org/activities/activity/1.3> .
 
-<http://id.unece.org/activity/activityArea/2> a coos:ActivityArea ;
+<http://id.unece.org/activities/activityArea/2> a coos:ActivityArea ;
     skos:notation "2" ;
     skos:prefLabel "Capability Development"@en , "Desarrollo de capacidades"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> ;
-    skos:narrower <http://id.unece.org/activity/activity/2.1> , <http://id.unece.org/activity/activity/2.2> , <http://id.unece.org/activity/activity/2.3> , <http://id.unece.org/activity/activity/2.4> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/officialStatistics> ;
+    skos:narrower <http://id.unece.org/activities/activity/2.1> , <http://id.unece.org/activities/activity/2.2> , <http://id.unece.org/activities/activity/2.3> , <http://id.unece.org/activities/activity/2.4> .
 
-<http://id.unece.org/activity/activityArea/3> a coos:ActivityArea ;
+<http://id.unece.org/activities/activityArea/3> a coos:ActivityArea ;
     skos:notation "3" ;
     skos:prefLabel "Corporate Support"@en , "Soporte Corporativo"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> ;
-    skos:narrower <http://id.unece.org/activity/activity/3.1> , <http://id.unece.org/activity/activity/3.2> , <http://id.unece.org/activity/activity/3.3> , <http://id.unece.org/activity/activity/3.4> , <http://id.unece.org/activity/activity/3.5> , <http://id.unece.org/activity/activity/3.6> , <http://id.unece.org/activity/activity/3.7> , <http://id.unece.org/activity/activity/3.8> , <http://id.unece.org/activity/activity/3.9> , <http://id.unece.org/activity/activity/3.10> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/officialStatistics> ;
+    skos:narrower <http://id.unece.org/activities/activity/3.1> , <http://id.unece.org/activities/activity/3.2> , <http://id.unece.org/activities/activity/3.3> , <http://id.unece.org/activities/activity/3.4> , <http://id.unece.org/activities/activity/3.5> , <http://id.unece.org/activities/activity/3.6> , <http://id.unece.org/activities/activity/3.7> , <http://id.unece.org/activities/activity/3.8> , <http://id.unece.org/activities/activity/3.9> , <http://id.unece.org/activities/activity/3.10> .
 
-<http://id.unece.org/activity/activityArea/4> a coos:ActivityArea ;
+<http://id.unece.org/activities/activityArea/4> a coos:ActivityArea ;
     skos:notation "4" ;
     skos:prefLabel "Production"@en , "Producción"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/officialStatistics> ;
-    skos:exactMatch <http://id.unece.org/activity/statisticalProductionProcess> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/officialStatistics> ;
+    skos:exactMatch <http://id.unece.org/activities/statisticalProductionProcess> .
 
-<http://id.unece.org/activity/activity/1.1> a coos:Activity ;
+<http://id.unece.org/activities/activity/1.1> a coos:Activity ;
     skos:notation "1.1" ;
     skos:prefLabel "Define Vision"@en , "Definir la Visión"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/1> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/1> .
 
-<http://id.unece.org/activity/activity/1.2> a coos:Activity ;
+<http://id.unece.org/activities/activity/1.2> a coos:Activity ;
     skos:notation "1.2" ;
     skos:prefLabel "Govern and Lead"@en , "Gobierno y Liderazgo"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/1> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/1> .
 
-<http://id.unece.org/activity/activity/1.3> a coos:Activity ;
+<http://id.unece.org/activities/activity/1.3> a coos:Activity ;
     skos:notation "1.3" ;
     skos:prefLabel "Manage Strategic Collaboration and Cooperation"@en , "Administrar la Colaboración y Cooperación Estratégicas"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/1> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/1> .
 
-<http://id.unece.org/activity/activity/2.1> a coos:Activity ;
+<http://id.unece.org/activities/activity/2.1> a coos:Activity ;
     skos:notation "2.1" ;
     skos:prefLabel "Plan Capability Improvements"@en , "Planificar Mejoras a las Capacidades"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/2> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/2> .
 
-<http://id.unece.org/activity/activity/2.2> a coos:Activity ;
+<http://id.unece.org/activities/activity/2.2> a coos:Activity ;
     skos:notation "2.2" ;
     skos:prefLabel "Develop Capability Improvements"@en , "Desarrollar Mejoras a las Capacidades"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/2> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/2> .
 
-<http://id.unece.org/activity/activity/2.3> a coos:Activity ;
+<http://id.unece.org/activities/activity/2.3> a coos:Activity ;
     skos:notation "2.3" ;
     skos:prefLabel "Monitor Capability Improvements"@en , "Monitorear Mejoras a las Capacidades"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/2> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/2> .
 
-<http://id.unece.org/activity/activity/2.4> a coos:Activity ;
+<http://id.unece.org/activities/activity/2.4> a coos:Activity ;
     skos:notation "2.4" ;
     skos:prefLabel "Transfer Support of Capability Improvements"@en , "Soporte de la Transferencia a las Mejoras a las Capacidades"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/2> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/2> .
 
-<http://id.unece.org/activity/activity/3.1> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.1> a coos:Activity ;
     skos:notation "3.1" ;
     skos:prefLabel "Manage Business Performance and Legislation"@en , "Administrar el Desempeño y Legislación de los Procesos"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.2> a coos:Activity , coos:StatisticalActivity ;
+<http://id.unece.org/activities/activity/3.2> a coos:Activity , coos:StatisticalActivity ;
     skos:notation "3.2" ;
     skos:prefLabel "Manage Statistical Methodology"@en , "Administrar la Metodología Estadística"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.3> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.3> a coos:Activity ;
     skos:notation "3.3" ;
     skos:prefLabel "Manage Quality"@en , "Administrar la Calidad"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> ;
-    coos:supports <http://id.unece.org/activity/overarchingActivity/0.1> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> ;
+    coos:supports <http://id.unece.org/activities/overarchingActivity/0.1> .
 
-<http://id.unece.org/activity/activity/3.4> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.4> a coos:Activity ;
     skos:notation "3.4" ;
     skos:prefLabel "Manage Information and Knowledge"@en , "Administrar la Información y el Conocimiento"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.5> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.5> a coos:Activity ;
     skos:notation "3.5" ;
     skos:prefLabel "Manage Consumers"@en , "Adminitrar los Consumidores"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.6> a coos:Activity , coos:StatisticalActivity ;
+<http://id.unece.org/activities/activity/3.6> a coos:Activity , coos:StatisticalActivity ;
     skos:notation "3.6" ;
     skos:prefLabel "Manage Data Suppliers"@en , "Administrar a los Proveedores de Datos"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.7> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.7> a coos:Activity ;
     skos:notation "3.7" ;
     skos:prefLabel "Manage Finances"@en , "Administrar las Finanzas"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.8> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.8> a coos:Activity ;
     skos:notation "3.8" ;
     skos:prefLabel "Manage Human Resources"@en , "Administrar los Recursos Humanos"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.9> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.9> a coos:Activity ;
     skos:notation "3.9" ;
     skos:prefLabel "Manage Information Technology (IT)"@en , "Administrar las Tecnologías de la Información (TI)"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
-<http://id.unece.org/activity/activity/3.10> a coos:Activity ;
+<http://id.unece.org/activities/activity/3.10> a coos:Activity ;
     skos:notation "3.10" ;
     skos:prefLabel "Manage Buildings and Physical Space"@en , "Administrar Edificios y Espacios Físicos"@es ;
-    skos:inScheme <http://id.unece.org/activity/gamso> ;
-    skos:broader <http://id.unece.org/activity/activityArea/3> .
+    skos:inScheme <http://id.unece.org/activities/gamso> ;
+    skos:broader <http://id.unece.org/activities/activityArea/3> .
 
 # The GSBPM overarching processes
 
-<http://id.unece.org/activity/overarchingActivity/0.1> a coos:OverarchingActivity ;
+<http://id.unece.org/activities/overarchingActivity/0.1> a coos:OverarchingActivity ;
     skos:notation "0.1"	;
     skos:prefLabel "Quality Management"@en , "Gestion de la qualité"@fr , "Administración de la Calidad"@es ;
-    coos:uses <http://id.unece.org/activity/activity/3.3> .
+    coos:uses <http://id.unece.org/activities/activity/3.3> .
 
-<http://id.unece.org/activity/overarchingActivity/0.2> a coos:OverarchingActivity ;
+<http://id.unece.org/activities/overarchingActivity/0.2> a coos:OverarchingActivity ;
     skos:notation "0.2"	;
     skos:prefLabel "Metadata Management"@en , "Gestion des métadonnées"@fr , "Administración de Metadatos"@es .
 
-<http://id.unece.org/activity/overarchingActivity/0.3> a coos:OverarchingActivity ;
+<http://id.unece.org/activities/overarchingActivity/0.3> a coos:OverarchingActivity ;
     skos:notation "0.3"	;
     skos:prefLabel "Data Management"@en , "Gestion des données"@fr , "Administración de Datos"@es .
 
 # The GSBPM phases and sub-process
 
-<http://id.unece.org/activity/phase/1> a coos:Phase ;
+<http://id.unece.org/activities/phase/1> a coos:Phase ;
     skos:notation "1" ;
     skos:prefLabel "Specify Needs"@en , "Especificación de Necesidades"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/1.1> , <http://id.unece.org/activity/subProcess/1.2> , <http://id.unece.org/activity/subProcess/1.3> , <http://id.unece.org/activity/subProcess/1.4> , <http://id.unece.org/activity/subProcess/1.5> , <http://id.unece.org/activity/subProcess/1.6> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/1.1> , <http://id.unece.org/activities/subProcess/1.2> , <http://id.unece.org/activities/subProcess/1.3> , <http://id.unece.org/activities/subProcess/1.4> , <http://id.unece.org/activities/subProcess/1.5> , <http://id.unece.org/activities/subProcess/1.6> .
 
-<http://id.unece.org/activity/phase/2> a coos:Phase ;
+<http://id.unece.org/activities/phase/2> a coos:Phase ;
     skos:notation "2" ;
     skos:prefLabel "Design"@en , "Diseño"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/2.1> , <http://id.unece.org/activity/subProcess/2.2> , <http://id.unece.org/activity/subProcess/2.3> , <http://id.unece.org/activity/subProcess/2.4> , <http://id.unece.org/activity/subProcess/2.5> , <http://id.unece.org/activity/subProcess/2.6> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/2.1> , <http://id.unece.org/activities/subProcess/2.2> , <http://id.unece.org/activities/subProcess/2.3> , <http://id.unece.org/activities/subProcess/2.4> , <http://id.unece.org/activities/subProcess/2.5> , <http://id.unece.org/activities/subProcess/2.6> .
 
-<http://id.unece.org/activity/phase/3> a coos:Phase ;
+<http://id.unece.org/activities/phase/3> a coos:Phase ;
     skos:notation "3" ;
     skos:prefLabel "Build"@en , "Construcción"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/3.1> , <http://id.unece.org/activity/subProcess/3.2> , <http://id.unece.org/activity/subProcess/3.3> , <http://id.unece.org/activity/subProcess/3.4> , <http://id.unece.org/activity/subProcess/3.5> , <http://id.unece.org/activity/subProcess/3.6> , <http://id.unece.org/activity/subProcess/3.7> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/3.1> , <http://id.unece.org/activities/subProcess/3.2> , <http://id.unece.org/activities/subProcess/3.3> , <http://id.unece.org/activities/subProcess/3.4> , <http://id.unece.org/activities/subProcess/3.5> , <http://id.unece.org/activities/subProcess/3.6> , <http://id.unece.org/activities/subProcess/3.7> .
 
-<http://id.unece.org/activity/phase/4> a coos:Phase ;
+<http://id.unece.org/activities/phase/4> a coos:Phase ;
     skos:notation "4" ;
     skos:prefLabel "Collect"@en , "Recolección"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/4.1> , <http://id.unece.org/activity/subProcess/4.2> , <http://id.unece.org/activity/subProcess/4.3> , <http://id.unece.org/activity/subProcess/4.4> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/4.1> , <http://id.unece.org/activities/subProcess/4.2> , <http://id.unece.org/activities/subProcess/4.3> , <http://id.unece.org/activities/subProcess/4.4> .
 
-<http://id.unece.org/activity/phase/5> a coos:Phase ;
+<http://id.unece.org/activities/phase/5> a coos:Phase ;
     skos:notation "5" ;
     skos:prefLabel "Process"@en , "Procesamiento"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/5.1> , <http://id.unece.org/activity/subProcess/5.2> , <http://id.unece.org/activity/subProcess/5.3> , <http://id.unece.org/activity/subProcess/5.4> , <http://id.unece.org/activity/subProcess/5.5> , <http://id.unece.org/activity/subProcess/5.6> , <http://id.unece.org/activity/subProcess/5.7> , <http://id.unece.org/activity/subProcess/5.8> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/5.1> , <http://id.unece.org/activities/subProcess/5.2> , <http://id.unece.org/activities/subProcess/5.3> , <http://id.unece.org/activities/subProcess/5.4> , <http://id.unece.org/activities/subProcess/5.5> , <http://id.unece.org/activities/subProcess/5.6> , <http://id.unece.org/activities/subProcess/5.7> , <http://id.unece.org/activities/subProcess/5.8> .
 
-<http://id.unece.org/activity/phase/6> a coos:Phase ;
+<http://id.unece.org/activities/phase/6> a coos:Phase ;
     skos:notation "6" ;
     skos:prefLabel "Analyse"@en , "Analísis"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/6.1> , <http://id.unece.org/activity/subProcess/6.2> , <http://id.unece.org/activity/subProcess/6.3> , <http://id.unece.org/activity/subProcess/6.4> , <http://id.unece.org/activity/subProcess/6.5> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/6.1> , <http://id.unece.org/activities/subProcess/6.2> , <http://id.unece.org/activities/subProcess/6.3> , <http://id.unece.org/activities/subProcess/6.4> , <http://id.unece.org/activities/subProcess/6.5> .
 
-<http://id.unece.org/activity/phase/7> a coos:Phase ;
+<http://id.unece.org/activities/phase/7> a coos:Phase ;
     skos:notation "7" ;
     skos:prefLabel "Disseminate"@en , "Difusión"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/7.1> , <http://id.unece.org/activity/subProcess/7.2> , <http://id.unece.org/activity/subProcess/7.3> , <http://id.unece.org/activity/subProcess/7.4> , <http://id.unece.org/activity/subProcess/7.5> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/7.1> , <http://id.unece.org/activities/subProcess/7.2> , <http://id.unece.org/activities/subProcess/7.3> , <http://id.unece.org/activities/subProcess/7.4> , <http://id.unece.org/activities/subProcess/7.5> .
 
-<http://id.unece.org/activity/phase/8> a coos:Phase ;
+<http://id.unece.org/activities/phase/8> a coos:Phase ;
     skos:notation "8" ;
     skos:prefLabel "Evaluate"@en , "Evaluación"@es ;
-    skos:inScheme <http://id.unece.org/activity/gsbpm> ;
-    skos:broader <http://id.unece.org/activity/statisticalProductionProcess> ;
-    skos:narrower <http://id.unece.org/activity/subProcess/8.1> , <http://id.unece.org/activity/subProcess/8.2> , <http://id.unece.org/activity/subProcess/8.3> .
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
+    skos:narrower <http://id.unece.org/activities/subProcess/8.1> , <http://id.unece.org/activities/subProcess/8.2> , <http://id.unece.org/activities/subProcess/8.3> .
 
-<http://id.unece.org/activity/subProcess/1.1> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/1.1> a coos:SubProcess ;
     skos:notation "1.1" ;
 	skos:prefLabel "Identify needs"@en , "Identificar necesidades"@es ;
-    skos:broader <http://id.unece.org/activity/phase/1> .
+    skos:broader <http://id.unece.org/activities/phase/1> .
 
-<http://id.unece.org/activity/subProcess/1.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/1.2> a coos:SubProcess ;
     skos:notation "1.2" ;
     skos:prefLabel "Consult and confirm needs"@en , "Consultar y confirmar necesidades"@es ;
-    skos:broader <http://id.unece.org/activity/phase/1> .
+    skos:broader <http://id.unece.org/activities/phase/1> .
 
-<http://id.unece.org/activity/subProcess/1.3> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/1.3> a coos:SubProcess ;
     skos:notation "1.3" ;
 	skos:prefLabel "Establish output objectives"@en , "Establecer objetivos de salidas"@es ;
-    skos:broader <http://id.unece.org/activity/phase/1> .
+    skos:broader <http://id.unece.org/activities/phase/1> .
 
-<http://id.unece.org/activity/subProcess/1.4> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/1.4> a coos:SubProcess ;
     skos:notation "1.4" ;
 	skos:prefLabel "Identify concepts"@en , "Identificar conceptos"@es ;
-    skos:broader <http://id.unece.org/activity/phase/1> .
+    skos:broader <http://id.unece.org/activities/phase/1> .
 
-<http://id.unece.org/activity/subProcess/1.5> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/1.5> a coos:SubProcess ;
     skos:notation "1.5" ;
     skos:prefLabel "Check data availability"@en , "Revisar la disponibilidad de datos"@es ;
-    skos:broader <http://id.unece.org/activity/phase/1> .
+    skos:broader <http://id.unece.org/activities/phase/1> .
 
-<http://id.unece.org/activity/subProcess/1.6> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/1.6> a coos:SubProcess ;
     skos:notation "1.6" ;
     skos:prefLabel "Prepare and submit business case"@en , "Preparar y enviar el caso de negocio"@es;
-    skos:broader <http://id.unece.org/activity/phase/1> .
+    skos:broader <http://id.unece.org/activities/phase/1> .
 
-<http://id.unece.org/activity/subProcess/2.1> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/2.1> a coos:SubProcess ;
     skos:notation "2.1" ;
     skos:prefLabel "Design outputs"@en , "Diseñar salidas"@es ;
-    skos:broader <http://id.unece.org/activity/phase/2> .
+    skos:broader <http://id.unece.org/activities/phase/2> .
 
-<http://id.unece.org/activity/subProcess/2.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/2.2> a coos:SubProcess ;
     skos:notation "2.2" ;
     skos:prefLabel "Design variable descriptions"@en , "Diseñar descripciones de variables"@es ;
-    skos:broader <http://id.unece.org/activity/phase/2> .
+    skos:broader <http://id.unece.org/activities/phase/2> .
 
-<http://id.unece.org/activity/subProcess/2.3> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/2.3> a coos:SubProcess ;
     skos:notation "2.3" ;
     skos:prefLabel "Design collection"@en , "Diseñar recolección"@es ;
-    skos:broader <http://id.unece.org/activity/phase/2> .
+    skos:broader <http://id.unece.org/activities/phase/2> .
 
-<http://id.unece.org/activity/subProcess/2.4> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/2.4> a coos:SubProcess ;
     skos:notation "2.4" ;
     skos:prefLabel "Design frame and sample"@en , "Diseñar marco y muestra"@es;
-    skos:broader <http://id.unece.org/activity/phase/2> .
+    skos:broader <http://id.unece.org/activities/phase/2> .
 
-<http://id.unece.org/activity/subProcess/2.5> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/2.5> a coos:SubProcess ;
     skos:notation "2.5" ;
     skos:prefLabel "Design processing and analysis"@en , "Diseñar procesamiento y análisis"@es ;
-    skos:broader <http://id.unece.org/activity/phase/2> .
+    skos:broader <http://id.unece.org/activities/phase/2> .
 
-<http://id.unece.org/activity/subProcess/2.6> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/2.6> a coos:SubProcess ;
     skos:notation "2.6" ;
 	skos:prefLabel "Design production systems and workflow"@en , "Diseñar sistemas de producción y flujo de trabajo"@es ;
-    skos:broader <http://id.unece.org/activity/phase/2> .
+    skos:broader <http://id.unece.org/activities/phase/2> .
 
-<http://id.unece.org/activity/subProcess/3.1> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/3.1> a coos:SubProcess ;
     skos:notation "3.1" ;
     skos:prefLabel "Reuse or build collection instruments"@en , "Reutilizar o construir instrumentos de recolección"@es ;
-    skos:broader <http://id.unece.org/activity/phase/3> .
+    skos:broader <http://id.unece.org/activities/phase/3> .
 
-<http://id.unece.org/activity/subProcess/3.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/3.2> a coos:SubProcess ;
     skos:notation "3.2" ;
 	skos:prefLabel "Reuse or build analysis components"@en , "Reutilizar o construir componentes de análisis"@es ;
-    skos:broader <http://id.unece.org/activity/phase/3> .
+    skos:broader <http://id.unece.org/activities/phase/3> .
 
-<http://id.unece.org/activity/subProcess/3.3> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/3.3> a coos:SubProcess ;
     skos:notation "3.3" ;
 	skos:prefLabel "Reuse or build dissemination components"@en , "Reutilizar o construir componentes de difusión"@es ;
-    skos:broader <http://id.unece.org/activity/phase/3> .
+    skos:broader <http://id.unece.org/activities/phase/3> .
 
-<http://id.unece.org/activity/subProcess/3.4> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/3.4> a coos:SubProcess ;
     skos:notation "3.4" ;
 	skos:prefLabel "Configure workflows"@en , "Configurar flujos de trabajo"@es ;
-    skos:broader <http://id.unece.org/activity/phase/3> .
+    skos:broader <http://id.unece.org/activities/phase/3> .
 
-<http://id.unece.org/activity/subProcess/3.5> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/3.5> a coos:SubProcess ;
     skos:notation "3.5" ;
     skos:prefLabel "Test production systems"@en , "Probar sistemas de producción"@es ;
-    skos:broader <http://id.unece.org/activity/phase/3> .
+    skos:broader <http://id.unece.org/activities/phase/3> .
 
-<http://id.unece.org/activity/subProcess/3.6> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/3.6> a coos:SubProcess ;
     skos:notation "3.6" ;
     skos:prefLabel "Test statistical business process"@en , "Probar procesos estadísticos"@es ;
-    skos:broader <http://id.unece.org/activity/phase/3> .
+    skos:broader <http://id.unece.org/activities/phase/3> .
 
-<http://id.unece.org/activity/subProcess/3.7> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/3.7> a coos:SubProcess ;
     skos:notation "3.7" ;
 	skos:prefLabel "Finalise production systems"@en , "Finalizar sistemas de producción"@es ;
-	skos:broader <http://id.unece.org/activity/phase/3> .
+	skos:broader <http://id.unece.org/activities/phase/3> .
 
-<http://id.unece.org/activity/subProcess/4.1> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/4.1> a coos:SubProcess ;
     skos:notation "4.1" ;
     skos:prefLabel "Create frame and select sample"@en , "Crear marco y seleccionar muestra"@es ;
-    skos:broader <http://id.unece.org/activity/phase/4> .
+    skos:broader <http://id.unece.org/activities/phase/4> .
 
-<http://id.unece.org/activity/subProcess/4.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/4.2> a coos:SubProcess ;
     skos:notation "4.2" ;
     skos:prefLabel "Set up collection"@en , "Establecer recolección"@es ;
-    skos:broader <http://id.unece.org/activity/phase/4> .
+    skos:broader <http://id.unece.org/activities/phase/4> .
 
-<http://id.unece.org/activity/subProcess/4.3> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/4.3> a coos:SubProcess ;
     skos:notation "4.3" ;
     skos:prefLabel "Run collection"@en , "Ejecutar recolección"@es ;
-    skos:broader <http://id.unece.org/activity/phase/4> .
+    skos:broader <http://id.unece.org/activities/phase/4> .
 
-<http://id.unece.org/activity/subProcess/4.4> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/4.4> a coos:SubProcess ;
     skos:notation "4.4" ;
     skos:prefLabel "Finalise collection"@en , "Finalizar recolección"@es ;
-    skos:broader <http://id.unece.org/activity/phase/4> .
+    skos:broader <http://id.unece.org/activities/phase/4> .
 
-<http://id.unece.org/activity/subProcess/5.1> a coos:SubProcess ; 
+<http://id.unece.org/activities/subProcess/5.1> a coos:SubProcess ; 
     skos:notation "5.1" ;
     skos:prefLabel "Integrate data"@en , "Integrar datos"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/5.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/5.2> a coos:SubProcess ;
     skos:notation "5.2" ;
     skos:prefLabel "Classify and code"@en , "Clasificar y codificar"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/5.3> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/5.3> a coos:SubProcess ;
     skos:notation "5.3" ;
 	skos:prefLabel "Review and validate"@en , "Revisar y validar"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/5.4> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/5.4> a coos:SubProcess ;
     skos:notation "5.4" ;
     skos:prefLabel "Edit and impute"@en , "Editar e imputar"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/5.5> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/5.5> a coos:SubProcess ;
     skos:notation "5.5" ;
     skos:prefLabel "Derive new variables and units"@en , "Derivar nuevas variables y unidades"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/5.6> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/5.6> a coos:SubProcess ;
     skos:notation "5.6" ;
     skos:prefLabel "Calculate weights"@en , "Calcular pesos"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/5.7> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/5.7> a coos:SubProcess ;
     skos:notation "5.7" ;
     skos:prefLabel "Calculate aggregates"@en , "Calcular agregados"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/5.8> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/5.8> a coos:SubProcess ;
     skos:notation "5.8" ;
     skos:prefLabel "Finalise data files"@en , "Finalizar archivos de datos"@es ;
-    skos:broader <http://id.unece.org/activity/phase/5> .
+    skos:broader <http://id.unece.org/activities/phase/5> .
 
-<http://id.unece.org/activity/subProcess/6.1> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/6.1> a coos:SubProcess ;
     skos:notation "6.1" ;
     skos:prefLabel "Prepare draft outputs"@en , "Preparar salidas preliminares"@es ;
-    skos:broader <http://id.unece.org/activity/phase/6> .
+    skos:broader <http://id.unece.org/activities/phase/6> .
 
-<http://id.unece.org/activity/subProcess/6.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/6.2> a coos:SubProcess ;
     skos:notation "6.2" ;
     skos:prefLabel "Validate outputs"@en , "Validar salidas"@es ;
-    skos:broader <http://id.unece.org/activity/phase/6> .
+    skos:broader <http://id.unece.org/activities/phase/6> .
 
-<http://id.unece.org/activity/subProcess/6.3> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/6.3> a coos:SubProcess ;
     skos:notation "6.3" ;
     skos:prefLabel "Interpret and explain outputs"@en , "Interpretar y explicar salidas"@es ;
-    skos:broader <http://id.unece.org/activity/phase/6> .
+    skos:broader <http://id.unece.org/activities/phase/6> .
 
-<http://id.unece.org/activity/subProcess/6.4> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/6.4> a coos:SubProcess ;
     skos:notation "6.4" ;
     skos:prefLabel "Apply disclosure control"@en , "Aplicar control de divulgación"@es ;
-    skos:broader <http://id.unece.org/activity/phase/6> .
+    skos:broader <http://id.unece.org/activities/phase/6> .
 
-<http://id.unece.org/activity/subProcess/6.5> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/6.5> a coos:SubProcess ;
     skos:notation "6.5" ;
     skos:prefLabel "Finalise outputs"@en , "Finalizar salidas"@es ;
-    skos:broader <http://id.unece.org/activity/phase/6> .
+    skos:broader <http://id.unece.org/activities/phase/6> .
 
-<http://id.unece.org/activity/subProcess/7.1> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/7.1> a coos:SubProcess ;
     skos:notation "7.1" ;
     skos:prefLabel "Update output systems"@en , "Actualizar sistemas de salida"@es ;
-    skos:broader <http://id.unece.org/activity/phase/7> .
+    skos:broader <http://id.unece.org/activities/phase/7> .
 
-<http://id.unece.org/activity/subProcess/7.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/7.2> a coos:SubProcess ;
     skos:notation "7.2" ;
     skos:prefLabel "Produce dissemination products"@en , "Producir productos de difusión"@es ;
-    skos:broader <http://id.unece.org/activity/phase/7> .
+    skos:broader <http://id.unece.org/activities/phase/7> .
 
-<http://id.unece.org/activity/subProcess/7.3> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/7.3> a coos:SubProcess ;
     skos:notation "7.3" ;
     skos:prefLabel "Manage release of dissemination products"@en , "Administrar la publicación de productos de difusión"@es ;
-    skos:broader <http://id.unece.org/activity/phase/7> .
+    skos:broader <http://id.unece.org/activities/phase/7> .
 
-<http://id.unece.org/activity/subProcess/7.4> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/7.4> a coos:SubProcess ;
     skos:notation "7.4" ;
     skos:prefLabel "Promote dissemination products"@en , "Promover los productos de difusión"@es ;
-    skos:broader <http://id.unece.org/activity/phase/7> .
+    skos:broader <http://id.unece.org/activities/phase/7> .
 
-<http://id.unece.org/activity/subProcess/7.5> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/7.5> a coos:SubProcess ;
     skos:notation "7.5" ;
     skos:prefLabel "Manage user support"@en , "Administrar el soporte al usuario"@es ;
-    skos:broader <http://id.unece.org/activity/phase/7> .
+    skos:broader <http://id.unece.org/activities/phase/7> .
 
-<http://id.unece.org/activity/subProcess/8.1> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/8.1> a coos:SubProcess ;
     skos:notation "8.1" ;
     skos:prefLabel "Gather evaluation inputs"@en , "Obtener entradas de evaluación"@es ;
-    skos:broader <http://id.unece.org/activity/phase/8> .
+    skos:broader <http://id.unece.org/activities/phase/8> .
 
-<http://id.unece.org/activity/subProcess/8.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/8.2> a coos:SubProcess ;
     skos:notation "8.2" ;
     skos:prefLabel "Conduct evaluation"@en , "Conducir la evaluación"@es ;
-    skos:broader <http://id.unece.org/activity/phase/8> .
+    skos:broader <http://id.unece.org/activities/phase/8> .
 
-<http://id.unece.org/activity/subProcess/8.2> a coos:SubProcess ;
+<http://id.unece.org/activities/subProcess/8.2> a coos:SubProcess ;
     skos:notation "8.3" ;
     skos:prefLabel "Agree an action plan"@en , "Acordar un plan de acción"@es ;
-    skos:broader <http://id.unece.org/activity/phase/8> .
+    skos:broader <http://id.unece.org/activities/phase/8> .
 
 # The GAMSO/GSBPM concept schemes (see issue 2)
 
-<http://id.unece.org/activity/gamso> a skos:ConceptScheme ;
+<http://id.unece.org/activities/gamso> a skos:ConceptScheme ;
     skos:prefLabel "Generic Activity Model for Statistical Organisations"@en , "Modelo Genérico de Actividades para las Organizaciones Estadísticas"@es ;
     skos:notation "GAMSO" ;
     pav:version  "v1.2" ;
     foaf:homePage <https://statswiki.unece.org/display/GAMSO/GAMSO+v1.2> ;
-    dcterms:hasPart <http://id.unece.org/activity/gsbpm> ;
-    skos:hasTopConcept <http://id.unece.org/activity/officialStatistics> .
+    dcterms:hasPart <http://id.unece.org/activities/gsbpm> ;
+    skos:hasTopConcept <http://id.unece.org/activities/officialStatistics> .
 
-<http://id.unece.org/activity/gsbpm> a skos:ConceptScheme ;
+<http://id.unece.org/activities/gsbpm> a skos:ConceptScheme ;
     skos:prefLabel "Generic Statistical Business Process Model"@en , "Modelo Genérico del Proceso Estadístico"@es;
     skos:notation "GSBPM" ;
     pav:version  "v5.1" ;
     foaf:homePage <https://statswiki.unece.org/display/GSBPM/GSBPM+v5.1> ;
-    dcterms:isPartOf <http://id.unece.org/activity/gamso> ;
-    skos:hasTopConcept <http://id.unece.org/activity/statisticalProductionProcess> .
+    dcterms:isPartOf <http://id.unece.org/activities/gamso> ;
+    skos:hasTopConcept <http://id.unece.org/activities/statisticalProductionProcess> .

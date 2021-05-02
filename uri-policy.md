@@ -41,17 +41,11 @@ Instance resources URIs generally conform to the following structure:
 
 Examples:
 
-  * ```http://id.unece.org/activity/subProcess/6.3``` is the URI of the GSBPM sub-process 6.3 ("Interpret and explain outputs")
-  * ```http://id.unece.org/activity/activity/3.7``` is the URI of the GAMSO activity 3.7 ("Manage Finances")
+  * ```http://id.unece.org/activities/subProcess/6.3``` is the URI of the GSBPM sub-process 6.3 ("Interpret and explain outputs")
+  * ```http://id.unece.org/activities/activity/3.7``` is the URI of the GAMSO activity 3.7 ("Manage Finances")
  
 The following specificities apply:
 
-  * When the resource is well-known enough in the ```domain``` context, the ```type``` part can be omitted: ```http://id.unece.org/activity/gamso```
-  * When no standard identifier exist, a pseudo identifier will be constructed from the usual name: ```http://id.unece.org/activity/officialStatistics```
-  * Acronyms can be used for the ```type``` segment when there is no ambiguity: ```http://id.unece.org/organization/nsi/gus```
-
-
-## Notes
-
-  * URI policy enforcement and management should be part of the COOS governance.
-  * Use of plural for domains (activities, organizations...) would avoid confusion and redundancy: ```http://id.unece.org/activities/activity/3.7```
+  * When the resource is well-known enough in the ```domain``` context, the ```type``` part can be omitted: ```http://id.unece.org/activities/gamso```
+  * When no standard identifier exist, a pseudo identifier will be constructed from the usual name: ```http://id.unece.org/activities/officialStatistics```
+  * Acronyms can be used for the ```type``` segment when there is no ambiguity: ```http://id.unece.org/organizations/nsi/gus```
