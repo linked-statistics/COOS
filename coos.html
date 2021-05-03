@@ -168,6 +168,10 @@
 						<td><a href="#activities">Section x. Activities</a></td>
 					</tr>
 					<tr>
+						<td>coos:Capability</td>
+						<td><a href="#activities">Section x. Activities</a></td>
+					</tr>
+					<tr>
 						<td>coos:StatisticalProgram</td>
 						<td><a href="#activities">Section x. Activities</a></td>
 					</tr>
@@ -300,7 +304,7 @@
 
 				<p>In addition, we need two properties to describe how an <code>Activity</code> relates to a <code>StatisticalProductionActivity</code>:</p>
 				<ul>
-					<li><code>supports</code>: it means to enable to perform or function. We say that an <code>Activity</code>, e.g. GAMOS Manage Statistical Methods, <code>supports</code> a <code>StatisticalProductionActivity</code>, e.g. a GSBPM Phase.</li>
+					<li><code>supports</code>: it means to enable to perform or function. We say that an <code>Activity</code>, e.g. GAMSO Manage Statistical Methods, <code>supports</code> a <code>StatisticalProductionActivity</code>, e.g. a GSBPM Phase.</li>
 					<li><code>uses</code>: it means to require to perform or function. We say that a <code>StatisticalProductionActivity</code>, e.g. GSBPM Overarching Processes, <code>uses</code> an <code>Activity</code>, e.g. Manage IT.</li>
 				</ul>
 				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They are weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas <code>part/whole</code> are about constitution.</p>
@@ -324,6 +328,21 @@
 				</div>
 
 			</section>
+
+			<section id="activities-other">
+				<h3>Other classes linked to activities</h3>
+				<p>The following classes are defined:</p>
+				<ul>
+					<li><code>StatisticalProgram</code></li>
+					<li><code>StatisticalProgramCycle</code></li>
+					<li><code>Capability</code></li>
+				</ul>
+
+				<div class="issue">
+					<p>Write out this section.</p>
+				</div>
+
+			</section>
 		</section>
 
 		<section id="organizations">
@@ -336,6 +355,7 @@
 			</figure>
 			
 			<ul>
+				<li><code>StatisticalOrganization</code>: Organization, or unit within an organization, whose primary role is the production of official statistics.</li>
 				<li><code>NationalStatisticalInstitute</code>: The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system. The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc.</li>
 				<li><code>InternationalAgency</code>: A body with an international membership, scope, or presence whose primary role is the production of official statistics. There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations.</li>
 			</ul>	

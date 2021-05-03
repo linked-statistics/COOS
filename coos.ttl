@@ -22,15 +22,15 @@
 
 <http://id.unece.org/def/coos> a owl:Ontology, voaf:Vocabulary ;
     dc:title "COOS: a core ontology for Official Statistics"@en , "COOS : une ontologie centrale pour la Statistique Officielle"@fr , "COOS: Una ontología básica para las Estadísticas Oficiales"@es ;
-    dc:contributor "Guillaume Duffes" , "Dan Gillman" , "Flavio Rizzolo" , "Francine Kalonji", "Juan Muñoz" ;
+    dc:contributor "Guillaume Duffes" , "Dan Gillman" , "Flavio Rizzolo" , "Francine Kalonji", "Juan Muñoz" , "Florian Vucko" ;
     dc:creator "Franck Cotton" ;
     vann:preferredNamespacePrefix "coos" ;
     vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
     dc:rights "Copyright © 2021 Unece" ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    voaf:classNumber "14"^^xsd:integer ;
+    voaf:classNumber "19"^^xsd:integer ;
     voaf:propertyNumber "2"^^xsd:integer ;
-    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" .
+    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" .
 
 
 #################################################################
@@ -98,6 +98,10 @@ coos:Task a rdfs:Class , owl:Class ;
     skos:definition "Statistical activity scoped by a given GSBPM sub-process"@en , "Activité statistique incluse dans un sous-processuS GSBPM donné"@fr , "Actividad estadística limitada por un subproceso dado de GSBPM"@es ;
     rdfs:comment "Tasks can be more or less fine-grained and form hierarchies"@en , "Les tâches peuvent être de granularité plus ou moins fine et former des hiérarchies"@fr , "Las tareas pueden tener un granularidad mayor o menor y conformar jerarquías"@es ;
     rdfs:subClassOf coos:StatisticalActivity ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:Capability a rdfs:Class , owl:Class ;
+    rdfs:label "Capability"@en , "Capacity"@fr , "Capacidad"@es ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Additional useful elements from GSIM
