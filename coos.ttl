@@ -137,17 +137,20 @@ coos:StatisticalDataset a rdfs:Class , owl:Class ;
 
 coos:StatisticalOrganization a rdfs:Class , owl:Class ;
     rdfs:label "Statistical organization"@en , "Organization statistique"@fr , "Organización estadística"@es ;
+    skos:definition "Organization, or unit within an organization, whose primary role is the production of official statistics."@en ;
     rdfs:subClassOf org:Organization , prov:Organization ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:NationalStatisticalInstitute a rdfs:Class , owl:Class ;
     rdfs:label "National statistical institute"@en , "Institut national de statistiques"@fr ,"Instituto nacional de estadística"@es ;
+    skos:definition: "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:InternationalAgency ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:InternationalAgency a rdfs:Class , owl:Class ;
     rdfs:label "International agency"@en , "Agence internationale"@fr , "Agencia internacional"@es ;
+    skos:definition "A body with an international membership, scope, or presence whose primary role is the production of official statistics."@en ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:NationalStatisticalInstitute ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -174,6 +177,7 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
 
 coos:uses a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "uses"@en , "utilise"@fr , "usos"@es ;
+    skos:definition "To require to perform or function" ;
     rdfs:domain coos:StatisticalProductionActivity ;
     rdfs:range coos:Activity ;
     owl:inverseOf coos:supports ;
@@ -181,6 +185,7 @@ coos:uses a rdfs:Property , owl:ObjectProperty ;
 
 coos:supports a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "supports"@en , "supporte"@fr , "soportes"@es ;
+    skos:definition "To enable to perform or function."@en ;
     rdfs:domain coos:Activity ;
     rdfs:range coos:StatisticalProductionActivity ;
     owl:inverseOf coos:uses ;
