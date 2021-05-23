@@ -259,11 +259,15 @@
 			</table>
 
 			<div class="issue">
-				<p>Add VOAF, VANN and CC.</p>
+				<p>Note on vocabularies:</p>
+				<ul>
+					<li>VOAF, VANN and CC are used in the RDF file, but not here</li>
+					<li>PAV does not seem to be used</li>
+				</ul>
 			</div>
 
 			<p>RDF, RDFS, OWL and XSD vocabularies or namespaces are also used, with their usual URIs and prefixes.</p>
-			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[turtle]]. Unless otherwise specified, these examples use http://example.org/ns/ as a base namespace; resource names between angle brackets represent URIs in this namespace. Note however that individual resource names used as examples are entirely fictitious.</p>
+			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[turtle]]. Unless otherwise specified, these examples use the http://example.org/ns/, which will be represented by the <code>ex:</code> prefix. Note however that individual resource names used as examples are entirely fictitious.</p>
 		</section>
 
 		<section id="activities">
@@ -273,11 +277,28 @@
 				<p>A first approach to modeling statistical activities, based on the GSBPM, is presented in http://ceur-ws.org/Vol-1551/article-06.pdf. Basically, three classes are defined in this GSBPM ontology, which are depicted in the following figure.</p>
 				<p><code>StatisticalProductionActivity</code> is a subclass of both <code>prov:Activity</code> and <code>skos:Concept</code>. Using SKOS allows us to organize the activities in schemes, like GSBPM or GAMSO. Using PROV allows us to specify who undertakes an activity and what entities it consumes or produces.</p>
 
+				<pre class="example" title="Example of statistical production activity">
+				ex:produce-study a coos:StatisticalProductionActivity ;
+					rdfs:label "Produce study"@en .
+				</pre>
+
 				<p><code>Phase</code> and <code>SubProcess</code> are both subclasses of <code>StatisticalProductionActivity</code> and represent respectively the concepts of a GSBPM phase and GSBPM sub-process.</p>
 
 				<p>The ontology also defines an individual for each GSBPM phase or subprocess, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and subprocesses), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
 
 				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
+
+				<pre class="example nohighlight" title="Example of GSBPM phase and sub-process">
+				&lt;http://id.unece.org/activities/phase/2&gt; a coos:Phase ;
+					skos:notation "2" ;
+					skos:prefLabel "Design"@en ;
+					skos:narrower &lt;http://id.unece.org/activities/subProcess/2.3&gt; .
+
+				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
+					skos:notation "2.3" ;
+					skos:prefLabel "Design collection"@en ;
+					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; .
+				</pre>
 
 				<p>The following figure summarizes the vocabulary terms defined until now.</p>
 				<figure id="image-gsbpm">
@@ -323,9 +344,17 @@
 				<h3>More detailed activities</h3>
 				<p>The previous definitions stay in the framework of the GAMSO/GSBPM, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less fine-grained and form hierarchies.</p>
 
-				<div class="issue">
-					<p>Include examples of tasks.</p>
-				</div>
+				<pre class="example" title="Example of task">
+				ex:calculate-mean-wages a coos:Task ;
+					rdfs:label "Calculate mean wages"@en ;
+					skos:broader &lt;http://id.unece.org/activities/subProcess/5.7&gt; .
+
+				ex:produce-study prov:wasInformedBy ex:calculate-mean-wages .
+				</pre>
+
+				<p>We see in this example how we can use PROV to represent links between activities: here we suppose that the "Produce study" activity uses the results of the "Calculate mean wages" task.</p>
+
+				<p>As mentioned previously, the Task class can be used by NSIs to create instances for their own needs. Two NSIs can create their own "Calculate mean wages" task, and only their labels would indicate that they do similar things. In certain cases however, it could be useful to define standard sub-classes of Task for some widely used and specific types of tasks, for example record linkage or hot-deck imputation. This would allow for example to refer to relevant methodology.</p>
 
 			</section>
 

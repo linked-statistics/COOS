@@ -101,7 +101,7 @@ coos:Task a rdfs:Class , owl:Class ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:Capability a rdfs:Class , owl:Class ;
-    rdfs:label "Capability"@en , "Capacity"@fr , "Capacidad"@es ;
+    rdfs:label "Capability"@en , "Capacité"@fr , "Capacidad"@es ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Additional useful elements from GSIM
