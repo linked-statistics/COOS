@@ -102,6 +102,8 @@ coos:Task a rdfs:Class , owl:Class ;
 
 coos:Capability a rdfs:Class , owl:Class ;
     rdfs:label "Capability"@en , "Capacité"@fr , "Capacidad"@es ;
+	skos:definition "An ability a statistical organization possesses to undertake a specific activity"@en , "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
+	rdfs:comment "A capability is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills)"@en , "Une capacité n'est atteinte que par l'intégration de tous les éléments de capacité pertinents (par exemple, méthodes, processus, normes et cadres, systèmes informatiques et compétences humaines)"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Additional useful elements from GSIM

@@ -4,7 +4,7 @@
 		<title>Core Ontology for Official Statistics</title>
 		<meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
 
-		<script src='https://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
+		<script src='https://www.w3.org/Tools/respec/respec-w3c' class='remove' defer></script>
 		<script class='remove'>
 			var respecConfig = {
 				specStatus: "CG-DRAFT",
@@ -13,13 +13,22 @@
 				editors: [
 					{ name: "Franck Cotton", company: "INSEE", companyURL: "http://www.insee.fr/" }
 				],
+				authors: [
+					{ name: "Flavio Rizzolo", company: "Statistics Canada", companyURL: "https://www.statcan.gc.ca/" }
+				],
 				wg: "Semantic Statistics Community Group",
 				wgURI: "https://www.w3.org/community/semstats/",
 				wgPatentURI: "http://creativecommons.org/licenses/by/4.0/",
 				processVersion: 2018,
 				edDraftURI: "https://github.com/linked-statistics/COOS",
-				githubAPI: "https://api.github.com/repos/linked-statistics/COOS",
+				github: "https://github.com/linked-statistics/COOS",
 				localBiblio: {
+					"CSDA": {
+						"date": "Novembre 2018",
+						"href": "https://statswiki.unece.org/display/DA",
+						"publisher": "Unece",
+						"title": "Common Statistical Data Architecture (CSDA)"
+					},
 					"GAMSO": {
 						"date": "January 2019",
 						"href": "https://statswiki.unece.org/display/gamso",
@@ -66,6 +75,16 @@
 						"date": "16 March 2015",
 						"href": "https://pav-ontology.github.io/pav/",
 						"title": "PAV ontology: provenance, authoring and versioning"
+					},
+					"PROV-RL":{
+						"authors": [
+							"Franck Cotton",
+							"Guillaume Duffes",
+							"Flavio Rizzolo"
+						],
+						"date": "October 2019",
+						"href": "http://ceur-ws.org/Vol-2549/article-08.pdf",
+						"title": "Using PROV-O to Represent Lineage in Statistical Processes: A Record Linkage Example"
 					}
 				}
 			};
@@ -372,8 +391,13 @@
 					<li><code>Capability</code></li>
 				</ul>
 
-				<div class="issue">
-					<p>Write out this section.</p>
+				<p>A capability is an ability a statistical organization possesses to undertake a specific activity. It is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills). The notion of capability is often used in enterprise architecture approaches like TOGAF or, in the statistical domain, the Common Statistical Data Architecture [[CSDA]]. Capabilities can be mapped to strategic goals and objectives and provide a useful starting point to map lower level elements such as business process and functions, applications and technology assets.</p>
+
+				<div class="issue" title="Remaining work for this section">
+					<ul>
+						<li>Write the rest of this section: introduction and description of StatisticalProgram and StatisticalProgramCycle</li>
+						<li>Give a good example of capability from CSDA (Data Ingestion, Data Transformation, Data Integration, Provisioning, Metadata Management, Data Governance, Provenance & Lineage, Security & Information Assurance)</li>
+					</ul>
 				</div>
 
 			</section>
