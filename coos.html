@@ -14,7 +14,8 @@
 					{ name: "Franck Cotton", company: "INSEE", companyURL: "http://www.insee.fr/" }
 				],
 				authors: [
-					{ name: "Flavio Rizzolo", company: "Statistics Canada", companyURL: "https://www.statcan.gc.ca/" }
+					{ name: "Flavio Rizzolo", company: "Statistics Canada", companyURL: "https://www.statcan.gc.ca/" },
+					{ name: "Daniel Gillman", company: "Bureau of Labor Statistics", companyURL: "https://www.bls.gov/" }
 				],
 				wg: "Semantic Statistics Community Group",
 				wgURI: "https://www.w3.org/community/semstats/",
@@ -461,6 +462,44 @@
 			<figure id="image-prod">
 				<img src="img/coos-prod.png" alt="Product vocabulary overview" title="Product vocabulary overview"/>
 				<figcaption>Product vocabulary overview</figcaption>
+			</figure>
+
+			<div class="issue">
+				<ul>
+					<li>Review the following text (reproduced from Dan's comment in issue #15)</li>
+					<li>Add bibliographic entry and reference for DDI-CDI</li>
+					<li>Rescale figure</li>
+				</ul>
+			</div>
+
+			<p>In DDI-CDI, four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Several of the types could be used to structure the same data. There is not a canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
+
+			<p>The types are defined roughly as follows:</p>
+
+			<ol>
+				<li>rectangular (or wide) - rows are units and columns are variables</li>
+				<li>event history (or tall or long) - rows are based on the value for each variable, one unit at a time - and this could be visualized as rows are variables and columns are units</li>
+				<li>dimensional - a pre-defined set of cells defined by the combination of categories, one from each of a set of dimensions (category sets), used to handle the value of some measure (variable) restricted to the cell</li>
+				<li>key-value - a set of values, each associated with some key</li>
+			</ol>
+
+			<p>Dimensional data are usually associated with aggregates. Key-value data are often taken from scraping the web. Even-history is used to describe events over some time period.</p>
+
+			<p>The nominal, ordinal, interval, ratio are not used to differentiate datasets. Rather, they are families of datatypes used to describe variables. Nominal data are those conforming to a finite set of categories with no other conditions (sex categories). Ordinal data are those conforming to an ordered finite set of categories, but the difference between adjacent categories is not necessarily uniform (Likert scale measures of satisfaction). Interval data are numeric with no zero (absence of quantity) defined (Celsius temperature). Ratio data are numeric with a defined zero (Kelvin temperature). These apply to any kind of statistical data.</p>
+
+			<p>The distinction between aggregate and unit data is based on the definition of the variables in the dataset. A dataset can contain both unit and aggregate data.</p>
+
+			<p>Access restrictions on data (e.g., public, restricted, private) are assigned by the business and can change over the life-cycle of the dataset.</p>
+
+			<p>The domain for a dataset is defined by the subject field that data apply to. However, some datasets are merged from others, so a merged set can have the combination of its constituents. There seems to be no restriction on the number of subject fields.</p>
+
+			<p>Mode of transmission is not definitional for a dataset, as a single dataset can be obtained multiple ways. The phases of GSBPM may not be useful, as a single dataset can pass through a phase without change. Further, the phases impose a usage criterion (data for collection; data for editing; etc.) that seems arbitrary and would be useless in another domain (outside statistics).</p>
+
+			<p>Similarly, the explorative, temporary, and organizational categorization is based on intent, rather than the data per se. Plus, the categorization could change without any change to the data. If we change the organizational structure described above (rectangular, etc.), then we should call that a new dataset.</p>
+
+			<figure id="image-ds">
+				<img src="img/coos-ds.png" alt="Dataset types" title="Dataset types"/>
+				<figcaption>Dataset types</figcaption>
 			</figure>
 
 		</section>

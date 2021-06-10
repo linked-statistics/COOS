@@ -149,9 +149,37 @@ coos:StatisticalProduct a rdfs:Class , owl:Class ;
 
 coos:StatisticalDataset a rdfs:Class , owl:Class ;
     rdfs:label "Statistical dataset"@en , "Jeu de données statistiques"@fr , "Conjunto de datos estadísticos"@es ;
-    rdfs:comment "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es  ;
-    skos:definition "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es  ;
+    rdfs:comment "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es ;
+    skos:definition "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es ;
     rdfs:subClassOf coos:StatisticalProduct , dcat:Dataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:DimensionalDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Dimensional dataset"@en ;
+    rdfs:comment "TBD"@en ;
+    skos:definition "TBD"@en ;
+    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:EventHistoryDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Event-history dataset"@en ;
+    rdfs:comment "TBD"@en ;
+    skos:definition "TBD"@en ;
+    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:KeyValueDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Key-value dataset"@en ;
+    rdfs:comment "TBD"@en ;
+    skos:definition "TBD"@en ;
+    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:RectangularDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Rectangular dataset"@en ;
+    rdfs:comment "TBD"@en ;
+    skos:definition "TBD"@en ;
+    rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Classes related to the 'organizations' domain
