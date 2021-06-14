@@ -41,8 +41,8 @@
 
 coos:Activity a rdfs:Class , owl:Class ;
     rdfs:label "Activity"@en , "Activité"@fr, "Actividad"@es ;
-    rdfs:comment "Activity as defined by the GAMSO."@en , "Activité telle que définie par le GAMSO."@fr , "Actividad definida conforme a GAMSO."@es ;
-    skos:definition "Activity as defined by the GAMSO."@en , "Activité telle que définie par le GAMSO."@fr , "Actividad definida conforme a GAMSO."@es ;
+    rdfs:comment "activity that a statistical organization does"@en , "Activité telle que définie par le GAMSO."@fr , "Actividad definida conforme a GAMSO."@es ;
+    skos:definition "activity that a statistical organization does"@en , "Activité telle que définie par le GAMSO."@fr , "Actividad definida conforme a GAMSO."@es ;
     rdfs:subClassOf skos:Concept , prov:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -55,15 +55,15 @@ coos:ActivityArea a rdfs:Class , owl:Class ;
 
 coos:StatisticalActivity a rdfs:Class , owl:Class ;
     rdfs:label "Statistical activity"@en , "Activité statistique"@fr , "Actividad estadítstica"@es ;
-    rdfs:comment "Generic statistical activity."@en , "Activité statistique générique."@fr , "Actividad estadística genérica."@es ;
-    skos:definition "Generic statistical activity."@en , "Activité statistique générique."@fr , "Actividad estadística genérica."@es ;
+    rdfs:comment "Statistical production activity or activity that directly supports it"@en , "Activité statistique générique."@fr , "Actividad estadística genérica."@es ;
+    skos:definition "Statistical production activity or activity that directly supports it"@en , "Activité statistique générique."@fr , "Actividad estadística genérica."@es ;
     rdfs:subClassOf coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalProductionActivity a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production activity"@en , "Activité de production statistique"@fr , "Actividad de producción estadística"@es ;
-    rdfs:comment "Statistical production activity covered by the GSBPM."@en , "Activité de production statistique couverte par le GSBPM."@fr , "Actividad de producción estadística cubierta por GSBPM."@es ;
-    skos:definition "Statistical production activity covered by the GSBPM."@en , "Activité de production statistique couverte par le GSBPM."@fr , "Actividad de producción estadística cubierta por GSBPM."@es ;
+    rdfs:comment "Statistical activity that is conducted as a part of a process to produce statistics"@en , "Activité de production statistique couverte par le GSBPM."@fr , "Actividad de producción estadística cubierta por GSBPM."@es ;
+    skos:definition "Statistical activity that is conducted as a part of a process to produce statistics"@en , "Activité de production statistique couverte par le GSBPM."@fr , "Actividad de producción estadística cubierta por GSBPM."@es ;
     rdfs:subClassOf coos:StatisticalActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -76,15 +76,15 @@ coos:OverarchingActivity a rdfs:Class , owl:Class ;
 
 coos:Phase a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production process phase"@en , "Phase du processus de production statistique"@fr , "Fase del proceso de producción estadística"@es ;
-    rdfs:comment "Process phase as defined by the GSBPM."@en , "Phase du processus telle que définie par le GSBPM."@fr , "Fase del proceso conforme a la definición en GAMSO."@es ;
-    skos:definition "Process phase as defined by the GSBPM."@en , "Phase du processus telle que définie par le GSBPM."@fr , "Fase del proceso conforme a la definición en GAMSO."@es ;
+    rdfs:comment "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM Phases"@en , "Phase du processus telle que définie par le GSBPM."@fr , "Fase del proceso conforme a la definición en GAMSO."@es ;
+    skos:definition "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM Phases"@en , "Phase du processus telle que définie par le GSBPM."@fr , "Fase del proceso conforme a la definición en GAMSO."@es ;
     rdfs:subClassOf coos:StatisticalProductionActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:SubProcess a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production sub-process"@en , "Sous-processus de production statistique"@fr , "Subproceso de producción estadística"@es ;
-    rdfs:comment "Sub-process as defined by the GSBPM."@en , "Sous-processus tel que défini par le GSBPM."@fr , "Subproceso conforme a la definición en GSBPM."@es ;
-    skos:definition "Sub-process as defined by the GSBPM."@en , "Sous-processus tel que défini par le GSBPM."@fr , "Subproceso conforme a la definición en GSBPM."@es ;
+    rdfs:comment "Statistical production activity that is scoped by a given Phase"@en , "Sous-processus tel que défini par le GSBPM."@fr , "Subproceso conforme a la definición en GSBPM."@es ;
+    skos:definition "Statistical production activity that is scoped by a given Phase"@en , "Sous-processus tel que défini par le GSBPM."@fr , "Subproceso conforme a la definición en GSBPM."@es ;
     rdfs:subClassOf coos:StatisticalProductionActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -104,16 +104,17 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
 
 coos:Task a rdfs:Class , owl:Class ;
     rdfs:label "Task"@en , "Tâche"@fr , "Tarea"@es ;
-    rdfs:comment "Statistical activity scoped by a given GSBPM sub-process"@en , "Activité statistique incluse dans un sous-processuS GSBPM donné"@fr , "Actividad estadística limitada por un subproceso dado de GSBPM"@es ;
-    skos:definition "Statistical activity scoped by a given GSBPM sub-process"@en , "Activité statistique incluse dans un sous-processuS GSBPM donné"@fr , "Actividad estadística limitada por un subproceso dado de GSBPM"@es ;
+    rdfs:comment "Statistical production activity that is scoped by a given Subprocess"@en , "Activité statistique incluse dans un sous-processuS GSBPM donné"@fr , "Actividad estadística limitada por un subproceso dado de GSBPM"@es ;
+    skos:definition "Statistical production activity that is scoped by a given Subprocess"@en , "Activité statistique incluse dans un sous-processuS GSBPM donné"@fr , "Actividad estadística limitada por un subproceso dado de GSBPM"@es ;
     skos:scopeNote "Tasks can be more or less fine-grained and form hierarchies"@en , "Les tâches peuvent être de granularité plus ou moins fine et former des hiérarchies"@fr , "Las tareas pueden tener un granularidad mayor o menor y conformar jerarquías"@es ;
     rdfs:subClassOf coos:StatisticalActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:Capability a rdfs:Class , owl:Class ;
     rdfs:label "Capability"@en , "Capacité"@fr , "Capacidad"@es ;
-	skos:definition "An ability a statistical organization possesses to undertake a specific activity"@en , "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
-	rdfs:comment "A capability is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills)"@en , "Une capacité n'est atteinte que par l'intégration de tous les éléments de capacité pertinents (par exemple, méthodes, processus, normes et cadres, systèmes informatiques et compétences humaines)"@fr ;
+    rdfs:comment "An ability a statistical organization possesses to undertake a specific activity"@en , "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
+    skos:definition "An ability a statistical organization possesses to undertake a specific activity"@en , "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
+    skos:scopeNote "A capability is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills)"@en , "Une capacité n'est atteinte que par l'intégration de tous les éléments de capacité pertinents (par exemple, méthodes, processus, normes et cadres, systèmes informatiques et compétences humaines)"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Additional useful elements from GSIM
