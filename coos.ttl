@@ -196,6 +196,7 @@ coos:NationalStatisticalInstitute a rdfs:Class , owl:Class ;
     rdfs:label "National statistical institute"@en , "Institut national de statistiques"@fr ,"Instituto nacional de estadística"@es ;
     rdfs:comment "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en ;
     skos:definition "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en ;
+    skos:scopeNote "The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc."@en ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:InternationalAgency ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -204,6 +205,7 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
     rdfs:label "International agency"@en , "Agence internationale"@fr , "Agencia internacional"@es ;
     rdfs:comment "A body with an international membership, scope, or presence whose primary role is the production of official statistics."@en ;
     skos:definition "A body with an international membership, scope, or presence whose primary role is the production of official statistics."@en ;
+    skos:scopeNote "There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations."@en ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:NationalStatisticalInstitute ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
