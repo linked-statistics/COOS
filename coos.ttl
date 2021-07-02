@@ -183,6 +183,13 @@ coos:RectangularDataset a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+coos:GraphDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Graph dataset"@en ;
+    rdfs:comment "TBD"@en ;
+    skos:definition "TBD"@en ;
+    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 # Classes related to the 'organizations' domain
 
 coos:StatisticalOrganization a rdfs:Class , owl:Class ;
