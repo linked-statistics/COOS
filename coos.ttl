@@ -162,7 +162,7 @@ coos:DimensionalDataset a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:EventHistoryDataset a rdfs:Class , owl:Class ;
+coos:TransposedDataset a rdfs:Class , owl:Class ;
     rdfs:label "Event-history dataset"@en ;
     rdfs:comment "TBD"@en ;
     skos:definition "TBD"@en ;
