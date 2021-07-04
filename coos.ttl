@@ -28,7 +28,7 @@
     vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
     dc:rights "Copyright © 2021 Unece" ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    voaf:classNumber "19"^^xsd:integer ;
+    voaf:classNumber "24"^^xsd:integer ;
     voaf:propertyNumber "2"^^xsd:integer ;
     owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" .
 
@@ -157,13 +157,13 @@ coos:StatisticalDataset a rdfs:Class , owl:Class ;
 
 coos:DimensionalDataset a rdfs:Class , owl:Class ;
     rdfs:label "Dimensional dataset"@en ;
-    rdfs:comment "TBD"@en ;
-    skos:definition "TBD"@en ;
+    rdfs:comment "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en ;
+    skos:definition "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:EventHistoryDataset a rdfs:Class , owl:Class ;
-    rdfs:label "Event-history dataset"@en ;
+coos:GraphDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Graph dataset"@en ;
     rdfs:comment "TBD"@en ;
     skos:definition "TBD"@en ;
     rdfs:subClassOf coos:StatisticalDataset ;
@@ -171,15 +171,22 @@ coos:EventHistoryDataset a rdfs:Class , owl:Class ;
 
 coos:KeyValueDataset a rdfs:Class , owl:Class ;
     rdfs:label "Key-value dataset"@en ;
-    rdfs:comment "TBD"@en ;
-    skos:definition "TBD"@en ;
+    rdfs:comment "Collection of data where each datapoint is paired with a key"@en ;
+    skos:definition "Collection of data where each datapoint is paired with a key"@en ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:RectangularDataset a rdfs:Class , owl:Class ;
     rdfs:label "Rectangular dataset"@en ;
-    rdfs:comment "TBD"@en ;
-    skos:definition "TBD"@en ;
+    rdfs:comment "Collection of data where variables are represented with columns"@en ;
+    skos:definition "Collection of data where variables are represented with columns"@en ;
+    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:TransposedDataset a rdfs:Class , owl:Class ;
+    rdfs:label "Transposed dataset"@en ;
+    rdfs:comment "Collection of data where variables are represented with rows"@en ;
+    skos:definition "Collection of data where variables are represented with rows"@en ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
