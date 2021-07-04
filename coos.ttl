@@ -119,24 +119,23 @@ coos:Capability a rdfs:Class , owl:Class ;
 
 # Additional useful elements from GSIM
 
-coos:GSIMClass a rdfs:Class , owl:Class ;
-    rdfs:label "GSIM class"@en , "Classe GSIM"@fr , "Clase GSIM"@es ;
+coos:InformationObject a rdfs:Class , owl:Class ;
+    rdfs:label "Information object"@en , "Objet informationnel"@fr ;
     rdfs:comment "Mother of all classes defined in GSIM."@en , "Mère de toutes les classes définies par le GSIM."@fr , "Madre (raíz) de todas las clases definidas en GSIM."@es ;
     skos:definition "Mother of all classes defined in GSIM."@en , "Mère de toutes les classes définies par le GSIM."@fr , "Madre (raíz) de todas las clases definidas en GSIM."@es ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:GSIMObject a owl:Class ;
-    rdfs:label "GSIM object"@en , "Objet GSIM"@fr , "Objeto GSIM"@es ;
-    rdfs:comment "Term traditionally used in GSIM, but class should be used instead."@en , "Terme utilisé traditionnellement dans GSIM, mais classe devrait être utilisé à la place."@fr ,"Termino utilizado tradicionalmente en GSIM, pero una clase debe ser usada en su lugar."@es ;
-    skos:definition "Term traditionally used in GSIM, but class should be used instead."@en , "Terme utilisé traditionnellement dans GSIM, mais classe devrait être utilisé à la place."@fr ,"Termino utilizado tradicionalmente en GSIM, pero una clase debe ser usada en su lugar."@es ;
-    owl:equivalentClass coos:GSIMClass ;
+coos:StatisticalInformationObject a owl:Class ;
+    rdfs:label "Statistical information object"@en , "Objet informationnel statistique"@fr ;
+    rdfs:comment "Information object representing statistical information."@en , "Objet informationnel représentant de l'information statistique."@fr ;
+    skos:definition "Information object representing statistical information."@en , "Objet informationnel représentant de l'information statistique."@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:GSIMEntity a rdfs:Class , owl:Class ;
-    rdfs:label "GSIM entity"@en , "Entité GSIM"@fr , "Entidad GSIM"@es ;
-    rdfs:comment "Statistical entity, in the sense of PROV."@en , "Entité statistique, au sens de PROV."@fr , "Entidad estadística, en un sentido de PROV."@es ;
-    skos:definition "Statistical entity, in the sense of PROV."@en , "Entité statistique, au sens de PROV."@fr , "Entidad estadística, en un sentido de PROV."@es ;
-    rdfs:subClassOf coos:GSIMClass , prov:Entity ;
+coos:StatisticalEntity a rdfs:Class , owl:Class ;
+    rdfs:label "Statistical entity"@en , "Entité statistique"@fr , "Entidad estadística"@es ;
+    rdfs:comment "Statistical information object which is also an entity in the sense of PROV."@en , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
+    skos:definition "Statistical information object which is also an entity in the sense of PROV."@en , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
+    rdfs:subClassOf coos:StatisticalInformationObject , prov:Entity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Classes related to the 'products' domain
