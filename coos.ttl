@@ -163,8 +163,8 @@ coos:DimensionalDataset a rdfs:Class , owl:Class ;
 
 coos:GraphDataset a rdfs:Class , owl:Class ;
     rdfs:label "Graph dataset"@en ;
-    rdfs:comment "TBD"@en ;
-    skos:definition "TBD"@en ;
+    rdfs:comment "Collection of data organized in a graph-like (including tree-like) structure, such as RDF, property graphs or XML"@en ;
+    skos:definition "Collection of data organized in a graph-like (including tree-like) structure, such as RDF, property graphs or XML"@en ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
