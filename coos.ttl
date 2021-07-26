@@ -254,6 +254,15 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
     owl:inverseOf coos:uses ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+# Characterization of metadata sets
+
+coos:metadataFor a rdfs:Property , owl:ObjectProperty ;
+    rdfs:label "metadata for"@en , "métadonnées pour"@fr , "metadatos por"@es ;
+    rdfs:comment "Indicates that a dataset contains metadata attached to a given resource"@en ;
+    skos:definition "Indicates that a dataset contains metadata attached to a given resource"@en ;
+    rdfs:domain coos:StatisticalDataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 
 #################################################################
 # Individuals
