@@ -101,13 +101,15 @@
 		<section>
 			<h2>Background and Motivation</h2>
 
-			<p>The Official Statistics community has been collaborating for some years in order to define business models aiming at building common representations of its processes and information. These works, mostly conducted under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics (ModernStats), include the Generic Statistical Business Process Model (GSBPM), the Generic Statistical Information Model (GSIM), and the Generic Activity Model for Statistical Organisation (GAMSO).</p>
+			<p>The Official Statistics community has been collaborating for some years in order to define business models aiming at building common representations of its processes and information. These works, mostly conducted under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics (ModernStats), include the Generic Statistical Business Process Model (GSBPM), the Generic Statistical Information Model (GSIM), the Generic Activity Model for Statistical Organisation (GAMSO), and the Common Statistical Data Architecture (CSDA).</p>
 				
 			<p>GSBPM provides a framework to describe the building blocks of statistical production in terms of sub-processes. Its main goal is to help statistical organizations standardize their statistical production processes. It was the first ModernStats model to be published, back in 2008, and has been widely used by national and international statistical agencies since then.</p> 
 				
 			<p>GAMSO provides a framework to describe the building blocks of statistical production in terms of activities. It complements the GSBPM in two ways: (i) by covering areas beyond the scope of GSBPM, and (ii) by providing a business capability view of statistical production itself.</p> 
 				
 			<p>GSIM complements both GSBPM and GAMSO by providing a catalogue of information objects to describe statistical data and metadata. It functions as a reference framework consisting of a set of standardised information objects to be used in statistical production.</p>
+
+			<p>CSDA provides a capability framework cataloguing the mayor abilities a statistical organization has to use, produce, share and manage data and metadata. CSDA integrates with the GSBPM and GAMSO by enabling processes and activities related to the lifecycle management of GSIM information objects. </p>
 
 			<p>As more and more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on our international core models to establish common foundations on which the different works can develop in a coherent way. This should be done using a formal framework that allows interoperability, activation and globally unique identification.</p>
 
@@ -385,9 +387,33 @@
 				</ul>
 			</section>
 
+			<section id="activities-other">
+				<h3>Adding GSIM and CSDA</h3>
+				<p>Adding the Generic Statistical Information Model (GSIM) in this framework allows us to refine <code>StatisticalActivity</code> even further. Parallel to <code>StatisticalProductionActivity</code> we can define three additional sub-classes of <code>StatisticalActivity</code>:</p>
+				<ul>
+					<li><code>StatisticalProgram:</code> it is essentially a set of activities carried out to produce statistics. These statistics are about the set of units in scope for the program, e.g. “All persons with a university degree”, within a given subject field, e.g. income statistics, tourism, etc.</li>
+					<li><code>StatisticalProgramCycle:</code> statistical program activities are often repeated over time in iterations called cycles. A StatisticalProgramCycle is one of those iterations for a specific time and geography.</li>
+					<li><code>StatisticalSupportProgram:</code> these are all centralized, corporate-level activities that allow statistical programs to exist and operate. These span from requirements elicitation, design and implementation (GSBPM Phases 1-3) to metadata management data, metadata and quality management (GSBPM overarching processes) and the statistical portion of capability development and corporate support (GAMSO).</li>
+				</ul>
+				
+				
+				<p>Another dimension to consider is that of information capabilities. A capability is an ability a statistical organization possesses to undertake a specific activity. It is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills). The notion of capability is often used in enterprise architecture approaches like TOGAF or, in the statistical domain, the Common Statistical Data Architecture [[CSDA]]. Capabilities can be mapped to strategic goals and objectives and provide a useful starting point to map lower level elements such as business process and functions, applications and technology assets.</p>
+
+				<ul>
+					<li><code>Core capabilities: </code> capabilities the organization needs to execute its core business, i.e. the production of statistics. They generally map to phases in GSBPM.</li>
+					<li><code>Cross-cutting capabilities: </code>capabilities used to formulate and implement the policies that the organization chooses for its internal operations. They generally map to corporate support in GAMSO and overarching processes in GSBPM.</li>
+				</ul>
+				
+				<pre class="example" title="Example of capability">
+				ex:csda-data-integration a coos:Capability ;
+					rdfs:label "Data integration"@en ;
+					skos:definition "The ability to combine, link, relate and/or align different data sets in order to create an integrated information set."@en .
+				</pre>				
+			</section>
+			
 			<section id="activities-task">
 				<h3>More detailed activities</h3>
-				<p>The previous definitions stay in the framework of the GAMSO/GSBPM, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less fine-grained and form hierarchies.</p>
+				<p>The previous definitions stay in the framework of the GAMSO/GSBPM/GSIM/CSDA, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less fine-grained and form hierarchies.</p>
 
 				<pre class="example" title="Example of task">
 				ex:calculate-mean-wages a coos:Task ;
@@ -408,28 +434,7 @@
 
 			</section>
 
-			<section id="activities-other">
-				<h3>Other classes linked to activities</h3>
-				<p>The following classes are defined:</p>
-				<ul>
-					<li><code>StatisticalProgram</code></li>
-					<li><code>StatisticalProgramCycle</code></li>
-					<li><code>Capability</code></li>
-				</ul>
-
-				<p>A capability is an ability a statistical organization possesses to undertake a specific activity. It is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills). The notion of capability is often used in enterprise architecture approaches like TOGAF or, in the statistical domain, the Common Statistical Data Architecture [[CSDA]]. Capabilities can be mapped to strategic goals and objectives and provide a useful starting point to map lower level elements such as business process and functions, applications and technology assets.</p>
-
-				<pre class="example" title="Example of capability">
-				ex:csda-data-integration a coos:Capability ;
-					rdfs:label "Data integration"@en ;
-					skos:definition "The ability to combine, link, relate and/or align different data sets in order to create an integrated information set."@en .
-				</pre>
-
-				<div class="issue" title="Remaining work for this section">
-					<p>Write the rest of this section: introduction and description of StatisticalProgram and StatisticalProgramCycle</p>
-				</div>
-
-			</section>
+			
 		</section>
 
 		<section id="organizations">
@@ -492,6 +497,7 @@
 				<li>event history (or tall or long) - rows are based on the value for each variable, one unit at a time - and this could be visualized as rows are variables and columns are units</li>
 				<li>dimensional - a pre-defined set of cells defined by the combination of categories, one from each of a set of dimensions (category sets), used to handle the value of some measure (variable) restricted to the cell</li>
 				<li>key-value - a set of values, each associated with some key</li>
+				<li>graph - datapoints are nodes and relationships between them are edges in a graph structure</li>
 			</ol>
 
 			<p>Dimensional data are usually associated with aggregates. Key-value data are often taken from scraping the web. Even-history is used to describe events over some time period.</p>
