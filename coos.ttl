@@ -102,6 +102,13 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:Activity , coos:InformationObject ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+coos:StatisticalSupportProgram a rdfs:Class , owl:Class ;
+    rdfs:label "Statistical support program"@en ;
+    rdfs:comment "Corporate-level activity that allows statistical programs to exist and operate."@en ;
+    skos:definition "Corporate-level activity that allows statistical programs to exist and operate."@en ;
+    rdfs:subClassOf coos:StatisticalActivity , coos:InformationObject ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 coos:Task a rdfs:Class , owl:Class ;
     rdfs:label "Task"@en , "Tâche"@fr , "Tarea"@es ;
     rdfs:comment "Statistical production activity that is scoped by a given GSBPM sub-process"@en , "Activité statistique incluse dans un sous-processus GSBPM donné"@fr , "Actividad estadística limitada por un subproceso dado de GSBPM"@es ;
