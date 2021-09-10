@@ -99,7 +99,7 @@ coos:StatisticalProgramCycle a rdfs:Class , owl:Class ;
     rdfs:label "Statistical program cycle"@en , "Cycle de programme statistique"@fr , "Ciclo de programa estadístico"@es ;
     rdfs:comment "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr , "Tal como está definido en GSIM."@es ;
     skos:definition "As defined by the GSIM."@en , "Tel que défini par le GSIM."@fr , "Tal como está definido en GSIM."@es ;
-    rdfs:subClassOf coos:Activity , coos:InformationObject ;
+    rdfs:subClassOf coos:StatisticalActivity , coos:InformationObject ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalSupportProgram a rdfs:Class , owl:Class ;
