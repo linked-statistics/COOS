@@ -28,8 +28,8 @@
     vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
     dc:rights "Copyright © 2021 Unece" ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    voaf:classNumber "27"^^xsd:integer ;
-    voaf:propertyNumber "4"^^xsd:integer ;
+    voaf:classNumber "28"^^xsd:integer ;
+    voaf:propertyNumber "5"^^xsd:integer ;
     owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" .
 
 
@@ -214,6 +214,11 @@ coos:TransposedDataset a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+coos:ProductPresentation a owl:Class , rdfs:Class ;
+    rdfs:seeAlso coos:productPresentations ;
+    skos:prefLabel "Product presentation"@en , "Présentation de produit"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 # Classes related to the 'organizations' domain
 
 coos:StatisticalOrganization a rdfs:Class , owl:Class ;
@@ -279,7 +284,7 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
     owl:inverseOf coos:uses ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-# Links between capabilities and GAMSO activities
+# Links between capabilities and activities
 
 coos:enables a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "enables"@en , "permet"@fr ;
@@ -294,6 +299,16 @@ coos:metadataFor a rdfs:Property , owl:ObjectProperty ;
     rdfs:comment "Indicates that a dataset contains metadata attached to a given resource"@en ;
     skos:definition "Indicates that a dataset contains metadata attached to a given resource"@en ;
     rdfs:domain coos:StatisticalDataset ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+# Property for product presentation
+
+coos:presentation a rdfs:Property , owl:ObjectProperty ;
+    rdfs:label "presentation"@en , "présentation"@fr ;
+    rdfs:comment "Type of presentation of a statistical product"@en , "Type de présentation d'un produit statistique"@fr ;
+    skos:definition "Type of presentation of a statistical product"@en , "Type de présentation d'un produit statistique"@fr ;
+    rdfs:domain coos:StatisticalProduct ;
+    rdfs:range coos:ProductPresentation ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 
@@ -746,7 +761,7 @@ coos:metadataFor a rdfs:Property , owl:ObjectProperty ;
     skos:prefLabel "Agree an action plan"@en , "Acordar un plan de acción"@es ;
     skos:broader <http://id.unece.org/activities/phase/8> .
 
-# The GAMSO/GSBPM concept schemes (see issue 2)
+# The GAMSO/GSBPM concept schemes
 
 <http://id.unece.org/activities/gamso> a skos:ConceptScheme ;
     skos:prefLabel "Generic Activity Model for Statistical Organisations"@en , "Modelo Genérico de Actividades para las Organizaciones Estadísticas"@es ;
@@ -763,3 +778,42 @@ coos:metadataFor a rdfs:Property , owl:ObjectProperty ;
     foaf:homePage <https://statswiki.unece.org/display/GSBPM/GSBPM+v5.1> ;
     dcterms:isPartOf <http://id.unece.org/activities/gamso> ;
     skos:hasTopConcept <http://id.unece.org/activities/statisticalProductionProcess> .
+
+# Concept scheme for types of product presentation
+
+coos:productPresentations a skos:ConceptScheme ;
+    rdfs:seeAlso coos:ProductPresentation ;
+    skos:hasTopConcept coos:datasetPresentation , coos:publicationPresentation , coos:viualizationPresentation , coos:infographicPresentation , coos:thematicMapPresentation , coos:interactivePresentation ;
+    skos:notation "CL_PROD_PRES" ;
+    skos:prefLabel "Product presentations"@en , "Présentations de produit"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:datasetPresentation a coos:ProductPresentation , skos:Concept ;
+    skos:inScheme coos:productPresentations ;
+    skos:prefLabel  "Dataset"@en , "Jeu de données"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:publicationPresentation a coos:ProductPresentation , skos:Concept ;
+    skos:inScheme coos:productPresentations ;
+    skos:prefLabel  "Publication"@en , "Publication"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:viualizationPresentation a coos:ProductPresentation , skos:Concept ;
+    skos:inScheme coos:productPresentations ;
+    skos:prefLabel  "Visualization"@en , "Visualisation"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:infographicPresentation a coos:ProductPresentation , skos:Concept ;
+    skos:inScheme coos:productPresentations ;
+    skos:prefLabel  "Infographic"@en , "Infographie"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:thematicMapPresentation a coos:ProductPresentation , skos:Concept ;
+    skos:inScheme coos:productPresentations ;
+    skos:prefLabel  "Thematic map"@en , "Carte thématique"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:interactivePresentation a coos:ProductPresentation , skos:Concept ;
+    skos:inScheme coos:productPresentations ;
+    skos:prefLabel  "Interactive"@en , "Interactive"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
