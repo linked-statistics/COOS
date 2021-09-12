@@ -28,7 +28,7 @@
     vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
     dc:rights "Copyright © 2021 Unece" ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    voaf:classNumber "26"^^xsd:integer ;
+    voaf:classNumber "27"^^xsd:integer ;
     voaf:propertyNumber "3"^^xsd:integer ;
     owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" .
 
@@ -130,6 +130,14 @@ coos:CoreCapability a rdfs:Class , owl:Class ;
     rdfs:comment "Capability the organization needs to execute its core business, i.e. the production of statistics."@en , "Capacité dont l'organisation a besoin pour exercer son coeur de métier, c'est-à-dire la production de statistiques."@fr ;
     skos:definition "Capability the organization needs to execute its core business, i.e. the production of statistics."@en , "Capacité dont l'organisation a besoin pour exercer son coeur de métier, c'est-à-dire la production de statistiques."@fr ;
     skos:scopeNote "Core capabilities generally map to phases in GSBPM"@en ;
+    rdfs:subClassOf coos:Capability ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:CrossCuttingCapability a rdfs:Class , owl:Class ;
+    rdfs:label "Cross-cutting Capability"@en ;
+    rdfs:comment "Capability used to formulate and implement the policies that the organization chooses for its internal operations."@en , "Capacité utilisée pour formuler et implémenter les politiques que l'organisation choisit pour ses opérations internes."@fr ;
+    rdfs:comment "Capability used to formulate and implement the policies that the organization chooses for its internal operations."@en , "Capacité utilisée pour formuler et implémenter les politiques que l'organisation choisit pour ses opérations internes."@fr ;
+    skos:scopeNote "Core capabilities generally map to corporate support activities in GAMSO and overarching processes in GSBPM"@en ;
     rdfs:subClassOf coos:Capability ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
