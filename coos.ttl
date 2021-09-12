@@ -28,8 +28,8 @@
     vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
     dc:rights "Copyright © 2021 Unece" ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    voaf:classNumber "28"^^xsd:integer ;
-    voaf:propertyNumber "5"^^xsd:integer ;
+    voaf:classNumber "29"^^xsd:integer ;
+    voaf:propertyNumber "6"^^xsd:integer ;
     owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" .
 
 
