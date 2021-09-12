@@ -45,7 +45,7 @@ Based on the common semantic versioning governance elements of the ModernStats m
       </td>
     </tr>
     <tr>
-	  <th scope="row">1</th>
+	  <th scope="row">2</th>
       <td><b>Use of agreed standards</b></td>
       <td><p>COOS is built upon foundations set by other standards, makes use of already available standards and helps the user to leverage them in combination.</p></td>
       <td>
@@ -57,6 +57,89 @@ Based on the common semantic versioning governance elements of the ModernStats m
         <ul>
           <li>COOS adaptation/revision initiatives will not begin until they are examined for compliance with the design principles. A conflict with a principle will be resolved by changing the framework of the initiative.</li>
           <li>Mechanisms are needed to monitor the implementation of COOS and adapt it where necessary to meet business needs.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">3</th>
+      <td><b>Stakeholder appeal</b></td>
+      <td><p>COOS helps stakeholders to understand various standards and their connections.</p></td>
+      <td>
+        <p>COOS helps stakeholders to easily understand the importance of different standards and their connections in order to realise what benefits can be expected from their use.</p>
+      </td>
+      <td>
+        <ul>
+          <li>COOS ultimately means having an integrated view in place in the future on the ModernStats models, the ontology standards and their connections. This is important for their further development and more active stakeholder involvement. COOS will therefore be a powerful way to explain to stakeholders on a high level how the different standards and models are connected.</li>
+          <li>The intuitive appeal of the model should be tested with all targeted stakeholder groups. The value increases proportionally with the number of stakeholders who adopt the model.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">4</th>
+      <td><b>Driver for modernisation and future revisions</b></td>
+      <td><p>COOS is powerful in suggestingfuture modernisation and initiating revisions of the involved standards.</p></td>
+      <td>
+        <p>COOS provides ideas for future modernisation activities.</p>
+        <p>With COOS connecting several models and standards, it will also be used as a guidance on how to improve each  and strengthen the interconnection between them to have better integration in the future.</p>
+      </td>
+      <td>
+        <ul>
+          <li>COOS will help the community to identify further modernisation activities to better integrate standards used in the domain of official statistics and existing ontology standards.</li>
+          <li>Whenever ModernStats standards are to be revised or further developed, COOS will be used as one of the inputs to identify areas and priorities for their revisions.</li>
+          <li>In the longer run, the use of COOS will also help to synchronize revision practices for each involved standard.</li>
+          <li>Whenever ModernStats models are developed or further developed, COOS implications will have to be taken on board for discussions.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">5</th>
+      <td><b>Simple presentation</b></td>
+      <td>
+        <p>COOS objects and their relationships are presented as simply as possible.</p>
+		<p>COOS is aimed to provide a generic solution to users and not specific elements for different statistical domains.</p>
+	  </td>
+      <td>
+        <p>Even though the use of ontology standards will ensure that the information described by COOS is understandable, it needs to be presented as simply as possible, avoiding notations and presentation styles that are known only to experts.</p>
+      </td>
+      <td>
+        <ul>
+          <li>COOS will not be widely adopted if it cannot be easily understood by different stakeholders.</li>
+          <li>Presentations using specific formats can be too technical for most stakeholders, therefore a non-technical presentation is needed for the wide audience.</li>
+          <li>For specific purposes, precise presentation in OWL format should also be provided.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">6</th>
+      <td><b>Agreed level of detail</b></td>
+      <td>
+        <p>COOS represents objects only down to the level of agreement between key stakeholders.</p>
+	  </td>
+      <td>
+        <p>COOS does not represent information on the deep level of the standards but on high-level to highlight the benefits of using different models together.</p>
+        <p>Too detailed level means the presentation will not be easy for several stakeholders to adopt/understand while too high-level imposes the risk of not realising the benefit of each standard.</p>
+      </td>
+      <td>
+        <ul>
+          <li>COOS must adhere to an appropriate, agreed level of detail in order to remain generic.</li>
+          <li>Stakeholders must agree on what the appropriate level of detail for COOS is.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">7</th>
+      <td><b>Adaptability and extensibility</b></td>
+      <td>
+        <p>COOS can be easily adapted and extended to meet new/changed user needs.</p>
+	  </td>
+      <td>
+        <p>COOS will need to be robust and stable to be adopted by statistical organizations, but will need ongoing review and adaptation to remain relevant to user needs.</p>
+      </td>
+      <td>
+        <ul>
+          <li>During the design of ontology, each organisation should identify how and in what context it will adapt it to its own use. Different national environments might define different requirements for this purpose.</li>
+          <li>Mechanisms for ongoing review and update will need to be established.</li>
+          <li>Users will need incentives to test initial versions of COOS so that it can be adapted to meet a variety of needs.</li>
         </ul>
       </td>
     </tr>
