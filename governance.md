@@ -143,6 +143,72 @@ Based on the common semantic versioning governance elements of the ModernStats m
         </ul>
       </td>
     </tr>
+    <tr>
+	  <th scope="row">8</th>
+      <td><b>Platform independence</b></td>
+      <td>
+        <p>COOS does not refer to any specific IT setting or tool.</p>
+	  </td>
+      <td>
+        <p>Statistical organizations use a wide range of in-house and proprietary hardware and software platforms; this environment also changes over time. COOS must be platform independent to be relevant to all stakeholders and robust over time.</p>
+        <p>COOS will provide the ontology based on ModernStats standards and common ontology models. The interpretation, presentation is not IT-specific, the formats used for the ontology do not limit its use in specific IT settings.</p>
+      </td>
+      <td>
+        <ul>
+          <li>COOS needs to be designed to be a generic connecting model, using a standard language.</li>
+          <li>COOS will be available as OWL format to further facilitate machine interpretability of content but it will not limit the use of ontology on different platforms.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">9</th>
+      <td><b>Formal specification</b></td>
+      <td>
+        <p>COOS provides formal naming, definitions and descriptions of  concepts in a given domain, and the relationships between these concepts.</p>
+	  </td>
+      <td>
+        <p>COOS will provide a set of standardized, consistently described objects (OWL). This will help readers understand significant relationships among the objects in the various standards involved in the ontology.</p>
+      </td>
+      <td>
+        <ul>
+          <li>In the field of official statistics, a number of models, vocabularies or other semantic assets already exist, but they are often not formally expressed or coherent with one another. The ontology can help an organisation with this integration.</li>
+          <li>The method used to specify COOS should be transparent to those not involved in the development of COOS.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">10</th>
+      <td><b>Reusability</b></td>
+      <td>
+        <p>COOS is meant for repeated use and not only for a one-time investment.</p>
+	  </td>
+      <td>
+        <p>Development of COOS requires stocktaking of standards to be involved in the work according to the user needs.</p>
+        <p>Once it is developed, it needs to be put in use in order to realise its benefits in harmonisation and modernisation goals. The developed solution can be used and reused by the organisation.</p>
+      </td>
+      <td>
+        <ul>
+          <li>COOS should be designed and developed with the motivation to be used in practice. Only with its repeated use can most of its benefits be realised by the organisation.</li>
+          <li>COOS should be designed in a way that the needs for its reuse are collected and analysed to ensure smooth transition from development to implementation phase.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+	  <th scope="row">11</th>
+      <td><b>Relevance</b></td>
+      <td>
+        <p>COOS is a solution that provides relevant information on the standards and their relationships to the users.</p>
+	  </td>
+      <td>
+        <p>The ontology in itself is an up-to-date solution but it also means that the information described by the ontology is relevant to the users and outdated information is removed, new information is added. COOS represents the latest versions of the underlying models it is integrating, e.g. GSIM, GAMSO, etc.</p>
+      </td>
+      <td>
+        <ul>
+          <li>Representing outdated information or using not up-to-date ontology standards by the COOS means loss of interest by stakeholders.</li>
+          <li>Attention should be given to its maintenance and future revisions during the development of COOS in order to ensure its relevance.</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>
 
