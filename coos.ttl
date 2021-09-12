@@ -219,6 +219,11 @@ coos:ProductPresentation a owl:Class , rdfs:Class ;
     skos:prefLabel "Product presentation"@en , "Présentation de produit"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+coos:ProductContent a owl:Class , rdfs:Class ;
+    rdfs:seeAlso coos:productContents ;
+    skos:prefLabel "Product content"@en , "Contenu de produit"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 # Classes related to the 'organizations' domain
 
 coos:StatisticalOrganization a rdfs:Class , owl:Class ;
@@ -245,6 +250,7 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:NationalStatisticalInstitute ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 
 #################################################################
 # Annotation properties
@@ -309,6 +315,16 @@ coos:presentation a rdfs:Property , owl:ObjectProperty ;
     skos:definition "Type of presentation of a statistical product"@en , "Type de présentation d'un produit statistique"@fr ;
     rdfs:domain coos:StatisticalProduct ;
     rdfs:range coos:ProductPresentation ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+# Property for product content
+
+coos:content a rdfs:Property , owl:ObjectProperty ;
+    rdfs:label "content"@en , "contenu"@fr ;
+    rdfs:comment "Type of content of a statistical product"@en , "Type de contenu d'un produit statistique"@fr ;
+    skos:definition "Type of content of a statistical product"@en , "Type de contenu d'un produit statistique"@fr ;
+    rdfs:domain coos:StatisticalProduct ;
+    rdfs:range coos:ProductContent ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 
@@ -816,4 +832,33 @@ coos:thematicMapPresentation a coos:ProductPresentation , skos:Concept ;
 coos:interactivePresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
     skos:prefLabel  "Interactive"@en , "Interactive"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+# Concept scheme for types of product content
+
+coos:productContents a skos:ConceptScheme ;
+    rdfs:seeAlso coos:ProductContent ;
+    skos:hasTopConcept coos:dataContent , coos:metadataContent , coos:analysisContent , coos:modelContent ;
+    skos:notation "CL_PROD_CONT" ;
+    skos:prefLabel "Product contents"@en , "Contenus de produit"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:dataContent a coos:ProductContent , skos:Concept ;
+    skos:inScheme coos:productContents ;
+    skos:prefLabel  "Data"@en , "Données"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:metadataContent a coos:ProductContent , skos:Concept ;
+    skos:inScheme coos:productContents ;
+    skos:prefLabel  "Metadata"@en , "Métadonnées"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:analysisContent a coos:ProductContent , skos:Concept ;
+    skos:inScheme coos:productContents ;
+    skos:prefLabel  "Analysis"@en , "Analyse"@fr ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:modelContent a coos:ProductContent , skos:Concept ;
+    skos:inScheme coos:productContents ;
+    skos:prefLabel  "Model"@en , "Modèle"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
