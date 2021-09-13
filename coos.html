@@ -30,6 +30,12 @@
 						"publisher": "Unece",
 						"title": "Common Statistical Data Architecture (CSDA)"
 					},
+					"DDI-CDI": {
+						"date": "July 2021",
+						"href": "https://ddialliance.org/announcement/public-review-ddi-cross-domain-integration-ddi-cdi",
+						"publisher": "DDI Alliance",
+						"title": "DDI - Cross Domain Integration"
+					},
 					"GAMSO": {
 						"date": "January 2019",
 						"href": "https://statswiki.unece.org/display/gamso",
@@ -247,6 +253,18 @@
 						<td><a href="#activities">Section 6. Organizations</a></td>
 					</tr>
 					<tr>
+						<td>coos:InformationOject</td>
+						<td><a href="#activities">Section 7. Products</a></td>
+					</tr>
+					<tr>
+						<td>coos:StatisticalInformationOject</td>
+						<td><a href="#activities">Section 7. Products</a></td>
+					</tr>
+					<tr>
+						<td>coos:StatisticalEntity</td>
+						<td><a href="#activities">Section 7. Products</a></td>
+					</tr>
+					<tr>
 						<td>coos:StatisticalProduct</td>
 						<td><a href="#activities">Section 7. Products</a></td>
 					</tr>
@@ -297,9 +315,9 @@
 				</tbody>
 			</table>
 
-			<p>COOS also defines a number of individuals which are instances of the classes above: those are described in more detail in the relevant sections.</p>
+			<p>COOS also defines a number of individuals which are mostly instances of the classes above: those are described in more detail in the relevant sections.</p>
 
-			<p>Other vocabularies used in this document are listed in the table below, with their namespaces and associated prefixes.</p>
+			<p>Other vocabularies used in this document or in the RDF specification are listed in the table below, with their namespaces and associated prefixes.</p>
 			<table class="simple">
 				<caption>Table 2. Other vocabularies used in this document</caption>
 				<thead>
@@ -311,14 +329,19 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>cc</td>
+						<td>https://creativecommons.org/ns</td>
+						<td>Describing Copyright in RDF: Creative Commons Rights Expression Language ([[!CC-ABOUT]])</td>
+					</tr>
+					<tr>
 						<td>dc</td>
 						<td>http://purl.org/dc/elements/1.1/</td>
-						<td>Dublin Core Metadata Element Set, Version 1.1([[!DC11]])</td>
+						<td>Dublin Core Metadata Element Set, Version 1.1 ([[!DC11]])</td>
 					</tr>
 					<tr>
 						<td>dcat</td>
 						<td>http://www.w3.org/ns/dcat#</td>
-						<td>Data Catalog Vocabulary ([[!vocab-dcat]])</td>
+						<td>Data Catalog Vocabulary ([[!vocab-dcat-2]])</td>
 					</tr>
 					<tr>
 						<td>dcterms</td>
@@ -363,21 +386,11 @@
 				</tbody>
 			</table>
 
-			<div class="issue">
-				<p>Note on vocabularies:</p>
-				<ul>
-					<li>VOAF, VANN and CC are used in the RDF file, but not here</li>
-					<li>PAV does not seem to be used</li>
-					<li>check why getting the CC reference does not work</li>
-				</ul>
-			</div>
-
 			<p>RDF, RDFS, OWL and XSD vocabularies or namespaces are also used, with their usual URIs and prefixes.</p>
+
 			<p>The RDF examples are expressed with the Terse RDF Triple language (Turtle) [[turtle]]. Unless otherwise specified, these examples use the http://example.org/ns/, which will be represented by the <code>ex:</code> prefix. Note however that individual resource names used as examples are entirely fictitious.</p>
 
 			<p class="ednote" title="Naming policy">Include of reference the naming policy</p>
-
-			<p class="ednote" title="Information objets">Add mention to generic GSIM artefacts (<code>InformationObject</code>, <code><code>StatisticalInformationObject</code></code>...), but where?</p>
 
 		</section>
 
@@ -527,6 +540,9 @@
 
 		<section id="products">
 			<h2>Products</h2>
+
+			<p class="ednote" title="Information objets">Introduce <code>InformationObject</code>, <code>StatisticalInformationObject</code> and <code>StatisticalEntity</code> here, even if they cover more than products.</p>
+
 			<p>The COOS ontology defines two base classes in the "Products" domain: <code>StatisticalProduct</code> and <code>StatisticalDataset</code>.</p>
 
 			<div class="issue">
@@ -546,13 +562,13 @@
 				<ul>
 					<li>Review the following text (reproduced from Dan's comment in issue #15)</li>
 					<li>Add comment on renaming "long" to "transposed"</li>
-					<li>Add graph dataset type and metadataFor property</li>
-					<li>Add bibliographic entry and reference for DDI-CDI</li>
+					<li>Add metadataFor property</li>
+					<li>Add constructs about product content and presentation</li>
 					<li>Rescale figure</li>
 				</ul>
 			</div>
 
-			<p>In DDI-CDI, four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Several of the types could be used to structure the same data. There is not a canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
+			<p>In DDI-CDI ([[DDI-CDI]]), four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Here we add the 'graph' type, which covers also tree-like data. Several of the types could be used to structure the same data. There is not a canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
 
 			<p>The types are defined roughly as follows:</p>
 
