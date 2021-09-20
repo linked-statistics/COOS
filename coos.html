@@ -405,6 +405,7 @@
 		</section>
 
 		<section id="activities">
+
 			<h2>Activities</h2>
 
 			<p>A large part of the COOS is related to the activities performed by statistical organizations. Indeed, the GSBPM model was one of the first to be standardized at the international level, and remains the most widely used of the Unece models. The GAMSO appeared later, and was subsequently articulated with the GSBPM in a coherent scheme.</p>
@@ -474,42 +475,66 @@
 				</pre>
 
 				<p>The following figure summarizes the vocabulary terms defined until now.</p>
+
 				<figure id="image-gsbpm">
 					<img src="img/coos-gsbpm.png" alt="GSBPM vocabulary overview" title="GSBPM vocabulary overview"/>
-					<figcaption>GSBPM vocabulary overview</figcaption>
+					<figcaption>Overview of COOS vocabulary for GSBPM</figcaption>
 				</figure>
 
 			</section>
 
 			<section id="activities-gamso">
+
 				<h3>Adding GAMSO</h3>
-				<p>Introducing GAMSO in this framework is not very difficult, but raises a few interesting questions. If we look at the terminology used in GAMSO, we find that the main concepts used are activity and activity area.</p>
 
-				<p>For the concept of activity, the simpler idea is to introduce a <code>StatisticalActivity</code> class that would be a daughter of <code>prov:Activity</code> and a mother of <code>StatisticalProductionActivity</code>. All second-level GAMSO activities would be instances of this <code>StatisticalActivity</code> class.</p>
+				<p>Introducing GAMSO in this framework is not very difficult. If we look at the terminology used in the model, we find that the main concepts are activities and activity areas. But actually, GAMSO describes two kinds of activities: those that are of statistical nature, for example “Manage Statistical Methodology”, and those that are only in support of statistical activities, like “Manage Finance”. To account for this distinction, COOS defines two different classes: <code>StatisticalActivity</code> and <code>Activity</code>. <code>Activity</code> is a daughter of <code>prov:Activity</code> and a mother of <code>StatisticalActivity</code>, which in turn is a mother of the <code>StatisticalProductionActivity</code> introduced previously.</p>
 
-				<p>For the activity areas, the question is a bit more tricky: are these really activities, or just boxes where we classify the second-level activities? In the first case, activity areas will be themselves instances of <code>StatisticalActivity</code>, in the second case (represented below) they will just be instances of <code>skos:Concept</code> or of a specific <code>StatisticalActivityArea</code> sub-class. The answer can in fact be different for each GAMSO activity area: that does not change the global structure of the ontology.</p>
+				<p>On the other hand, the GAMSO activity areas are not really activities by themselves, but rather “boxes” used to classify the activities. We thus make them only instances of <code>skos:Concept</code> to represent this “taxonomic” nature, or more precisely of a specific <code>StatisticalActivityArea</code> sub-classof <code>skos:Concept</code>.</p>
+
+				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity">
+				&lt;http://id.unece.org/activities/activityArea/1&gt; a coos:ActivityArea ;
+					skos:notation "1" ;
+					skos:prefLabel "Strategy and Leadership"@en .
+
+				&lt;http://id.unece.org/activities/activity/2.3&gt; a coos:Activity ;
+					skos:notation "2.3" ;
+					skos:prefLabel "Monitor Capability Improvements"@en .					
+				</pre>
+
+				<p>As previously for the GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the activities they contain. At a top of the scheme, an instance of <code>Activity</code> represents the whole activity of statistical organizations, so we name it <code>officialStatistics</code>.</p>
+
+				<p>Finally, we need two properties to describe how a GAMSO <code>Activity</code> relates to a GSBPM <code>StatisticalProductionActivity</code>:</p>
+
+				<ul>
+					<li><code>supports</code>: we say that an <code>Activity</code>, for example a GAMSO individual, helps to perform a <code>StatisticalProductionActivity</code>, e.g. a sub-process.</li>
+					<li><code>uses</code>: conversely, a statistical production activity will require one or several GAMSO activities in order to function.</li>
+				</ul>
+
+				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They represent weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas partitive relations are about constitution. An obvious example of <code>uses/supports</code> relation is included in the ontology for reference:</p>
+
+				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity">
+				&lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; a coos:OverarchingActivity ;
+					skos:notation "0.1"	;
+					skos:prefLabel "Quality Management"@en ;
+					coos:uses &lt;http://id.unece.org/activities/activity/3.3&gt; .
+
+				&lt;http://id.unece.org/activities/activity/3.3> a coos:Activity ;
+					skos:notation "3.3" ;
+					skos:prefLabel "Manage Quality"@en ;
+					coos:supports &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; .
+				</pre>
+
+				<p>The following figure gives an overview of the COOS elements defined until now.</p>
 
 				<figure id="image-gamso">
 					<img src="img/coos-gamso.png" alt="GAMSO vocabulary overview" title="GAMSO vocabulary overview"/>
-					<figcaption>GAMSO vocabulary overview</figcaption>
+					<figcaption>Overview of COOS vocabulary for GAMSO and GSBPM</figcaption>
 				</figure>
-
-				<p>As previously for the GSBPM, individuals would be defined for each activity and activity area, and the GAMSO itself would be a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it.</p>
-
-				<p>In addition, we need two properties to describe how an <code>Activity</code> relates to a <code>StatisticalProductionActivity</code>:</p>
-				<ul>
-					<li><code>supports</code>: it means to enable to perform or function. We say that an <code>Activity</code>, e.g. GAMSO Manage Statistical Methods, <code>supports</code> a <code>StatisticalProductionActivity</code>, e.g. a GSBPM Phase.</li>
-					<li><code>uses</code>: it means to require to perform or function. We say that a <code>StatisticalProductionActivity</code>, e.g. GSBPM Overarching Processes, <code>uses</code> an <code>Activity</code>, e.g. Manage IT.</li>
-				</ul>
-				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They are weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas <code>part/whole</code> are about constitution.</p>
 
 				<p>A few points should be studied further:</p>
 				<ul>
 					<li>The notes of the second-level GAMSO activities are very well structured, so it would be possible to replace (or double) them with lists of individual concepts for third-level activities. For example, activity 2.1.1 ('Identify disruptions and capability improvements') would be added in the figure above with a <code>skso:broader</code> link to the activity 2.1.</li>
-					<li>We could refine the model by introducing more specific classes, for example <code>StatisticalSupportActivity</code>, <code>StatisticalStategicActivity</code>, etc. That should be justified by well-defined use cases.</li>
 					<li>The relation between the GSBPM as a concept scheme and as an activity area has to be precised. For now we can use a simple <code>rdf:seeAlso</code> property, but in a totally integrated view, all GSBPM and GAMSO artefacts would go in a single <code>skos:ConceptScheme</code> (the GAMSO) and the GSBPM would not be a concept scheme anymore: it would be an instance of both <code>StatisticalArea</code> and <code>StatisticalProductionActivity</code>.</li>
-					<li>There is a remaining question about the over-arching processes of the GSBPM. They probably should be viewed as components of the GSBPM concept scheme, and instances of class <code>StatisticalProductionActivity</code> which are not phases or sub-processes; an additional <code>OverArchingProcess</code> (or <code>TransverseActivity</code>, etc.) class could be created.</li>
-					<li>Some clarification should be made on the relations between similar GSBPM over-arching processes and GAMSO activities, notably 'Quality Management' (GSBPM) and 'Manage Quality' (GAMSO 3.10).</li>
 				</ul>
 			</section>
 
