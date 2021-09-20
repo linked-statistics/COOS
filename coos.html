@@ -98,6 +98,16 @@
 		</script>
 	</head>
 	<body>
+
+		<div class="issue" title="Missing text">
+			<p>Text missing</p>
+			<ul>
+				<li>Abstract</li>
+				<li>Introduction</li>
+				<li>Overview</li>
+				<li>Conclusion</li>
+			</ul>
+		</div>
 		<section id='abstract'>
 			<p>The abstract will go there.</p>
 		</section>
@@ -396,19 +406,57 @@
 
 		<section id="activities">
 			<h2>Activities</h2>
+
+			<p>A large part of the COOS is related to the activities performed by statistical organizations. Indeed, the GSBPM model was one of the first to be standardized at the international level, and remains the most widely used of the Unece models. The GAMSO appeared later, and was subsequently articulated with the GSBPM in a coherent scheme.</p>
+
+			<p>In this section, we will follow this historic view and start by describing the COOS artefacts that originate from the GSBPM, then add the GAMSO view. Other useful COOS constructs related to the Official Statistics activities are listed in a third sub-section.</p>
+
 			<section id="activities-gsbpm">
+
 				<h3>Base GSBPM model</h3>
-				<p>A first approach to modeling statistical activities, based on the GSBPM, is presented in http://ceur-ws.org/Vol-1551/article-06.pdf. Basically, three classes are defined in this GSBPM ontology, which are depicted in the following figure.</p>
-				<p><code>StatisticalProductionActivity</code> is a subclass of both <code>prov:Activity</code> and <code>skos:Concept</code>. Using SKOS allows us to organize the activities in schemes, like GSBPM or GAMSO. Using PROV allows us to specify who undertakes an activity and what entities it consumes or produces.</p>
+
+				<div class="issue" title="Add short GSBPM overview">
+					<ul>
+						<li>Evolution of the model, now in version 5.1.</li>
+						<li>Use cases.</li>
+						<li>Structure</li>
+					</ul>
+				</div>
+
+				<p>A first approach to modeling statistical activities, based on the GSBPM, is presented in [[GSBPM-LM]]. Basically, three classes are defined in this GSBPM ontology: <code>StatisticalProductionActivity</code>, <code>Phase</code> and <code>SubProcess</code>.</p>
+
+				<p><code>StatisticalProductionActivity</code> is a sub-class of both <code>prov:Activity</code> and <code>skos:Concept</code>. Using SKOS allows us to organize the activities in schemes, like GSBPM or GAMSO. Using PROV allows us to specify who undertakes an activity and what entities it consumes or produces.</p>
 
 				<pre class="example" title="Example of statistical production activity">
 				ex:produce-study a coos:StatisticalProductionActivity ;
 					rdfs:label "Produce study"@en .
 				</pre>
 
-				<p><code>Phase</code> and <code>SubProcess</code> are both subclasses of <code>StatisticalProductionActivity</code> and represent respectively the concepts of a GSBPM phase and GSBPM sub-process.</p>
+				<p><code>Phase</code> and <code>SubProcess</code> are both sub-classes of <code>StatisticalProductionActivity</code> and represent respectively the concepts of a GSBPM phase and GSBPM sub-process.</p>
 
-				<p>The ontology also defines an individual for each GSBPM phase or subprocess, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and subprocesses), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
+				<pre class="example nohighlight" title="Examples of GSBPM phase and sub-process">
+				&lt;http://id.unece.org/activities/phase/6&gt; a coos:Phase ;
+					skos:notation "6" ;
+					skos:prefLabel "Analyse"@en .					
+
+				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
+					skos:notation "7.2" ;
+					skos:prefLabel "Produce dissemination products"@en .
+				</pre>
+
+				<p>In addition, COOS defines the <code>OverarchingActivity</code> class to represent what is called overarching process by the GSBPM.</p>
+
+				<div class="issue" title="Overarching process or activity">
+					<p>Add a sentence to explain why over-arching process became over-arching activity.</p>
+				</div>
+
+				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
+				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:OverarchingActivity ;
+					skos:notation "0.2"	;
+					skos:prefLabel "Metadata Management"@en .					
+				</pre>
+
+				<p>The ontology actually defines an individual for each GSBPM phase, sub-process, and overarching activities, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases, sub-processes and overarching activities), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
 
 				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
 
