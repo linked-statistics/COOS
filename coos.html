@@ -458,7 +458,7 @@
 
 				<p>The ontology actually defines an individual for each GSBPM phase, sub-process, and overarching activities, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases, sub-processes and overarching activities), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
 
-				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
+				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
 
 				<pre class="example nohighlight" title="Example of GSBPM phase and sub-process">
 				&lt;http://id.unece.org/activities/phase/2&gt; a coos:Phase ;
@@ -469,7 +469,8 @@
 				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
 					skos:notation "2.3" ;
 					skos:prefLabel "Design collection"@en ;
-					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; .
+					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; ;
+					skos:isPartOf &lt;http://id.unece.org/activities/phase/2&gt; .
 				</pre>
 
 				<p>The following figure summarizes the vocabulary terms defined until now.</p>
