@@ -343,7 +343,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:topConceptOf <http://id.unece.org/activities/gsbpm> ;
     skos:exactMatch <http://id.unece.org/activities/activityArea/4> ;
-    skos:narrower <http://id.unece.org/activities/phase/1> , <http://id.unece.org/activities/phase/2> , <http://id.unece.org/activities/phase/3> , <http://id.unece.org/activities/phase/4> , <http://id.unece.org/activities/phase/5> , <http://id.unece.org/activities/phase/6> , <http://id.unece.org/activities/phase/7> , <http://id.unece.org/activities/phase/8> ;
+    skos:narrower <http://id.unece.org/activities/phase/1> , <http://id.unece.org/activities/phase/2> , <http://id.unece.org/activities/phase/3> , <http://id.unece.org/activities/phase/4> , <http://id.unece.org/activities/phase/5> , <http://id.unece.org/activities/phase/6> , <http://id.unece.org/activities/phase/7> , <http://id.unece.org/activities/phase/8> , <http://id.unece.org/activities/overarchingActivity/0.1> , <http://id.unece.org/activities/overarchingActivity/0.2> , <http://id.unece.org/activities/overarchingActivity/0.3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # The GAMSO activities and activity areas
@@ -505,17 +505,23 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 <http://id.unece.org/activities/overarchingActivity/0.1> a coos:OverarchingActivity ;
     skos:notation "0.1"	;
     skos:prefLabel "Quality Management"@en , "Gestion de la qualité"@fr , "Administración de la Calidad"@es ;
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
     coos:uses <http://id.unece.org/activities/activity/3.3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/overarchingActivity/0.2> a coos:OverarchingActivity ;
     skos:notation "0.2"	;
     skos:prefLabel "Metadata Management"@en , "Gestion des métadonnées"@fr , "Administración de Metadatos"@es ;
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/overarchingActivity/0.3> a coos:OverarchingActivity ;
     skos:notation "0.3"	;
     skos:prefLabel "Data Management"@en , "Gestion des données"@fr , "Administración de Datos"@es ;
+    skos:inScheme <http://id.unece.org/activities/gsbpm> ;
+    skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # The GSBPM phases and sub-process
