@@ -287,6 +287,8 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
 
 coos:enables a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "enables"@en , "permet"@fr ;
+    rdfs:comment "To provide the means for."@en ;
+    skos:definition "To provide the means for."@en ;
     rdfs:domain coos:Capability ;
     rdfs:range coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
