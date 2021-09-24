@@ -557,10 +557,14 @@
 					<li><code>Cross-cutting capabilities: </code>capabilities used to formulate and implement the policies that the organization chooses for its internal operations. They generally map to corporate support in GAMSO and overarching processes in GSBPM.</li>
 				</ul>
 
-				<pre class="example" title="Example of capability">
-				ex:csda-data-integration a coos:Capability ;
+				<pre class="example" title="Example of capabilities">
+				ex:csda-data-integration a coos:CoreCapability ;
 					rdfs:label "Data integration"@en ;
 					skos:definition "The ability to combine, link, relate and/or align different data sets in order to create an integrated information set."@en .
+				
+				ex:csda-data-integration a coos:Capability ;
+					rdfs:label "Develop and apply services for smarter statistical-geospatial integration"@en ;
+					rdfs:isDefinedBy "https://www.efgs.info/geostat/" .
 				</pre>
 				
 				<figure id="image-csda-ex">
