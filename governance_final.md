@@ -32,7 +32,7 @@ BBased on the common semantic versioning governance elements of the ModernStats 
     <tr>
 	  <th scope="row">1</th>
       <td><b>Change control</b></td>
-      <td><p>CCOOS has a systematic way to design and adapt changes, i.e. the design principles of COOS apply to national adaptation of COOS and to the revisions of the model.</p></td>
+      <td><p>COOS has a systematic way to design and adapt changes, i.e. the design principles of COOS apply to national adaptation of COOS and to the revisions of the model.</p></td>
       <td>
         <p>The only way to provide a consistent level of quality information to stakeholders is if the whole organisation abides by the same principles. Therefore, it is recommended that national adaptations of COOS apply the design principles.</p>
         <p>The design principles also need to be used for future revisions of COOS in order to ensure consistency and comparability between different versions.</p>
