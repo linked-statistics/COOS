@@ -101,8 +101,9 @@ BBased on the common semantic versioning governance elements of the ModernStats 
 	   <p>The initial version of the COOS is guided by model interoperability, the future versions of the ontology would be more use-case-driven.</p>
 	  </td>
       <td>
-        <p>COOS is developed in a way that it uses agreed models and standards so also standard global names.</p>
-	<p>The global names provided by future versions of COOS will be based on the synthesis of use cases.</p>
+        <ul>
+         <li>COOS is developed in a way that it uses agreed models and standards so also standard global names.</li>
+	</li>The global names provided by future versions of COOS will be based on the synthesis of use cases.</li>
         </ul>
       </td>
     </tr>
