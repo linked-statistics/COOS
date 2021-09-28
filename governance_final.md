@@ -227,7 +227,7 @@ It does not cover the process of adoption by National Statistical Offices as tha
 
 This process model for ontology also includes the iterative approach similar to the PDCA cycle of quality management as ensuring the quality of an ontology is of high importance to serve user needs.
 
-## COOS Decision principles
+## COOS decision principles
 
 In order to keep the creation and update of the COOS understandable, some main criteria are defined in order to help NSOs with adopting COOS or a national ontology.
 
