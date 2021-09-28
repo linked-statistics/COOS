@@ -103,7 +103,7 @@ BBased on the common semantic versioning governance elements of the ModernStats 
       <td>
         <ul>
          <li>COOS is developed in a way that it uses agreed models and standards so also standard global names.</li>
-	</li>The global names provided by future versions of COOS will be based on the synthesis of use cases.</li>
+	 <li>The global names provided by future versions of COOS will be based on the synthesis of use cases.</li>
         </ul>
       </td>
     </tr>
