@@ -96,9 +96,9 @@ BBased on the common semantic versioning governance elements of the ModernStats 
     <tr>
 	  <th scope="row">5</th>
       <td><b>Providing global names</b></td>
+      <td> <p>COOS provides global names for some individuals, based on interoperability and use cases.</p></td>
       <td>
-        <p>COOS provides global names for some individuals, based on interoperability and use cases.</p>
-		<p>The initial version of the COOS is guided by model interoperability, the future versions of the ontology would be more use-case-driven.</p>
+	   <p>The initial version of the COOS is guided by model interoperability, the future versions of the ontology would be more use-case-driven.</p>
 	  </td>
       <td>
         <p>COOS is developed in a way that it uses agreed models and standards so also standard global names.</p>
