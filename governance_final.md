@@ -1,6 +1,6 @@
 # COOS Governance
 
-draft v0.2
+draft v0.3
 
 ## Scope
 
@@ -8,13 +8,13 @@ COOS governance is fully in line with the ModernStats Governance Guidance, the g
 
 ## Versioning
 
-Based on the common semantic versioning governance elements of the ModernStats models [link], the following COOS-specific rules apply to the three main version types:
+BBased on the common semantic versioning governance elements of the ModernStats models [link],  the following COOS-specific rules apply to the three main version types:
 
  - Major: there are changes in the new version that affect the formal naming, definitions and descriptions of the existing concepts, as well as the relations between these concepts.
 
  - Minor: there are changes of concepts and/or relations of the model that do not affect the formal naming, definitions and descriptions. The changes might include adding new concepts or relations or removing old ones, but all of these changes are considered as backward-compatible with the existing model.
 
- - Patch: error corrections, textual or visual changes based on errors identified in previous versions that result in backwards-compatible bug fixes. Changes implemented as part of the patch do not change the substance.
+ - Patch: error corrections, textual or visual changes based on errors identified in previous versions that result in bug fixes. Changes implemented as part of the patch do not change the substance
 
 ## COOS design principles
 
@@ -32,9 +32,9 @@ Based on the common semantic versioning governance elements of the ModernStats m
     <tr>
 	  <th scope="row">1</th>
       <td><b>Change control</b></td>
-      <td><p>COOS has change control i.e. the design principles of COOS apply to national adaptation of COOS and to the revisions of the model.</p></td>
+      <td><p>CCOOS has a systematic way to design and adapt changes, i.e. the design principles of COOS apply to national adaptation of COOS and to the revisions of the model.</p></td>
       <td>
-        <p>The only way to provide a consistent level of quality information to users is if the whole organisation abides by the same principles. Therefore, it is recommended that local adaptations of COOS apply the design principles.</p>
+        <p>The only way to provide a consistent level of quality information to stakeholders is if the whole organisation abides by the same principles. Therefore, it is recommended that national adaptations of COOS apply the design principles.</p>
         <p>The design principles also need to be used for future revisions of COOS in order to ensure consistency and comparability between different versions.</p>
       </td>
       <td>
@@ -46,17 +46,19 @@ Based on the common semantic versioning governance elements of the ModernStats m
     </tr>
     <tr>
 	  <th scope="row">2</th>
-      <td><b>Use of agreed standards</b></td>
-      <td><p>COOS is built upon foundations set by other standards, makes use of already available standards and helps the user to leverage them in combination.</p></td>
+      <td><b>Use of agreed models and standards</b></td>
+      <td><p>COOS is built upon foundations set by other standards and helps the stakeholder to leverage them in combination. Therefore COOS optimally reuses the existing terms and definitions used by the involved models, standards.</p></td>
       <td>
-        <p>COOS provides a formal presentation of all ModernStats standards covering the statistical business process, the information objects and the generic activities of statistical organisations.</p>
-        <p>COOS is also linked to general vocabularies, data models and existing ontologies, such as DCAT, PROV, SKOS</p>
+        <p>COOS provides a formal presentation of ModernStats standards covering the statistical business process, the information objects and the generic activities of statistical organisations.</p>
+        <p>COOS is also linked to general vocabularies, data models and existing ontologies, such as DCAT, PROV, SKOS.</p>
         <p>By COOS providing the high-level formal presentation of the concepts used in these models, it is ultimately connecting them.</p>
+	<p>As COOS is integrating information available in models, standards, in case of missing terms or contradictions between similar terms used in different models, using new definitions should be avoided.</p>
       </td>
       <td>
         <ul>
-          <li>COOS adaptation/revision initiatives will not begin until they are examined for compliance with the design principles. A conflict with a principle will be resolved by changing the framework of the initiative.</li>
-          <li>Mechanisms are needed to monitor the implementation of COOS and adapt it where necessary to meet business needs.</li>
+          <li>COOS is a powerful means of representing the connections between the ModernStats standards and ontology industry models, forming a bridge between the core standards for official statistics and relevant standards outside the domain.</li>
+          <li>Connecting the ModernStats models this way will help the community to highlight areas for further improvement in each model in order to support interoperability: to make them work together better.</li>
+	  <li>Defining relations between statistical concepts and objects defined in other ontologies or vocabularies allows us to benefit from existing well-defined and useful semantics.</li>
         </ul>
       </td>
     </tr>
