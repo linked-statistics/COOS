@@ -14,7 +14,7 @@ BBased on the common semantic versioning governance elements of the ModernStats 
 
  - Minor: there are changes of concepts and/or relations of the model that do not affect the formal naming, definitions and descriptions. The changes might include adding new concepts or relations or removing old ones, but all of these changes are considered as backward-compatible with the existing model.
 
- - Patch: error corrections, textual or visual changes based on errors identified in previous versions that result in bug fixes. Changes implemented as part of the patch do not change the substance
+ - Patch: error corrections, textual or visual changes based on errors identified in previous versions that result in bug fixes. Changes implemented as part of the patch do not change the substance.
 
 ## COOS design principles
 
