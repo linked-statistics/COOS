@@ -340,7 +340,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 # The statistical production process
 
 <http://id.unece.org/activities/statisticalProductionProcess> a coos:StatisticalProductionActivity ;
-    skos:notation "SPP"	;
+    skos:notation "SPP" ;
     skos:prefLabel "Statistical Production Process"@en , "Processus de Production Statistique"@fr , "Proceso de Producción Estadística"@es ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:topConceptOf <http://id.unece.org/activities/gsbpm> ;
@@ -505,7 +505,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 # The GSBPM overarching processes
 
 <http://id.unece.org/activities/overarchingActivity/0.1> a coos:OverarchingActivity ;
-    skos:notation "0.1"	;
+    skos:notation "0.1" ;
     skos:prefLabel "Quality Management"@en , "Gestion de la qualité"@fr , "Administración de la Calidad"@es ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
@@ -513,14 +513,14 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/overarchingActivity/0.2> a coos:OverarchingActivity ;
-    skos:notation "0.2"	;
+    skos:notation "0.2" ;
     skos:prefLabel "Metadata Management"@en , "Gestion des métadonnées"@fr , "Administración de Metadatos"@es ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/overarchingActivity/0.3> a coos:OverarchingActivity ;
-    skos:notation "0.3"	;
+    skos:notation "0.3" ;
     skos:prefLabel "Data Management"@en , "Gestion des données"@fr , "Administración de Datos"@es ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
@@ -594,7 +594,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/subProcess/1.1> a coos:SubProcess ;
     skos:notation "1.1" ;
-	  skos:prefLabel "Identify needs"@en , "Identificar necesidades"@es , "Identifier les besoins"@fr ;
+    skos:prefLabel "Identify needs"@en , "Identificar necesidades"@es , "Identifier les besoins"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/1> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -608,14 +608,14 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/subProcess/1.3> a coos:SubProcess ;
     skos:notation "1.3" ;
-	  skos:prefLabel "Establish output objectives"@en , "Establecer objetivos de salidas"@es , "Etablir les objectifs en matières de produits"@fr ;
+    skos:prefLabel "Establish output objectives"@en , "Establecer objetivos de salidas"@es , "Etablir les objectifs en matières de produits"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/1> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/subProcess/1.4> a coos:SubProcess ;
     skos:notation "1.4" ;
-	  skos:prefLabel "Identify concepts"@en , "Identificar conceptos"@es , "Identifier les concepts"@fr ;
+    skos:prefLabel "Identify concepts"@en , "Identificar conceptos"@es , "Identifier les concepts"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/1> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -671,7 +671,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/subProcess/2.6> a coos:SubProcess ;
     skos:notation "2.6" ;
-	  skos:prefLabel "Design production systems and workflow"@en , "Diseñar sistemas de producción y flujo de trabajo"@es , "Concevoir les systèmes de production et le déroulement des travaux"@fr ;
+    skos:prefLabel "Design production systems and workflow"@en , "Diseñar sistemas de producción y flujo de trabajo"@es , "Concevoir les systèmes de production et le déroulement des travaux"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/2> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -685,21 +685,21 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/subProcess/3.2> a coos:SubProcess ;
     skos:notation "3.2" ;
-	  skos:prefLabel "Reuse or build analysis components"@en , "Reutilizar o construir componentes de análisis"@es , "Réutiliser ou construire les composants d'analyse"@fr ;
+    skos:prefLabel "Reuse or build analysis components"@en , "Reutilizar o construir componentes de análisis"@es , "Réutiliser ou construire les composants d'analyse"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/subProcess/3.3> a coos:SubProcess ;
     skos:notation "3.3" ;
-	  skos:prefLabel "Reuse or build dissemination components"@en , "Reutilizar o construir componentes de difusión"@es , "Réutiliser ou construire les composants de diffusion"@fr ;
+    skos:prefLabel "Reuse or build dissemination components"@en , "Reutilizar o construir componentes de difusión"@es , "Réutiliser ou construire les composants de diffusion"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/subProcess/3.4> a coos:SubProcess ;
     skos:notation "3.4" ;
-	  skos:prefLabel "Configure workflows"@en , "Configurar flujos de trabajo"@es , "Configurer le déroulement des travaux"@fr ;
+    skos:prefLabel "Configure workflows"@en , "Configurar flujos de trabajo"@es , "Configurer le déroulement des travaux"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -720,9 +720,9 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/subProcess/3.7> a coos:SubProcess ;
     skos:notation "3.7" ;
-	skos:prefLabel "Finalise production systems"@en , "Finalizar sistemas de producción"@es , "Finaliser le système de production"@fr ;
+    skos:prefLabel "Finalise production systems"@en , "Finalizar sistemas de producción"@es , "Finaliser le système de production"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
-	skos:broader <http://id.unece.org/activities/phase/3> ;
+    skos:broader <http://id.unece.org/activities/phase/3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/subProcess/4.1> a coos:SubProcess ;
@@ -769,7 +769,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/subProcess/5.3> a coos:SubProcess ;
     skos:notation "5.3" ;
-	  skos:prefLabel "Review and validate"@en , "Revisar y validar"@es , "Examiner et valider les données"@fr ;
+    skos:prefLabel "Review and validate"@en , "Revisar y validar"@es , "Examiner et valider les données"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/phase/5> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
