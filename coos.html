@@ -221,10 +221,6 @@
 						<td><a href="#activities">Section 3. Activities</a></td>
 					</tr>
 					<tr>
-						<td>coos:StatisticalSupportProgram</td>
-						<td><a href="#activities">Section 3. Activities</a></td>
-					</tr>
-					<tr>
 						<td>coos:Task</td>
 						<td><a href="#activities">Section 3. Activities</a></td>
 					</tr>
@@ -542,11 +538,10 @@
 
 			<section id="activities-other">
 				<h3>Adding GSIM and CSDA</h3>
-				<p>Adding the Generic Statistical Information Model (GSIM) in this framework allows us to refine <code>StatisticalActivity</code> even further. Parallel to <code>StatisticalProductionActivity</code> we can define three additional sub-classes of <code>StatisticalActivity</code>:</p>
+				<p>Adding the Generic Statistical Information Model (GSIM) in this framework allows us to refine <code>StatisticalActivity</code> even further. Parallel to <code>StatisticalProductionActivity</code> we can define two additional sub-classes of <code>StatisticalActivity</code>:</p>
 				<ul>
 					<li><code>StatisticalProgram:</code> it is essentially a set of activities carried out to produce statistics. These statistics are about the set of units in scope for the program, e.g. “All persons with a university degree”, within a given subject field, e.g. income statistics, tourism, etc.</li>
 					<li><code>StatisticalProgramCycle:</code> statistical program activities are often repeated over time in iterations called cycles. A StatisticalProgramCycle is one of those iterations for a specific time and geography.</li>
-					<li><code>StatisticalSupportProgram:</code> these are all centralized, corporate-level activities that allow statistical programs to exist and operate. These span from requirements elicitation, design and implementation (GSBPM Phases 1-3) to metadata management data, metadata and quality management (GSBPM overarching processes) and the statistical portion of capability development and corporate support (GAMSO).</li>
 				</ul>
 				
 				
@@ -557,18 +552,25 @@
 					<li><code>Cross-cutting capabilities: </code>capabilities used to formulate and implement the policies that the organization chooses for its internal operations. They generally map to corporate support in GAMSO and overarching processes in GSBPM.</li>
 				</ul>
 
-				<pre class="example" title="Example of capability">
-				ex:csda-data-integration a coos:Capability ;
+				<pre class="example" title="Example of capabilities">
+				ex:csda-data-integration a coos:CoreCapability ;
 					rdfs:label "Data integration"@en ;
 					skos:definition "The ability to combine, link, relate and/or align different data sets in order to create an integrated information set."@en .
+				
+				ex:geostat-integration-services a coos:Capability ;
+					rdfs:label "Develop and apply services for smarter statistical-geospatial integration"@en ;
+					rdfs:isDefinedBy <https://www.efgs.info/geostat/> .
 				</pre>
+				
+				<figure id="image-csda-ex">
+					<img src="img/coos-csda-ex.png" alt="Linking COOS capabilities and activities" title="Linking COOS capabilities and activities"/>
+					<figcaption>Linking COOS capabilities and activities</figcaption>
+				</figure>
 
 				<div class="issue" title="To do on capabilities">
 					<ul>
-						<li>Add an example of capability from geospatial domain ("Develop and apply services for smarter statistical-geospatial integration" from GeoStat4).</li>
 						<li>Add text about link between capabilities and GAMSO area "Develop capabilities" as illustration.</li>
 						<li>The ESS has a Business Capabilities model that might be worth checking https://joinup.ec.europa.eu/collection/statistical-enterprise-architecture/document/ess-earf-business-capabilities-model (See Figure 2 ESS Business Capabilities model – Levels 0 & 1)</li>
-						<li>Insert final figure from https://github.com/linked-statistics/COOS/issues/46</li>
 					</ul>
 				</div>
 			</section>
@@ -649,7 +651,6 @@
 					<li>Add comment on renaming "long" to "transposed"</li>
 					<li>Add metadataFor property</li>
 					<li>Add constructs about product content and presentation</li>
-					<li>Rescale figure</li>
 				</ul>
 			</div>
 
