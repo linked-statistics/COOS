@@ -40,7 +40,7 @@
 # Classes related to the 'activities' domain
 
 coos:Activity a rdfs:Class , owl:Class ;
-    rdfs:label "Activity"@en , "Activité"@fr, "Actividad"@es ;
+    rdfs:label "Activity"@en , "Activité"@fr , "Actividad"@es ;
     rdfs:comment "Activity that a statistical organization does."@en , "Actividad que realiza la organización estadística."@es , "Activité réalisée par une organisation statistique."@en ;
     skos:definition "Activity that a statistical organization does."@en , "Actividad que realiza la organización estadística."@es, "Activité réalisée par une organisation statistique."@en ;
     rdfs:subClassOf skos:Concept , prov:Activity ;
@@ -227,10 +227,10 @@ coos:StatisticalOrganization a rdfs:Class , owl:Class ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:NationalStatisticalInstitute a rdfs:Class , owl:Class ;
-    rdfs:label "National statistical institute"@en , "Institut national de statistiques"@fr ,"Instituto nacional de estadística"@es ;
+    rdfs:label "National statistical institute"@en , "Institut national de statistiques"@fr , "Instituto nacional de estadística"@es ;
     rdfs:comment "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en , "El principal productor de estadísticas oficiales en un país y/o en la organización responsable de la coordinación de todas las actividades relacionadas con el desarrollo, producción y publicación de estadísticas nacionales en el sistema estadístico nacional."@es ;
     skos:definition "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en , "El principal productor de estadísticas oficiales en un país y/o en la organización responsable de la coordinación de todas las actividades relacionadas con el desarrollo, producción y publicación de estadísticas nacionales en el sistema estadístico nacional."@es ;
-    skos:scopeNote "The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc."@en , "El nombre real que se da a la oficina nacional de estadística en un país, puede ser Instituto Nacional de Estadística (INE, NSI en inglés), Oficina Nacional de Estadísticas (ONE, NBS en inglés), Oficina Central de Estadísticas (OCE, CBS en inglés), Agencia Nacional Estadística (ANE, NSA en inglés), Agencia Central Estadística (ACE, CSA en inglés), Agencia Central de Estadística (ACE, CSA en inglés), etc. "@es ;
+    skos:scopeNote "The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc."@en , "El nombre real que se da a la oficina nacional de estadística en un país, puede ser Instituto Nacional de Estadística (INE, NSI en inglés), Oficina Nacional de Estadísticas (ONE, NBS en inglés), Oficina Central de Estadísticas (OCE, CBS en inglés), Agencia Nacional Estadística (ANE, NSA en inglés), Agencia Central Estadística (ACE, CSA en inglés), Agencia Central de Estadística (ACE, CSA en inglés), etc."@es ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:InternationalAgency ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -380,6 +380,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
     skos:inScheme <http://id.unece.org/activities/gamso> ;
     skos:broader <http://id.unece.org/activities/officialStatistics> ;
     skos:exactMatch <http://id.unece.org/activities/statisticalProductionProcess> ;
+    rdfs:seeAlso <http://id.unece.org/activities/gsbpm> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 <http://id.unece.org/activities/activity/1.1> a coos:Activity ;
@@ -469,7 +470,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/activity/3.6> a coos:Activity , coos:StatisticalActivity ;
     skos:notation "3.6" ;
-    skos:prefLabel "Manage Data Suppliers"@en , "Administrar a los Proveedores de Datos"@es , "Gérer les fournisseurs de données"@fr;
+    skos:prefLabel "Manage Data Suppliers"@en , "Administrar a los Proveedores de Datos"@es , "Gérer les fournisseurs de données"@fr ;
     skos:inScheme <http://id.unece.org/activities/gamso> ;
     skos:broader <http://id.unece.org/activities/activityArea/3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -586,7 +587,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/phase/8> a coos:Phase ;
     skos:notation "8" ;
-    skos:prefLabel "Evaluate"@en , "Evaluación"@es , "Evaluer"@fr;
+    skos:prefLabel "Evaluate"@en , "Evaluación"@es , "Evaluer"@fr ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
     skos:broader <http://id.unece.org/activities/statisticalProductionProcess> ;
     skos:narrower <http://id.unece.org/activities/subProcess/8.1> , <http://id.unece.org/activities/subProcess/8.2> , <http://id.unece.org/activities/subProcess/8.3> ;
@@ -900,12 +901,12 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
     skos:broader <http://id.unece.org/activities/phase/8> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-# The GAMSO/GSBPM concept schemes
+# The GAMSO and GSBPM concept schemes
 
 <http://id.unece.org/activities/gamso> a skos:ConceptScheme ;
     skos:prefLabel "Generic Activity Model for Statistical Organisations"@en , "Modelo Genérico de Actividades para las Organizaciones Estadísticas"@es , "Modèle générique d'activité pour les organisations statistiques"@fr ;
     skos:notation "GAMSO" ;
-    pav:version  "v1.2" ;
+    pav:version "v1.2" ;
     foaf:homePage <https://statswiki.unece.org/display/GAMSO/GAMSO+v1.2> ;
     dcterms:hasPart <http://id.unece.org/activities/gsbpm> ;
     skos:hasTopConcept <http://id.unece.org/activities/officialStatistics> ;
@@ -914,10 +915,11 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 <http://id.unece.org/activities/gsbpm> a skos:ConceptScheme ;
     skos:prefLabel "Generic Statistical Business Process Model"@en , "Modelo Genérico del Proceso Estadístico"@es, "Modèle générique de processus de production statistique"@fr ;
     skos:notation "GSBPM" ;
-    pav:version  "v5.1" ;
+    pav:version "v5.1" ;
     foaf:homePage <https://statswiki.unece.org/display/GSBPM/GSBPM+v5.1> ;
     dcterms:isPartOf <http://id.unece.org/activities/gamso> ;
     skos:hasTopConcept <http://id.unece.org/activities/statisticalProductionProcess> ;
+    rdfs:seeAlso <http://id.unece.org/activities/activityArea/4> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Concept scheme for types of product presentation
@@ -931,32 +933,32 @@ coos:productPresentations a skos:ConceptScheme ;
 
 coos:datasetPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Dataset"@en , "Jeu de données"@fr ;
+    skos:prefLabel "Dataset"@en , "Jeu de données"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:publicationPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Publication"@en , "Publicación"@es  , "Publication"@fr ;
+    skos:prefLabel "Publication"@en , "Publicación"@es  , "Publication"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:viualizationPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Visualization"@en , "Visualización"@es , "Visualisation"@fr ;
+    skos:prefLabel "Visualization"@en , "Visualización"@es , "Visualisation"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:infographicPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Infographic"@en , "Infografía"@es , "Infographie"@fr ;
+    skos:prefLabel "Infographic"@en , "Infografía"@es , "Infographie"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:thematicMapPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Thematic map"@en , "Mapa temático"@es , "Carte thématique"@fr ;
+    skos:prefLabel "Thematic map"@en , "Mapa temático"@es , "Carte thématique"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:interactivePresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Interactive"@en , "Interactivo"@es , "Interactive"@fr ;
+    skos:prefLabel "Interactive"@en , "Interactivo"@es , "Interactive"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Concept scheme for types of product content
@@ -970,20 +972,20 @@ coos:productContents a skos:ConceptScheme ;
 
 coos:dataContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel  "Data"@en , "Données"@fr ;
+    skos:prefLabel "Data"@en , "Données"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:metadataContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel  "Metadata"@en , "Métadonnées"@fr ;
+    skos:prefLabel "Metadata"@en , "Métadonnées"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:analysisContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel  "Analysis"@en , "Análisis"@es, "Analyse"@fr ;
+    skos:prefLabel "Analysis"@en , "Análisis"@es, "Analyse"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:modelContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel  "Model"@en , "Modelo"@es , "Modèle"@fr ;
+    skos:prefLabel "Model"@en , "Modelo"@es , "Modèle"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
