@@ -524,7 +524,7 @@
 					<li><code>uses</code>: conversely, a statistical production activity will require one or several GAMSO activities in order to function.</li>
 				</ul>
 
-				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They represent weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas partitive relations are about constitution. An obvious example of <code>uses/supports</code> relation is included in the ontology for reference:</p>
+				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They represent weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas partitive relations are about constitution. An obvious example of <code>uses</code>/<code>supports</code> relation is included in the ontology for reference:</p>
 
 				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity">
 				&lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; a coos:OverarchingActivity ;
@@ -547,20 +547,20 @@
 
 				<p>A few points should be studied further:</p>
 				<ul>
-					<li>The notes of the second-level GAMSO activities are very well structured, so it would be possible to replace (or double) them with lists of individual concepts for third-level activities. For example, activity 2.1.1 ('Identify disruptions and capability improvements') would be added in the figure above with a <code>skso:broader</code> link to the activity 2.1.</li>
 					<li>The relation between the GSBPM as a concept scheme and as an activity area has to be precised. For now we can use a simple <code>rdf:seeAlso</code> property, but in a totally integrated view, all GSBPM and GAMSO artefacts would go in a single <code>skos:ConceptScheme</code> (the GAMSO) and the GSBPM would not be a concept scheme anymore: it would be an instance of both <code>StatisticalArea</code> and <code>StatisticalProductionActivity</code>.</li>
 				</ul>
 			</section>
 
 			<section id="activities-other">
+
 				<h3>Adding GSIM and CSDA</h3>
+
 				<p>Adding the Generic Statistical Information Model (GSIM) in this framework allows us to refine <code>StatisticalActivity</code> even further. Parallel to <code>StatisticalProductionActivity</code> we can define two additional sub-classes of <code>StatisticalActivity</code>:</p>
 				<ul>
-					<li><code>StatisticalProgram:</code> it is essentially a set of activities carried out to produce statistics. These statistics are about the set of units in scope for the program, e.g. “All persons with a university degree”, within a given subject field, e.g. income statistics, tourism, etc.</li>
-					<li><code>StatisticalProgramCycle:</code> statistical program activities are often repeated over time in iterations called cycles. A StatisticalProgramCycle is one of those iterations for a specific time and geography.</li>
+					<li><code>StatisticalProgram</code>: it is essentially a set of activities carried out to produce statistics. These statistics are about the set of units in scope for the program, e.g. “All persons with a university degree”, within a given subject field, e.g. income statistics, tourism, etc.</li>
+					<li><code>StatisticalProgramCycle</code>: statistical program activities are often repeated over time in iterations called cycles. A StatisticalProgramCycle is one of those iterations for a specific time and geography.</li>
 				</ul>
-				
-				
+
 				<p>Another dimension to consider is that of information capabilities. A capability is an ability a statistical organization possesses to undertake a specific activity. It is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills). The notion of capability is often used in enterprise architecture approaches like TOGAF or, in the statistical domain, the Common Statistical Data Architecture [[CSDA]]. Capabilities can be mapped to strategic goals and objectives and provide a useful starting point to map lower level elements such as business process and functions, applications and technology assets.</p>
 
 				<ul>
@@ -575,7 +575,7 @@
 				
 				ex:geostat-integration-services a coos:Capability ;
 					rdfs:label "Develop and apply services for smarter statistical-geospatial integration"@en ;
-					rdfs:isDefinedBy <https://www.efgs.info/geostat/> .
+					rdfs:isDefinedBy &lt;https://www.efgs.info/geostat/&gt; .
 				</pre>
 				
 				<figure id="image-csda-ex">
