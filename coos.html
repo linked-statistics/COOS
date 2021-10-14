@@ -102,36 +102,45 @@
 		<div class="issue" title="Text issues">
 			<ul>
 				<li>Abstract is missing</li>
-				<li>SOTD section to adapt to Unece context</li>
+				<li>SOTD section to adapt to the Unece context</li>
 			</ul>
 		</div>
+
 		<section id='abstract'>
 			<p>The abstract will go there.</p>
-		</section>		
+		</section>
+
 		<section id='sotd'>
 			<p>This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
-		</section>		
+		</section>
+
 		<section id="intro">
-			<h2>Introduction</h2>		
+
+			<h2>Introduction</h2>
+
 			<section>
+
 				<h3>Background and Motivation</h3>
 
 				<p>The Official Statistics community has been collaborating for some years in order to define business models aiming at building common representations of its processes and information. These works, mostly conducted under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics (ModernStats), include the Generic Statistical Business Process Model (GSBPM), the Generic Statistical Information Model (GSIM), the Generic Activity Model for Statistical Organisation (GAMSO), and the Common Statistical Data Architecture (CSDA).</p>
 
-				<p>GSBPM provides a framework to describe the building blocks of statistical production in terms of sub-processes. Its main goal is to help statistical organizations standardize their statistical production processes. It was the first ModernStats model to be published, back in 2008, and has been widely used by national and international statistical agencies since then.</p> 
+				<p>GSBPM provides a framework to describe the building blocks of statistical production in terms of sub-processes. Its main goal is to help statistical organizations standardize their statistical production processes. It was the first ModernStats model to be published, back in 2008, and has been widely used by national and international statistical agencies since then.</p>
 
-				<p>GAMSO provides a framework to describe the building blocks of statistical production in terms of activities. It complements the GSBPM in two ways: (i) by covering areas beyond the scope of GSBPM, and (ii) by providing a business capability view of statistical production itself.</p> 
+				<p>GAMSO provides a framework to describe the building blocks of statistical production in terms of activities. It complements the GSBPM in two ways: (i) by covering areas beyond the scope of GSBPM, and (ii) by providing a business capability view of statistical production itself.</p>
 
 				<p>GSIM complements both GSBPM and GAMSO by providing a catalogue of information objects to describe statistical data and metadata. It functions as a reference framework consisting of a set of standardised information objects to be used in statistical production.</p>
 
-				<p>CSDA provides a capability framework cataloguing the mayor abilities a statistical organization has to use, produce, share and manage data and metadata. CSDA integrates with the GSBPM and GAMSO by enabling processes and activities related to the lifecycle management of GSIM information objects. </p>
+				<p>CSDA provides a capability framework cataloguing the mayor abilities a statistical organization has to use, produce, share and manage data and metadata. CSDA integrates with the GSBPM and GAMSO by enabling processes and activities related to the lifecycle management of GSIM information objects.</p>
 
-				<p>As more and more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on our international core models to establish common foundations on which the different works can develop in a coherent way. This should be done using a formal framework that allows interoperability, activation and globally unique identification.</p>			
+				<p>As more and more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on our international core models to establish common foundations on which the different works can develop in a coherent way. This should be done using a formal framework that allows interoperability, activation and globally unique identification.</p>
+
 			</section>
+
 			<section id="objectives">
-				<h3>Objectives and scope</h3>
+
+				<h3>Objectives and Scope</h3>
 				
-				<p>This paper proposes a first try at a base OWL vocabulary for Official Statistics. It suggests formal representations for the core concepts used in our domain. It builds on a set of well-known OWL vocabularies, namely SKOS, PROV, ORG, DCAT and the Dublin Core.</p>
+				<p>This paper proposes a first try at a base OWL ([[owl2-overview]]) vocabulary for Official Statistics. It suggests formal representations for the core concepts used in our domain. It builds on a set of well-known OWL vocabularies, namely SKOS, PROV, ORG, DCAT and the Dublin Core.</p>
 
 				<p>The ontology does not aim to cover the domains exhaustively. Inclusion criteria for a concept are:</p>
 				<ul>
@@ -142,26 +151,38 @@
 				<p>In the following sections, we stay at a very general model and deal with the following domains: statistical activities, products and actors. For more precise definitions like those that can be found in the GSBPM or in GSIM, we refer to previous works: [[GSBPM-LM]] and [[GSIM-LM]] respectively.</p>
 			
 				<p>The ontology also defines a large number of individuals (class instances) in order to standardize their naming and identification.</p>
+
 			</section>
+
 			<section id="overview">
+
 				<h3>Overview</h3>
-				
+
 				<p>The ontology provides classes and properties to allow statististical activities to be described along with the organizations that undertake them, the inputs they use and the ouputs they produce.</p>
 				
-				<p>All activities undertaken by organizations that produce Official Statistics may be represented using the ontology. A distinction is made between activities directly linked to the production of statistical content, and activities required to perform those. Several classes of activities are also introduced to allow different levels of  granularity to be expressed. Furthermore, the ontology provides instance of GAMSO/GSBPM's activities and the possibility to map these to user defined activities. See <a href="#activities">Section 3. Activities</a></p>
+				<p>All activities undertaken by organizations that produce Official Statistics may be represented using the ontology. A distinction is made between activities directly linked to the production of statistical content, and activities required to perform those. Several classes of activities are also introduced to allow different levels of  granularity to be expressed. Furthermore, the ontology provides instance of GAMSO/GSBPM's activities and the possibility to map these to user defined activities. See <a href="#activities">Section 3. Activities</a>.</p>
 				
-				<p>In the context of the ontology, organizations are distinguished by whether they produce Official Statistics at national or international level. See <a href="#organizations">Section 4. Organizations</a></p>
+				<p>In the context of the ontology, organizations are distinguished by whether they produce Official Statistics at national or international level. See <a href="#organizations">Section 4. Organizations</a>.</p>
 				
-				<p>In the course of a statistical production process, different kind of information objects flow from one activity to the other. The ontology focuses on the core information object for the Official Statistics that is the DataSet. See <a href="#products">Section 5. Products</a></p>
-			
-				<div class="ednote" title="Governance">
-					<p>Include:</p>
-					<ul>
-						<li>Reference to governance policy of Unece MOS "stuff"</li>
-						<li>Specific policy elements that apply to COOS</li>
-					</ul>
-				</div>
+				<p>In the course of a statistical production process, different kind of information objects flow from one activity to the other. The ontology focuses on the core information object for the Official Statistics that is the DataSet. See <a href="#products">Section 5. Products</a>.</p>
+
 			</section>
+
+			<section id="coos-docs">
+
+				<h3>COOS Documents</h3>
+				
+				<p>In addition to the present specification, the COOS family of documents includes:</p>
+				<ul>
+					<li>The <a href="coos.ttl">formal vocabulary</a> expressed with the Terse RDF Triple language (Turtle) [[turtle]] syntax.</li>
+					<li>The <a href="governance.md">governance document</a> which describes the principles and processes used for the evolution of COOS.</li>
+					<li>The <a href="uri-policy.md">URI policy</a> which describes the principles used for the naming and identification of the COOS artifacts.</li>
+				</ul>
+
+				<p>In case of ambiguities or contradictions between the documents, the formal vocabulary will be authoritative.</p>
+
+			</section>
+
 		</section>
 
 		<section id="nsvoc">
