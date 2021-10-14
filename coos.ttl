@@ -41,8 +41,8 @@
 
 coos:Activity a rdfs:Class , owl:Class ;
     rdfs:label "Activity"@en , "Activité"@fr, "Actividad"@es ;
-    rdfs:comment "Activity that a statistical organization does."@en , "Activité réalisée par une organisation statistique."@en ;
-    skos:definition "Activity that a statistical organization does."@en , "Activité réalisée par une organisation statistique."@en ;
+    rdfs:comment "Activity that a statistical organization does."@en , "Actividad que realiza la organización estadística."@es , "Activité réalisée par une organisation statistique."@en ;
+    skos:definition "Activity that a statistical organization does."@en , "Actividad que realiza la organización estadística."@es, "Activité réalisée par une organisation statistique."@en ;
     rdfs:subClassOf skos:Concept , prov:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -55,8 +55,8 @@ coos:ActivityArea a rdfs:Class , owl:Class ;
 
 coos:StatisticalActivity a rdfs:Class , owl:Class ;
     rdfs:label "Statistical activity"@en , "Activité statistique"@fr , "Actividad estadítstica"@es ;
-    rdfs:comment "Statistical production activity or activity that directly supports it."@en , "Activité de production statistique ou activité qui la supporte directement."@fr ;
-    skos:definition "Statistical production activity or activity that directly supports it"@en , "Activité de production statistique ou activité qui la supporte directement."@fr ;
+    rdfs:comment "Statistical production activity or activity that directly supports it."@en , "Actividad de producción estadística, o actividad que la soporta directamente."@es , "Activité de production statistique ou activité qui la supporte directement."@fr ;
+    skos:definition "Statistical production activity or activity that directly supports it"@en , "Actividad de producción estadística, o actividad que la soporta directamente."@es , "Activité de production statistique ou activité qui la supporte directement."@fr ;
     rdfs:subClassOf coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -76,15 +76,15 @@ coos:OverarchingActivity a rdfs:Class , owl:Class ;
 
 coos:Phase a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production process phase"@en , "Phase du processus de production statistique"@fr , "Fase del proceso de producción estadística"@es ;
-    rdfs:comment "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
-    skos:definition "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
+    rdfs:comment "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Actividad de producción estadística que es conducida en una etapa específica de un proceso definido conforme a las fases de GSBPM"@es, "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
+    skos:definition "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Actividad de producción estadística que es conducida en una etapa específica de un proceso definido conforme a las fases de GSBPM"@es, "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
     rdfs:subClassOf coos:StatisticalProductionActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:SubProcess a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production sub-process"@en , "Sous-processus de production statistique"@fr , "Subproceso de producción estadística"@es ;
-    rdfs:comment "Statistical production activity that is scoped by a given Phase"@en , "Activité de production statistique incluse dans une Phase."@fr ;
-    skos:definition "Statistical production activity that is scoped by a given Phase"@en , "Activité de production statistique incluse dans une Phase."@fr ;
+    rdfs:comment "Statistical production activity that is scoped by a given Phase"@en , "Actividad de producción estadística delimitada por una fase específica"@es , "Activité de production statistique incluse dans une Phase."@fr ;
+    skos:definition "Statistical production activity that is scoped by a given Phase"@en , "Actividad de producción estadística delimitada por una fase específica"@es , "Activité de production statistique incluse dans une Phase."@fr ;
     rdfs:subClassOf coos:StatisticalProductionActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -112,46 +112,46 @@ coos:Task a rdfs:Class , owl:Class ;
 
 coos:Capability a rdfs:Class , owl:Class ;
     rdfs:label "Capability"@en , "Capacité"@fr , "Capacidad"@es ;
-    rdfs:comment "An ability a statistical organization possesses to undertake a specific activity"@en , "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
-    skos:definition "An ability a statistical organization possesses to undertake a specific activity"@en , "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
-    skos:scopeNote "A capability is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills)"@en , "Une capacité n'est atteinte que par l'intégration de tous les éléments de capacité pertinents (par exemple, méthodes, processus, normes et cadres, systèmes informatiques et compétences humaines)"@fr ;
+    rdfs:comment "An ability a statistical organization possesses to undertake a specific activity"@en , "Una habilidad que posee una organización estadística para atender una actividad específica"@es, "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
+    skos:definition "An ability a statistical organization possesses to undertake a specific activity"@en , "Una habilidad que posee una organización estadística para atender una actividad específica"@es, "Aptitude d'un organisme statistique à entreprendre une activité spécifique"@fr ;
+    skos:scopeNote "A capability is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills)"@en , "Una capacidad que solamente se alcanza a través de la integración de todos los elementos relevantes de la capacidad (por ejemplo métodos, procesos, estándares y marcos de trabajo, sistemas de TIC y habilidades personales)"@es, "Une capacité n'est atteinte que par l'intégration de tous les éléments de capacité pertinents (par exemple, méthodes, processus, normes et cadres, systèmes informatiques et compétences humaines)"@fr ;
     rdfs:subClassOf skos:Concept ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:CoreCapability a rdfs:Class , owl:Class ;
-    rdfs:label "Core Capability"@en ;
-    rdfs:comment "Capability the organization needs to execute its core business, i.e. the production of statistics."@en , "Capacité dont l'organisation a besoin pour exercer son coeur de métier, c'est-à-dire la production de statistiques."@fr ;
-    skos:definition "Capability the organization needs to execute its core business, i.e. the production of statistics."@en , "Capacité dont l'organisation a besoin pour exercer son coeur de métier, c'est-à-dire la production de statistiques."@fr ;
-    skos:scopeNote "Core capabilities generally map to phases in GSBPM"@en ;
+    rdfs:label "Core Capability"@en , "Capacidad Básica"@es ;
+    rdfs:comment "Capability the organization needs to execute its core business, i.e. the production of statistics."@en , "Capacidad que requiere la organización para ejecutar sus procesos básicos, por ejemplo, la producción de estadísticas."@es , "Capacité dont l'organisation a besoin pour exercer son coeur de métier, c'est-à-dire la production de statistiques."@fr ;
+    skos:definition "Capability the organization needs to execute its core business, i.e. the production of statistics."@en , "Capacidad que requiere la organización para ejecutar sus procesos básicos, por ejemplo, la producción de estadísticas."@es , "Capacité dont l'organisation a besoin pour exercer son coeur de métier, c'est-à-dire la production de statistiques."@fr ;
+    skos:scopeNote "Core capabilities generally map to phases in GSBPM"@en , "Capacidades básicas, generalmente relacionadas con fases del GSBPM"@es ;
     rdfs:subClassOf coos:Capability ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:CrossCuttingCapability a rdfs:Class , owl:Class ;
-    rdfs:label "Cross-cutting Capability"@en ;
-    rdfs:comment "Capability used to formulate and implement the policies that the organization chooses for its internal operations."@en , "Capacité utilisée pour formuler et implémenter les politiques que l'organisation choisit pour ses opérations internes."@fr ;
-    rdfs:comment "Capability used to formulate and implement the policies that the organization chooses for its internal operations."@en , "Capacité utilisée pour formuler et implémenter les politiques que l'organisation choisit pour ses opérations internes."@fr ;
-    skos:scopeNote "Core capabilities generally map to corporate support activities in GAMSO and overarching processes in GSBPM"@en ;
+    rdfs:label "Cross-cutting Capability"@en , "Capacidad transversal"@es ;
+    rdfs:comment "Capability used to formulate and implement the policies that the organization chooses for its internal operations."@en , "Capacidad utilizada para formular e implementar las políticas que escoge la organización para sus operaciones internas."@es , "Capacité utilisée pour formuler et implémenter les politiques que l'organisation choisit pour ses opérations internes."@fr ;
+    rdfs:comment "Capability used to formulate and implement the policies that the organization chooses for its internal operations."@en , "Capacidad utilizada para formular e implementar las políticas que escoge la organización para sus operaciones internas."@es , "Capacité utilisée pour formuler et implémenter les politiques que l'organisation choisit pour ses opérations internes."@fr ;
+    skos:scopeNote "Core capabilities generally map to corporate support activities in GAMSO and overarching processes in GSBPM"@en , "Capacidades básicas, generalmente relacionadas con actividades de soporte corporativo en GAMSO y con los procesos transversales de GSBPM"@es ;
     rdfs:subClassOf coos:Capability ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Additional useful elements from GSIM
 
 coos:InformationObject a rdfs:Class , owl:Class ;
-    rdfs:label "Information object"@en , "Objet informationnel"@fr ;
+    rdfs:label "Information object"@en , "Objeto de Información"@es , "Objet informationnel"@fr ;
     rdfs:comment "Mother of all classes defined in GSIM."@en , "Mère de toutes les classes définies par le GSIM."@fr , "Madre (raíz) de todas las clases definidas en GSIM."@es ;
     skos:definition "Mother of all classes defined in GSIM."@en , "Mère de toutes les classes définies par le GSIM."@fr , "Madre (raíz) de todas las clases definidas en GSIM."@es ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalInformationObject a owl:Class ;
-    rdfs:label "Statistical information object"@en , "Objet informationnel statistique"@fr ;
-    rdfs:comment "Information object representing statistical information."@en , "Objet informationnel représentant de l'information statistique."@fr ;
-    skos:definition "Information object representing statistical information."@en , "Objet informationnel représentant de l'information statistique."@fr ;
+    rdfs:label "Statistical information object"@en , "Objeto de información estadística"@es , "Objet informationnel statistique"@fr ;
+    rdfs:comment "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
+    skos:definition "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalEntity a rdfs:Class , owl:Class ;
     rdfs:label "Statistical entity"@en , "Entité statistique"@fr , "Entidad estadística"@es ;
-    rdfs:comment "Statistical information object which is also an entity in the sense of PROV."@en , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
-    skos:definition "Statistical information object which is also an entity in the sense of PROV."@en , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
+    rdfs:comment "Statistical information object which is also an entity in the sense of PROV."@en , "Objeto de información estadística, el cual es tambien una entidad en el sentido de PROV."@es , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
+    skos:definition "Statistical information object which is also an entity in the sense of PROV."@en , "Objeto de información estadística, el cual es tambien una entidad en el sentido de PROV."@es , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
     rdfs:subClassOf coos:StatisticalInformationObject , prov:Entity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -172,74 +172,74 @@ coos:StatisticalDataset a rdfs:Class , owl:Class ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:DimensionalDataset a rdfs:Class , owl:Class ;
-    rdfs:label "Dimensional dataset"@en ;
-    rdfs:comment "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en ;
-    skos:definition "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en ;
+    rdfs:label "Dimensional dataset"@en , "Conjunto de datos dimensional"@es ;
+    rdfs:comment "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en , "Colección de datos en los que cada punto de datos es definido unívocamente por la combinación de una categoría de de cada dimensión pre-especificada"@es ;
+    skos:definition "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en , "Colección de datos en los que cada punto de datos es definido unívocamente por la combinación de una categoría de de cada dimensión pre-especificada"@es ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:GraphDataset a rdfs:Class , owl:Class ;
-    rdfs:label "Graph dataset"@en ;
-    rdfs:comment "Collection of data organized in a graph-like (including tree-like) structure"@en ;
-    skos:definition "Collection of data organized in a graph-like (including tree-like) structure"@en ;
+    rdfs:label "Graph dataset"@en , "Conjunto de datos del grapho"@es ;
+    rdfs:comment "Collection of data organized in a graph-like (including tree-like) structure"@en , "Colección de datos organizados en una estructura parecida a la de un grafo (incluyendo la de árbol)"@es ;
+    skos:definition "Collection of data organized in a graph-like (including tree-like) structure"@en , "Colección de datos organizados en una estructura parecida a la de un grafo (incluyendo la de árbol)"@es ;
     skos:scopeNote "This includes RDF, property graphs and XML"@en ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:KeyValueDataset a rdfs:Class , owl:Class ;
-    rdfs:label "Key-value dataset"@en ;
-    rdfs:comment "Collection of data where each datapoint is paired with a key"@en ;
-    skos:definition "Collection of data where each datapoint is paired with a key"@en ;
+    rdfs:label "Key-value dataset"@en , "Conjunto de datos clave-valor"@es ;
+    rdfs:comment "Collection of data where each datapoint is paired with a key"@en , "Colección de datos donde cada punto de datos es emparejado con una clave"@es ;
+    skos:definition "Collection of data where each datapoint is paired with a key"@en , "Colección de datos donde cada punto de datos es emparejado con una clave"@es ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:RectangularDataset a rdfs:Class , owl:Class ;
-    rdfs:label "Rectangular dataset"@en ;
-    rdfs:comment "Collection of data where variables are represented with columns"@en ;
-    skos:definition "Collection of data where variables are represented with columns"@en ;
+    rdfs:label "Rectangular dataset"@en , "Conjunto de datos rectángular"@es ;
+    rdfs:comment "Collection of data where variables are represented with columns"@en , "Colección de datos en el que las variables son representadas con columnas"@es ;
+    skos:definition "Collection of data where variables are represented with columns"@en , "Colección de datos en el que las variables son representadas con columnas"@es ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:TransposedDataset a rdfs:Class , owl:Class ;
-    rdfs:label "Transposed dataset"@en ;
-    rdfs:comment "Collection of data where variables are represented with rows"@en ;
-    skos:definition "Collection of data where variables are represented with rows"@en ;
+    rdfs:label "Transposed dataset"@en , "Conjunto de datos transpuesto"@es ;
+    rdfs:comment "Collection of data where variables are represented with rows"@en , "Colección de datos en el que las variables son representadas con filas"@es ;
+    skos:definition "Collection of data where variables are represented with rows"@en , "Colección de datos en el que las variables son representadas con filas"@es ;
     rdfs:subClassOf coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:ProductPresentation a owl:Class , rdfs:Class ;
     rdfs:seeAlso coos:productPresentations ;
-    skos:prefLabel "Product presentation"@en , "Présentation de produit"@fr ;
+    skos:prefLabel "Product presentation"@en , "Presentación del producto"@es , "Présentation de produit"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:ProductContent a owl:Class , rdfs:Class ;
     rdfs:seeAlso coos:productContents ;
-    skos:prefLabel "Product content"@en , "Contenu de produit"@fr ;
+    skos:prefLabel "Product content"@en , "Contenido del producto"@es , "Contenu de produit"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Classes related to the 'organizations' domain
 
 coos:StatisticalOrganization a rdfs:Class , owl:Class ;
     rdfs:label "Statistical organization"@en , "Organization statistique"@fr , "Organización estadística"@es ;
-    rdfs:comment "Organization, or unit within an organization, whose primary role is the production of official statistics."@en ;
-    skos:definition "Organization, or unit within an organization, whose primary role is the production of official statistics."@en ;
+    rdfs:comment "Organization, or unit within an organization, whose primary role is the production of official statistics."@en , "Organización o unidad dentro de una organización cuyo rol principal es la producción de estadísticas oficiales."@es ;
+    skos:definition "Organization, or unit within an organization, whose primary role is the production of official statistics."@en , "Organización o unidad dentro de una organización cuyo rol principal es la producción de estadísticas oficiales."@es ;
     rdfs:subClassOf org:Organization , prov:Organization ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:NationalStatisticalInstitute a rdfs:Class , owl:Class ;
     rdfs:label "National statistical institute"@en , "Institut national de statistiques"@fr ,"Instituto nacional de estadística"@es ;
-    rdfs:comment "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en ;
-    skos:definition "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en ;
-    skos:scopeNote "The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc."@en ;
+    rdfs:comment "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en , "El principal productor de estadísticas oficiales en un país y/o en la organización responsable de la coordinación de todas las actividades relacionadas con el desarrollo, producción y publicación de estadísticas nacionales en el sistema estadístico nacional."@es ;
+    skos:definition "The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system."@en , "El principal productor de estadísticas oficiales en un país y/o en la organización responsable de la coordinación de todas las actividades relacionadas con el desarrollo, producción y publicación de estadísticas nacionales en el sistema estadístico nacional."@es ;
+    skos:scopeNote "The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc."@en , "El nombre real que se da a la oficina nacional de estadística en un país, puede ser Instituto Nacional de Estadística (INE, NSI en inglés), Oficina Nacional de Estadísticas (ONE, NBS en inglés), Oficina Central de Estadísticas (OCE, CBS en inglés), Agencia Nacional Estadística (ANE, NSA en inglés), Agencia Central Estadística (ACE, CSA en inglés), Agencia Central de Estadística (ACE, CSA en inglés), etc. "@es ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:InternationalAgency ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:InternationalAgency a rdfs:Class , owl:Class ;
     rdfs:label "International agency"@en , "Agence internationale"@fr , "Agencia internacional"@es ;
-    rdfs:comment "A body with an international membership, scope, or presence whose primary role is the production of official statistics."@en ;
-    skos:definition "A body with an international membership, scope, or presence whose primary role is the production of official statistics."@en ;
-    skos:scopeNote "There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations."@en ;
+    rdfs:comment "A body with an international membership, scope, or presence whose primary role is the production of official statistics."@en , "Un cuerpo con membresía internacional, alcance o presencia cuyo rol primario es la producción de estadísticas oficiales."@es ;
+    skos:definition "A body with an international membership, scope, or presence whose primary role is the production of official statistics."@en , "Un cuerpo con membresía internacional, alcance o presencia cuyo rol primario es la producción de estadísticas oficiales."@es ;
+    skos:scopeNote "There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations."@en , "Hay muchos tipos de organizaciones internacionales. Una forma de categorizarlas es distinguir entre agencias intergubernamentales, organizaciones supranacionales y organizaciones internacionales no gubernamentales."@es ;
     rdfs:subClassOf coos:StatisticalOrganization ;
     owl:disjointWith coos:NationalStatisticalInstitute ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -267,8 +267,8 @@ coos:InternationalAgency a rdfs:Class , owl:Class ;
 
 coos:uses a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "uses"@en , "utilise"@fr , "usos"@es ;
-    rdfs:comment "To require to perform or function"@en ;
-    skos:definition "To require to perform or function"@en ;
+    rdfs:comment "To require to perform or function"@en , "Requerir la realización o funcionamiento"@es ;
+    skos:definition "To require to perform or function"@en , "Requerir la realización o funcionamiento"@es ;
     rdfs:domain coos:StatisticalProductionActivity ;
     rdfs:range coos:Activity ;
     owl:inverseOf coos:supports ;
@@ -276,8 +276,8 @@ coos:uses a rdfs:Property , owl:ObjectProperty ;
 
 coos:supports a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "supports"@en , "supporte"@fr , "soportes"@es ;
-    rdfs:comment "To enable to perform or function."@en ;
-    skos:definition "To enable to perform or function."@en ;
+    rdfs:comment "To enable to perform or function."@en , "Permitir la realización o funcioamiento."@es ;
+    skos:definition "To enable to perform or function."@en , "Permitir la realización o funcioamiento."@es ;
     rdfs:domain coos:Activity ;
     rdfs:range coos:StatisticalProductionActivity ;
     owl:inverseOf coos:uses ;
@@ -286,7 +286,7 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
 # Links between capabilities and activities
 
 coos:enables a rdfs:Property , owl:ObjectProperty ;
-    rdfs:label "enables"@en , "permet"@fr ;
+    rdfs:label "enables"@en , "habilita"@es , "permet"@fr ;
     rdfs:comment "To provide the means for."@en ;
     skos:definition "To provide the means for."@en ;
     rdfs:domain coos:Capability ;
@@ -297,17 +297,17 @@ coos:enables a rdfs:Property , owl:ObjectProperty ;
 
 coos:metadataFor a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "metadata for"@en , "métadonnées pour"@fr , "metadatos por"@es ;
-    rdfs:comment "Indicates that a dataset contains metadata attached to a given resource"@en ;
-    skos:definition "Indicates that a dataset contains metadata attached to a given resource"@en ;
+    rdfs:comment "Indicates that a dataset contains metadata attached to a given resource"@en , "Indica que un conjunto de datos contiene metadatos adjuntos a un recurso dado"@es ;
+    skos:definition "Indicates that a dataset contains metadata attached to a given resource"@en , "Indica que un conjunto de datos contiene metadatos adjuntos a un recurso dado"@es ;
     rdfs:domain coos:StatisticalDataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Property for product presentation
 
 coos:presentation a rdfs:Property , owl:ObjectProperty ;
-    rdfs:label "presentation"@en , "présentation"@fr ;
-    rdfs:comment "Type of presentation of a statistical product"@en , "Type de présentation d'un produit statistique"@fr ;
-    skos:definition "Type of presentation of a statistical product"@en , "Type de présentation d'un produit statistique"@fr ;
+    rdfs:label "presentation"@en , "presentación"@es , "présentation"@fr ;
+    rdfs:comment "Type of presentation of a statistical product"@en , "Tipo de presentación de un producto estadístico"@es , "Type de présentation d'un produit statistique"@fr ;
+    skos:definition "Type of presentation of a statistical product"@en , "Tipo de presentación de un producto estadístico"@es , "Type de présentation d'un produit statistique"@fr ;
     rdfs:domain coos:StatisticalProduct ;
     rdfs:range coos:ProductPresentation ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -315,9 +315,9 @@ coos:presentation a rdfs:Property , owl:ObjectProperty ;
 # Property for product content
 
 coos:content a rdfs:Property , owl:ObjectProperty ;
-    rdfs:label "content"@en , "contenu"@fr ;
-    rdfs:comment "Type of content of a statistical product"@en , "Type de contenu d'un produit statistique"@fr ;
-    skos:definition "Type of content of a statistical product"@en , "Type de contenu d'un produit statistique"@fr ;
+    rdfs:label "content"@en , "contenido"@es , "contenu"@fr ;
+    rdfs:comment "Type of content of a statistical product"@en , "Tipo de contenido de un producto estadístico"@es , "Type de contenu d'un produit statistique"@fr ;
+    skos:definition "Type of content of a statistical product"@en , "Tipo de contenido de un producto estadístico"@es , "Type de contenu d'un produit statistique"@fr ;
     rdfs:domain coos:StatisticalProduct ;
     rdfs:range coos:ProductContent ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -936,27 +936,27 @@ coos:datasetPresentation a coos:ProductPresentation , skos:Concept ;
 
 coos:publicationPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Publication"@en , "Publication"@fr ;
+    skos:prefLabel  "Publication"@en , "Publicación"@es  , "Publication"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:viualizationPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Visualization"@en , "Visualisation"@fr ;
+    skos:prefLabel  "Visualization"@en , "Visualización"@es , "Visualisation"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:infographicPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Infographic"@en , "Infographie"@fr ;
+    skos:prefLabel  "Infographic"@en , "Infografía"@es , "Infographie"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:thematicMapPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Thematic map"@en , "Carte thématique"@fr ;
+    skos:prefLabel  "Thematic map"@en , "Mapa temático"@es , "Carte thématique"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:interactivePresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel  "Interactive"@en , "Interactive"@fr ;
+    skos:prefLabel  "Interactive"@en , "Interactivo"@es , "Interactive"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Concept scheme for types of product content
@@ -965,7 +965,7 @@ coos:productContents a skos:ConceptScheme ;
     rdfs:seeAlso coos:ProductContent ;
     skos:hasTopConcept coos:dataContent , coos:metadataContent , coos:analysisContent , coos:modelContent ;
     skos:notation "CL_PROD_CONT" ;
-    skos:prefLabel "Product contents"@en , "Contenus de produit"@fr ;
+    skos:prefLabel "Product contents"@en , "Contenidos del producto"@es , "Contenus de produit"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:dataContent a coos:ProductContent , skos:Concept ;
@@ -980,10 +980,10 @@ coos:metadataContent a coos:ProductContent , skos:Concept ;
 
 coos:analysisContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel  "Analysis"@en , "Analyse"@fr ;
+    skos:prefLabel  "Analysis"@en , "Análisis"@es, "Analyse"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:modelContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel  "Model"@en , "Modèle"@fr ;
+    skos:prefLabel  "Model"@en , "Modelo"@es , "Modèle"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
