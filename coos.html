@@ -545,10 +545,9 @@
 					<figcaption>Overview of COOS vocabulary for GAMSO and GSBPM</figcaption>
 				</figure>
 
-				<p>A few points should be studied further:</p>
-				<ul>
-					<li>The relation between the GSBPM as a concept scheme and as an activity area has to be precised. For now we can use a simple <code>rdf:seeAlso</code> property, but in a totally integrated view, all GSBPM and GAMSO artefacts would go in a single <code>skos:ConceptScheme</code> (the GAMSO) and the GSBPM would not be a concept scheme anymore: it would be an instance of both <code>StatisticalArea</code> and <code>StatisticalProductionActivity</code>.</li>
-				</ul>
+				<p><em>Note</em>:</p>
+				<p>In COOS, the relation between the “Production” <code>ActivityArea</code> of GAMSO and the GSBPM as a concept scheme is expressed by a simple pair of <code>rdf:seeAlso</code> properties. No GAMSO <code>Activity</code> is defined in the “Production” area, that would be redundant with the “Statistical Production Process” individual, but a <code>skos:exactMatch</code> relation is made between the GAMSO activity area and the GSBPM individual. It is possible that GAMSO and GSBPM evolve in the future towards a totally integrated view. In such an approach, all GSBPM and GAMSO artefacts would go into a single <code>skos:ConceptScheme</code> and the GSBPM would not be a concept scheme anymore but rather a <code>skos:Collection</code>.</p>
+
 			</section>
 
 			<section id="activities-other">
