@@ -30,7 +30,7 @@
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
     voaf:classNumber "28"^^xsd:integer ;
     voaf:propertyNumber "6"^^xsd:integer ;
-    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" , "Version 0.7 - 2021-09-13" .
+    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" , "Version 0.7 - 2021-09-13" , "Version 0.8 - 2021-10-14" .
 
 
 #################################################################
@@ -142,7 +142,7 @@ coos:InformationObject a rdfs:Class , owl:Class ;
     skos:definition "Mother of all classes defined in GSIM."@en , "Mère de toutes les classes définies par le GSIM."@fr , "Madre (raíz) de todas las clases definidas en GSIM."@es ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:StatisticalInformationObject a owl:Class ;
+coos:StatisticalInformationObject a rdfs:Class , owl:Class ;
     rdfs:label "Statistical information object"@en , "Objeto de información estadística"@es , "Objet informationnel statistique"@fr ;
     rdfs:comment "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
     skos:definition "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
