@@ -11,11 +11,12 @@
 				shortName: "COOS",
 				subtitle: "A Core Ontology for Official Statistics",
 				editors: [
-					{ name: "Franck Cotton", company: "INSEE", companyURL: "http://www.insee.fr/" }
+					{ name: "Franck Cotton", company: "Insee", companyURL: "http://www.insee.fr/" }
 				],
 				authors: [
 					{ name: "Flavio Rizzolo", company: "Statistics Canada", companyURL: "https://www.statcan.gc.ca/" },
-					{ name: "Daniel Gillman", company: "Bureau of Labor Statistics", companyURL: "https://www.bls.gov/" }
+					{ name: "Daniel Gillman", company: "Bureau of Labor Statistics", companyURL: "https://www.bls.gov/" },
+					{ name: "Florian Vucko", company: "Insee", companyURL: "http://www.insee.fr/" }
 				],
 				wg: "Semantic Statistics Community Group",
 				wgURI: "https://www.w3.org/community/semstats/",
@@ -598,7 +599,7 @@ Geospatial Framework (<a href="https://www.efgs.info/wp-content/uploads/geostat/
 				<h3>More detailed activities</h3>
 				<p>The previous definitions stay in the framework of the GAMSO/GSBPM/GSIM/CSDA, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less fine-grained and form hierarchies.</p>
 
-				<pre class="example" title="Example of task">
+				<pre class="example" title="Example of tasks">
 				ex:calculate-mean-wages a coos:Task ;
 					rdfs:label "Calculate mean wages"@en ;
 					skos:broader &lt;http://id.unece.org/activities/subProcess/5.7&gt; .
@@ -621,6 +622,11 @@ Geospatial Framework (<a href="https://www.efgs.info/wp-content/uploads/geostat/
 		</section>
 
 		<section id="organizations">
+
+			<div class="issue">
+				<p>Add short introduction</p>
+			</div>
+
 			<h2>Organizations</h2>
 			<p>The following classes are defined:</p>
 
@@ -639,9 +645,6 @@ Geospatial Framework (<a href="https://www.efgs.info/wp-content/uploads/geostat/
 
 			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
 
-			<div class="issue">
-				<p>Is there an "official" list of international agencies and NSIs?</p>
-			</div>
 		</section>
 
 		<section id="products">
