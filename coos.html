@@ -459,19 +459,7 @@
 					skos:prefLabel "Produce dissemination products"@en .
 				</pre>
 
-				<p>In addition, COOS defines the <code>OverarchingActivity</code> class to represent what is called overarching process by the GSBPM.</p>
-
-				<div class="issue" title="Overarching process or activity">
-					<p>Add a sentence to explain why over-arching process became over-arching activity.</p>
-				</div>
-
-				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
-				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:OverarchingActivity ;
-					skos:notation "0.2"	;
-					skos:prefLabel "Metadata Management"@en .					
-				</pre>
-
-				<p>The ontology actually defines an individual for each GSBPM phase, sub-process, and overarching activities, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases, sub-processes and overarching activities), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
+				<p>The ontology actually defines an individual for each GSBPM phase and sub-process, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
 
 				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
 
@@ -537,6 +525,15 @@
 					skos:prefLabel "Manage Quality"@en ;
 					coos:supports &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; .
 				</pre>
+				
+				<p>In addition, COOS defines the <code>OverarchingActivity</code> class, which represents a supporting activity that applies to all production phases, e.g. metadata management, data management, statistical methodology management, etc. These activities correspond to the overarching processes in the GSBPM and the statistical activities in Corporate Support in GAMSO. These activities support the execution of phases and sub-processes effectively. When harmonized and standardized, overarching activities enable the efficient execution of the entire statistical production process.</p>
+
+				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
+				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:OverarchingActivity ;
+					skos:notation "0.2"	;
+					skos:prefLabel "Metadata Management"@en .					
+				</pre>
+				
 
 				<p>The following figure gives an overview of the COOS elements defined until now.</p>
 
@@ -568,8 +565,7 @@
 					<li><code>Cross-cutting capabilities: </code>capabilities used to formulate and implement the policies that the organization chooses for its internal operations. They generally map to corporate support in GAMSO and overarching processes in GSBPM.</li>
 				</ul>
 
-				<p>Examples of capabilities relevant to statistical activities can be found in CSDA, but also in other references like the Global Statistical 
-Geospatial Framework (<a href="https://www.efgs.info/wp-content/uploads/geostat/3/GEOSTAT3_GSGF_EuropeanImplementationGuide_v1.0.pdf">GSGF</a>):</p>
+				<p>Examples of capabilities relevant to statistical activities can be found in CSDA, but also in other references like the Global Statistical Geospatial Framework (<a href="https://www.efgs.info/wp-content/uploads/geostat/3/GEOSTAT3_GSGF_EuropeanImplementationGuide_v1.0.pdf">GSGF</a>):</p>
 				<pre class="example" title="Example of capabilities">
 				ex:csda-data-integration a coos:CoreCapability ;
 					rdfs:label "Data integration"@en ;
@@ -622,40 +618,35 @@ Geospatial Framework (<a href="https://www.efgs.info/wp-content/uploads/geostat/
 
 		<section id="organizations">
 
-			<div class="issue">
-				<p>Add short introduction</p>
-			</div>
-
 			<h2>Organizations</h2>
-			<p>The following classes are defined:</p>
 
+
+			<p>We have discussed so far how to represent in the ontology what the official statistics community does in the form of activities, capabilities and processes. Now we need to represent how this community is organized.</p> 
+			
+			<p>Essentially, what we need is the notion of a collection of people organized as a group in some formal structure. We use <code>org:Organization</code> and <code>prov:Organization</code> for representing that notion. We then define a <code>StatisticalOrganization</code> as an organization, or unit within an organization, whose primary role is the production of official statistics. This <code>StatisticalOrganization</code> class is further specialize into two sub-classes:</p>
+			
+			
+			<ul>
+				<li><code>NationalStatisticalInstitute</code>: The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system. The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc.</li>
+				<li><code>InternationalAgency</code>: A body with an international membership, scope, or presence whose primary role is the production of official statistics. There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations.</li>
+			</ul>	
+			
 			<figure id="image-org">
 				<img src="img/coos-org.png" alt="Organizations vocabulary overview" title="Organizations vocabulary overview"/>
 				<figcaption>Organizations vocabulary overview</figcaption>
 			</figure>
-			
-			<ul>
-				<li><code>StatisticalOrganization</code>: Organization, or unit within an organization, whose primary role is the production of official statistics.</li>
-				<li><code>NationalStatisticalInstitute</code>: The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system. The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc.</li>
-				<li><code>InternationalAgency</code>: A body with an international membership, scope, or presence whose primary role is the production of official statistics. There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations.</li>
-			</ul>	
+
 			
 			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
 
 			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
 
 		</section>
-
+		
 		<section id="products">
 			<h2>Products</h2>
 
-			<p class="ednote" title="Information objets">Introduce <code>InformationObject</code>, <code>StatisticalInformationObject</code> and <code>StatisticalEntity</code> here, even if they cover more than products.</p>
-
-			<p>The COOS ontology defines two base classes in the "Products" domain: <code>StatisticalProduct</code> and <code>StatisticalDataset</code>.</p>
-
-			<div class="issue">
-				<p>Provide textual definition of Statistical Product and Statistical Dataset.</p>
-			</div>
+			<p>Finally, we need to describe the information that activities, capabilities and processes use and produce. This is captured by an <code>InformationObject</code> class that aligns with the notion of “information object” in GSIM, i.e. all GSIM classes are going to be sub-classes of <code>InformationObject</code>. A <code>StatisticalInformationObject</code> is essentially an <code>InformationObject</code> representing statistical information, i.e. they are the inputs and outputs in the design and production of statistics. Some of those statistical information objects are also entities in the <code>Prov</code> sense, which are captured by the <code>StatisticalProduct</code> and <code>StatisticalDataset</code> classes, corresponding to the GSIM Product and GSIM Data Set, respectively. </p>
 
 			<p>Here again, the PROV vocabulary is useful, in particular to provide provenance information on products and to link them to activities and organizations (for example <code>prov:wasGeneratedBy</code> from a product to an activity).</p>
 
