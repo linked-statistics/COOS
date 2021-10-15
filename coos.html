@@ -562,11 +562,14 @@
 
 				<p>Another dimension to consider is that of information capabilities. A capability is an ability a statistical organization possesses to undertake a specific activity. It is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills). The notion of capability is often used in enterprise architecture approaches like TOGAF or, in the statistical domain, the Common Statistical Data Architecture [[CSDA]]. Capabilities can be mapped to strategic goals and objectives and provide a useful starting point to map lower level elements such as business process and functions, applications and technology assets.</p>
 
+				<p>Following CSDA, we distinguish two types of capabilities:</p>
 				<ul>
 					<li><code>Core capabilities: </code> capabilities the organization needs to execute its core business, i.e. the production of statistics. They generally map to phases in GSBPM.</li>
 					<li><code>Cross-cutting capabilities: </code>capabilities used to formulate and implement the policies that the organization chooses for its internal operations. They generally map to corporate support in GAMSO and overarching processes in GSBPM.</li>
 				</ul>
 
+				<p>Examples of capabilities relevant to statistical activities can be found in CSDA, but also in other references like the Global Statistical 
+Geospatial Framework (<a href="https://www.efgs.info/wp-content/uploads/geostat/3/GEOSTAT3_GSGF_EuropeanImplementationGuide_v1.0.pdf">GSGF</a>):</p>
 				<pre class="example" title="Example of capabilities">
 				ex:csda-data-integration a coos:CoreCapability ;
 					rdfs:label "Data integration"@en ;
@@ -576,18 +579,19 @@
 					rdfs:label "Develop and apply services for smarter statistical-geospatial integration"@en ;
 					rdfs:isDefinedBy &lt;https://www.efgs.info/geostat/&gt; .
 				</pre>
-				
+
+				<p>Aso, the European Statistical System has published a <a href="https://joinup.ec.europa.eu/collection/statistical-enterprise-architecture/document/ess-earf-business-capabilities-model">Business Capabilities Model</a> that defines a number of capabilities organized in three levels.</p>
+
+				<p>To represent the link between a capacity and the activities it allows to perform, COOS defines the <code>enables</code> property. The figure below shows an example using this property.</p>
+
 				<figure id="image-csda-ex">
 					<img src="img/coos-csda-ex.png" alt="Linking COOS capabilities and activities" title="Linking COOS capabilities and activities"/>
 					<figcaption>Linking COOS capabilities and activities</figcaption>
 				</figure>
 
-				<div class="issue" title="To do on capabilities">
-					<ul>
-						<li>Add text about link between capabilities and GAMSO area "Develop capabilities" as illustration.</li>
-						<li>The ESS has a Business Capabilities model that might be worth checking https://joinup.ec.europa.eu/collection/statistical-enterprise-architecture/document/ess-earf-business-capabilities-model (See Figure 2 ESS Business Capabilities model – Levels 0 & 1)</li>
-					</ul>
-				</div>
+				<p><em>Note</em>:</p>
+				<p>There is an obvious relation between capabilities and the “Capability Development” GAMSO activity area, but this link is not formally modelled in COOS.</p>
+
 			</section>
 			
 			<section id="activities-task">
