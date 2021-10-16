@@ -123,7 +123,7 @@
 
 				<h3>Background and Motivation</h3>
 
-				<p>The Official Statistics community has been collaborating for some years in order to define business models aiming at building common representations of its processes and information. These works, mostly conducted under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics (ModernStats), include the Generic Statistical Business Process Model (GSBPM), the Generic Statistical Information Model (GSIM), the Generic Activity Model for Statistical Organisation (GAMSO), and the Common Statistical Data Architecture (CSDA).</p>
+				<p>The Official Statistics community has been collaborating for some years in order to define business models aiming at building common representations of its processes and information. These works, mostly conducted under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics (ModernStats), include the Generic Statistical Business Process Model (GSBPM), the Generic Statistical Information Model (GSIM), the Generic Activity Model for Statistical Organisations (GAMSO), and the Common Statistical Data Architecture (CSDA).</p>
 
 				<p>GSBPM provides a framework to describe the building blocks of statistical production in terms of sub-processes. Its main goal is to help statistical organizations standardize their statistical production processes. It was the first ModernStats model to be published, back in 2008, and has been widely used by national and international statistical agencies since then.</p>
 
@@ -133,7 +133,7 @@
 
 				<p>CSDA provides a capability framework cataloguing the mayor abilities a statistical organization has to use, produce, share and manage data and metadata. CSDA integrates with the GSBPM and GAMSO by enabling processes and activities related to the lifecycle management of GSIM information objects.</p>
 
-				<p>As more and more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on our international core models to establish common foundations on which the different works can develop in a coherent way. This should be done using a formal framework that allows interoperability, activation and globally unique identification.</p>
+				<p>As more and more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on these international core models to establish common foundations on which the different works can develop in a coherent way. This should be done using a formal framework that allows interoperability, activation and globally unique identification.</p>
 
 			</section>
 
@@ -141,15 +141,15 @@
 
 				<h3>Objectives and Scope</h3>
 				
-				<p>This paper proposes a first try at a base OWL ([[owl2-overview]]) vocabulary for Official Statistics. It suggests formal representations for the core concepts used in our domain. It builds on a set of well-known OWL vocabularies, namely SKOS, PROV, ORG, DCAT and the Dublin Core.</p>
+				<p>This paper proposes a first attempt at producing a base OWL ([[owl2-overview]]) vocabulary for Official Statistics. It suggests formal representations for the core concepts used in our domain. Furthermore, it builds on a set of well-known OWL vocabularies, namely SKOS, PROV, ORG, DCAT and the Dublin Core.</p>
 
-				<p>The ontology does not aim to cover the domains exhaustively. Inclusion criteria for a concept are:</p>
+				<p>The ontology does not aim at covering the domains exhaustively. Inclusion criteria for a concept are:</p>
 				<ul>
 					<li>The concept helps clarifying and harmonizing the terminology</li>
 					<li>The concept helps bridging constructs from different models</li>
 					<li>The concept helps connecting statistical models to other well-known vocabularies</li>
 				</ul>
-				<p>In the following sections, we stay at a very general model and deal with the following domains: statistical activities, products and actors. For more precise definitions like those that can be found in the GSBPM or in GSIM, we refer to previous works: [[GSBPM-LM]] and [[GSIM-LM]] respectively.</p>
+				<p>In the following sections, we stay at a very general model level and deal with the following domains: statistical activities, products and actors. For more precise definitions like those that can be found in the GSBPM or in GSIM, we refer to previous works: [[GSBPM-LM]] and [[GSIM-LM]] respectively.</p>
 			
 				<p>The ontology also defines a large number of individuals (class instances) in order to standardize their naming and identification.</p>
 
@@ -415,7 +415,7 @@
 
 			<p>RDF, RDFS, OWL and XSD vocabularies or namespaces are also used, with their usual URIs and prefixes.</p>
 
-			<p>The RDF examples are expressed Turtle. Unless otherwise specified, these examples use the http://example.org/ns/, which will be represented by the <code>ex:</code> prefix. Note however that individual resource names used as examples are entirely fictitious.</p>
+			<p>The RDF examples are expressed in Turtle. Unless otherwise specified, these examples use the http://example.org/ns/ domain, which will be represented by the <code>ex:</code> prefix. Note however that individual resource names used as examples are entirely fictitious.</p>
 
 		</section>
 
@@ -423,7 +423,7 @@
 
 			<h2>Activities</h2>
 
-			<p>A large part of the COOS is related to the activities performed by statistical organizations. Indeed, the GSBPM model was one of the first to be standardized at the international level, and remains the most widely used of the Unece models. The GAMSO appeared later, and was subsequently articulated with the GSBPM in a coherent scheme.</p>
+			<p>A large part of the COOS is related to the activities performed by statistical organizations. Indeed, the GSBPM model was one of the first to be standardized at the international level, and remains the most widely used of the UNECE models. The GAMSO appeared later, and was subsequently articulated with the GSBPM in a coherent scheme.</p>
 
 			<p>In this section, we will follow this historic view and start by describing the COOS artefacts that originate from the GSBPM, then add the GAMSO view. Other useful COOS constructs related to the Official Statistics activities are listed in a third sub-section.</p>
 
@@ -459,7 +459,7 @@
 					skos:prefLabel "Produce dissemination products"@en .
 				</pre>
 
-				<p>The ontology actually defines an individual for each GSBPM phase and sub-process, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents statistical production process as a whole.</p>
+				<p>The ontology actually defines an individual for each GSBPM phase and sub-process, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents the statistical production process as a whole.</p>
 
 				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
 
@@ -503,7 +503,7 @@
 					skos:prefLabel "Monitor Capability Improvements"@en .					
 				</pre>
 
-				<p>As previously for the GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the activities they contain. At a top of the scheme, an instance of <code>Activity</code> represents the whole activity of statistical organizations, so we name it <code>officialStatistics</code>.</p>
+				<p>As previously for the GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the activities they contain. At the top of the scheme, an instance of <code>Activity</code> represents the whole activity of statistical organizations, so we name it <code>officialStatistics</code>.</p>
 
 				<p>Finally, we need two properties to describe how a GAMSO <code>Activity</code> relates to a GSBPM <code>StatisticalProductionActivity</code>:</p>
 
@@ -578,7 +578,7 @@
 
 				<p>Also, the European Statistical System has published a <a href="https://joinup.ec.europa.eu/collection/statistical-enterprise-architecture/document/ess-earf-business-capabilities-model">Business Capabilities Model</a> that defines a number of capabilities organized in three levels.</p>
 
-				<p>To represent the link between a capacity and the activities it allows to perform, COOS defines the <code>enables</code> property. The figure below shows an example using this property.</p>
+				<p>To represent the link between an ability and the activities it allows to perform, COOS defines the <code>enables</code> property. The figure below shows an example using this property.</p>
 
 				<figure id="image-csda-ex">
 					<img src="img/coos-csda-ex.png" alt="Linking COOS capabilities and activities" title="Linking COOS capabilities and activities"/>
@@ -592,7 +592,7 @@
 			
 			<section id="activities-task">
 				<h3>More detailed activities</h3>
-				<p>The previous definitions stay in the framework of the GAMSO/GSBPM/GSIM/CSDA, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less fine-grained and form hierarchies.</p>
+				<p>The previous definitions stay in the framework of the GAMSO/GSBPM/GSIM/CSDA, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less granular and form hierarchies.</p>
 
 				<pre class="example" title="Example of tasks">
 				ex:calculate-mean-wages a coos:Task ;
@@ -650,7 +650,7 @@
 
 			<p>Here again, the PROV vocabulary is useful, in particular to provide provenance information on products and to link them to activities and organizations (for example <code>prov:wasGeneratedBy</code> from a product to an activity).</p>
 
-			<p>The <code>StatisticalDataset</code> class is also declared as a daughter of <code>dcat:Dataset</code>, which allows to reuse the DCAT (or StatDCAT-AP) possibilities, in particular to document datasets and their different distributions, group them in catalogues, etc.</p>
+			<p>The <code>StatisticalDataset</code> class is also declared as a daughter of <code>dcat:Dataset</code>, which allows to reuse DCAT (or StatDCAT-AP), in particular to document datasets and their different distributions, group them in catalogues, etc.</p>
 
 			<figure id="image-prod">
 				<img src="img/coos-prod.png" alt="Products vocabulary main classes" title="Products vocabulary main classes"/>
@@ -666,13 +666,13 @@
 				</ul>
 			</div>
 
-			<p>In DDI-CDI ([[DDI-CDI]]), four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Here we add the 'graph' type, which covers also tree-like data. Several of the types could be used to structure the same data. There is not a canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
+			<p>In DDI-CDI ([[DDI-CDI]]), four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Here we add the 'graph' type, which covers also tree-like data. Several of the types could be used to structure the same data. There is no canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
 
 			<p>The types are defined roughly as follows:</p>
 
 			<ol>
 				<li>rectangular (or wide) - rows are units and columns are variables</li>
-				<li>event history (or tall or long) - rows are based on the value for each variable, one unit at a time - and this could be visualized as rows are variables and columns are units</li>
+				<li>event history (or tall or long) - rows are based on the value for each variable, one unit at a time</li>
 				<li>dimensional - a pre-defined set of cells defined by the combination of categories, one from each of a set of dimensions (category sets), used to handle the value of some measure (variable) restricted to the cell</li>
 				<li>key-value - a set of values, each associated with some key</li>
 				<li>graph - datapoints are nodes and relationships between them are edges in a graph structure</li>
@@ -703,7 +703,7 @@
 			<h2>Conclusion</h2>
 			<p>This paper introduced COOS, the Core Ontology for Official Statistics. COOS main purpose is to serve as an integration ontology for the core set of ModernStats standards backed by elements of well-known standard vocabularies.</p>
 
-			<p>ModernStats standards have been developed independently over the course of more than a decade by a diverse group of specialists with different viewpoints, stakeholders and ideas. This created misalignments and impedance mismatch between the underlying models that should otherwise work well together and complement each other: Information objects (GSIM) describe the data and metadata necessary to produce statistics where capabilities (CSDA) are the essential building blocks enabling activities (GAMSO) to be implemented via business processes (GSBPM)</p>
+			<p>ModernStats standards have been developed independently over the course of more than a decade by a diverse group of specialists with different viewpoints, stakeholders and ideas. This created misalignments and impedance mismatch between the underlying models that should otherwise work well together and complement each other: Information objects (GSIM) describe the data and metadata necessary to produce statistics where capabilities (CSDA) are the essential building blocks enabling activities (GAMSO) to be implemented via business processes (GSBPM).</p>
 
 			<p>COOS defines a conceptual integration framework to provide semantic coherence across these models based on a common vocabulary of terms, definitions and a well-defined set of inter- and intra-model relationships formalized in RDF/OWL using standards vocabularies, e.g. SKOS, PROV, DCAT, DC, ORG, etc. COOS provides a powerful mechanism to describe complex aspects of statistical production to support business discussions and technical solution implementations.</p>
 			
