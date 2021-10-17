@@ -140,7 +140,7 @@
 			<section id="objectives">
 
 				<h3>Objectives and Scope</h3>
-				
+
 				<p>This paper proposes a first attempt at producing a base OWL ([[owl2-overview]]) vocabulary for Official Statistics. It suggests formal representations for the core concepts used in our domain. Furthermore, it builds on a set of well-known OWL vocabularies, namely SKOS, PROV, ORG, DCAT and the Dublin Core.</p>
 
 				<p>The ontology does not aim at covering the domains exhaustively. Inclusion criteria for a concept are:</p>
@@ -150,7 +150,7 @@
 					<li>The concept helps connecting statistical models to other well-known vocabularies</li>
 				</ul>
 				<p>In the following sections, we stay at a very general model level and deal with the following domains: statistical activities, products and actors. For more precise definitions like those that can be found in the GSBPM or in GSIM, we refer to previous works: [[GSBPM-LM]] and [[GSIM-LM]] respectively.</p>
-			
+
 				<p>The ontology also defines a large number of individuals (class instances) in order to standardize their naming and identification.</p>
 
 			</section>
@@ -160,11 +160,11 @@
 				<h3>Overview</h3>
 
 				<p>The ontology provides classes and properties to allow statististical activities to be described along with the organizations that undertake them, the inputs they use and the ouputs they produce.</p>
-				
+
 				<p>All activities undertaken by organizations that produce Official Statistics may be represented using the ontology. A distinction is made between activities directly linked to the production of statistical content, and activities required to perform those. Several classes of activities are also introduced to allow different levels of  granularity to be expressed. Furthermore, the ontology provides instance of GAMSO/GSBPM's activities and the possibility to map these to user defined activities. See <a href="#activities">Section 3. Activities</a>.</p>
-				
+
 				<p>In the context of the ontology, organizations are distinguished by whether they produce Official Statistics at national or international level. See <a href="#organizations">Section 4. Organizations</a>.</p>
-				
+
 				<p>In the course of a statistical production process, different kind of information objects flow from one activity to the other. The ontology focuses on the core information object for the Official Statistics that is the DataSet. See <a href="#products">Section 5. Products</a>.</p>
 
 			</section>
@@ -172,7 +172,7 @@
 			<section id="coos-docs">
 
 				<h3>COOS Documents</h3>
-				
+
 				<p>In addition to the present specification, the COOS family of documents includes:</p>
 				<ul>
 					<li>The <a href="coos.ttl">formal vocabulary</a> expressed with the Terse RDF Triple language (Turtle) [[turtle]] syntax.</li>
@@ -452,7 +452,7 @@
 				<pre class="example nohighlight" title="Examples of GSBPM phase and sub-process">
 				&lt;http://id.unece.org/activities/phase/6&gt; a coos:Phase ;
 					skos:notation "6" ;
-					skos:prefLabel "Analyse"@en .					
+					skos:prefLabel "Analyse"@en .
 
 				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
 					skos:notation "7.2" ;
@@ -500,7 +500,7 @@
 
 				&lt;http://id.unece.org/activities/activity/2.3&gt; a coos:Activity ;
 					skos:notation "2.3" ;
-					skos:prefLabel "Monitor Capability Improvements"@en .					
+					skos:prefLabel "Monitor Capability Improvements"@en .
 				</pre>
 
 				<p>As previously for the GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the activities they contain. At the top of the scheme, an instance of <code>Activity</code> represents the whole activity of statistical organizations, so we name it <code>officialStatistics</code>.</p>
@@ -525,15 +525,14 @@
 					skos:prefLabel "Manage Quality"@en ;
 					coos:supports &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; .
 				</pre>
-				
+
 				<p>In addition, COOS defines the <code>OverarchingActivity</code> class, which represents a supporting activity that applies to all production phases, e.g. metadata management, data management, statistical methodology management, etc. These activities correspond to the overarching processes in the GSBPM and the statistical activities in Corporate Support in GAMSO. These activities support the execution of phases and sub-processes effectively. When harmonized and standardized, overarching activities enable the efficient execution of the entire statistical production process.</p>
 
 				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
 				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:OverarchingActivity ;
 					skos:notation "0.2"	;
-					skos:prefLabel "Metadata Management"@en .					
+					skos:prefLabel "Metadata Management"@en .
 				</pre>
-				
 
 				<p>The following figure gives an overview of the COOS elements defined until now.</p>
 
@@ -570,7 +569,7 @@
 				ex:csda-data-integration a coos:CoreCapability ;
 					rdfs:label "Data integration"@en ;
 					skos:definition "The ability to combine, link, relate and/or align different data sets in order to create an integrated information set."@en .
-				
+
 				ex:geostat-integration-services a coos:Capability ;
 					rdfs:label "Develop and apply services for smarter statistical-geospatial integration"@en ;
 					rdfs:isDefinedBy &lt;https://www.efgs.info/geostat/&gt; .
@@ -578,7 +577,7 @@
 
 				<p>Also, the European Statistical System has published a <a href="https://joinup.ec.europa.eu/collection/statistical-enterprise-architecture/document/ess-earf-business-capabilities-model">Business Capabilities Model</a> that defines a number of capabilities organized in three levels.</p>
 
-				<p>To represent the link between an ability and the activities it allows to perform, COOS defines the <code>enables</code> property. The figure below shows an example using this property.</p>
+				<p>To represent the link between a capability and the activities it allows to perform, COOS defines the <code>enables</code> property. The figure below shows an example using this property.</p>
 
 				<figure id="image-csda-ex">
 					<img src="img/coos-csda-ex.png" alt="Linking COOS capabilities and activities" title="Linking COOS capabilities and activities"/>
@@ -589,7 +588,7 @@
 				<p>There is an obvious relation between capabilities and the “Capability Development” GAMSO activity area, but this link is not formally modeled in COOS.</p>
 
 			</section>
-			
+
 			<section id="activities-task">
 				<h3>More detailed activities</h3>
 				<p>The previous definitions stay in the framework of the GAMSO/GSBPM/GSIM/CSDA, but more precise notions will be needed by the NSIs for the more detailed modelization of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less granular and form hierarchies.</p>
@@ -613,36 +612,32 @@
 
 			</section>
 
-			
 		</section>
 
 		<section id="organizations">
 
 			<h2>Organizations</h2>
 
-
 			<p>We have discussed so far how to represent in the ontology what the official statistics community does in the form of activities, capabilities and processes. Now we need to represent how this community is organized.</p> 
-			
+
 			<p>Essentially, what we need is the notion of a collection of people organized as a group in some formal structure. We use <code>org:Organization</code> and <code>prov:Organization</code> for representing that notion. We then define a <code>StatisticalOrganization</code> as an organization, or unit within an organization, whose primary role is the production of official statistics. This <code>StatisticalOrganization</code> class is further specialize into two sub-classes:</p>
-			
-			
+
 			<ul>
 				<li><code>NationalStatisticalInstitute</code>: The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system. The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc.</li>
 				<li><code>InternationalAgency</code>: A body with an international membership, scope, or presence whose primary role is the production of official statistics. There are many types of international organizations. One way of categorizing them is to distinguish between intergovernmental organizations, supranational organizations and international non-governmental organizations.</li>
-			</ul>	
-			
+			</ul>
+
 			<figure id="image-org">
 				<img src="img/coos-org.png" alt="Organizations vocabulary overview" title="Organizations vocabulary overview"/>
 				<figcaption>Organizations vocabulary overview</figcaption>
 			</figure>
 
-			
 			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
 
 			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
 
 		</section>
-		
+
 		<section id="products">
 			<h2>Products</h2>
 
@@ -706,9 +701,9 @@
 			<p>ModernStats standards have been developed independently over the course of more than a decade by a diverse group of specialists with different viewpoints, stakeholders and ideas. This created misalignments and impedance mismatch between the underlying models that should otherwise work well together and complement each other: Information objects (GSIM) describe the data and metadata necessary to produce statistics where capabilities (CSDA) are the essential building blocks enabling activities (GAMSO) to be implemented via business processes (GSBPM).</p>
 
 			<p>COOS defines a conceptual integration framework to provide semantic coherence across these models based on a common vocabulary of terms, definitions and a well-defined set of inter- and intra-model relationships formalized in RDF/OWL using standards vocabularies, e.g. SKOS, PROV, DCAT, DC, ORG, etc. COOS provides a powerful mechanism to describe complex aspects of statistical production to support business discussions and technical solution implementations.</p>
-			
+
 			<p>Model management is a big part of the standards integration story: the underlying models evolve and to maintain alignment the COOS needs to evolve with them. COOS includes an initial governance framework complementing each model’s own governance processes. This governance framework includes a core set of principles and a process for managing change.</p>
-			
+
 			<p>Moving forward, we will investigate the feasibility and benefits of integrating other aspects of standards already included, e.g. GSIM statistical concepts, and look into new standards and architectures, e.g. the Common Statistical Production Architecture (CSPA), the ESS Enterprise Architecture Reference Framework, and the European Interoperability Framework (EIF) and Reference Architecture (EIRA), and the Single Integrated Metadata Structure (SIMS), among others.</p>
 		</section>
 
