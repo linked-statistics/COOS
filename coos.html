@@ -21,7 +21,7 @@
 				wg: "High-Level Group for the Modernisation of Official Statistics",
 				wgURI: "https://statswiki.unece.org/display/hlgbas/Modernisation+Groups",
 				wgPatentURI: "http://creativecommons.org/licenses/by/4.0/",
-				processVersion: 2018,
+				latestVersion: "https://github.com/linked-statistics/COOS",
 				edDraftURI: "https://github.com/linked-statistics/COOS",
 				github: "https://github.com/linked-statistics/COOS",
 				localBiblio: {
@@ -654,26 +654,24 @@
 
 			<div class="issue">
 				<ul>
-					<li>Review the following text (reproduced from Dan's comment in issue #15)</li>
-					<li>Add comment on renaming "long" to "transposed"</li>
 					<li>Add metadataFor property</li>
 					<li>Add constructs about product content and presentation</li>
 				</ul>
 			</div>
 
-			<p>In DDI-CDI ([[DDI-CDI]]), four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Here we add the 'graph' type, which covers also tree-like data. Several of the types could be used to structure the same data. There is no canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
+			<p>In DDI-CDI ([[DDI-CDI]]), four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Here we add the 'graph' type, which covers also tree-like data, and rename 'event history' as 'transposed'. Several of the types could be used to structure the same data. There is no canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
 
 			<p>The types are defined roughly as follows:</p>
 
 			<ol>
 				<li>rectangular (or wide) - rows are units and columns are variables</li>
-				<li>event history (or tall or long) - rows are based on the value for each variable, one unit at a time</li>
+				<li>transposed (or event history, tall or long) - rows are based on the value for each variable, one unit at a time</li>
 				<li>dimensional - a pre-defined set of cells defined by the combination of categories, one from each of a set of dimensions (category sets), used to handle the value of some measure (variable) restricted to the cell</li>
 				<li>key-value - a set of values, each associated with some key</li>
 				<li>graph - datapoints are nodes and relationships between them are edges in a graph structure</li>
 			</ol>
 
-			<p>Dimensional data are usually associated with aggregates. Key-value data are often taken from scraping the web. Even-history is used to describe events over some time period.</p>
+			<p>Dimensional data are usually associated with aggregates. Key-value data are often taken from scraping the web. Even-history (transposed) is used to describe events over some time period.</p>
 
 			<p>The nominal, ordinal, interval, ratio are not used to differentiate datasets. Rather, they are families of datatypes used to describe variables. Nominal data are those conforming to a finite set of categories with no other conditions (sex categories). Ordinal data are those conforming to an ordered finite set of categories, but the difference between adjacent categories is not necessarily uniform (Likert scale measures of satisfaction). Interval data are numeric with no zero (absence of quantity) defined (Celsius temperature). Ratio data are numeric with a defined zero (Kelvin temperature). These apply to any kind of statistical data.</p>
 
