@@ -601,7 +601,7 @@
 				ex:produce-study prov:wasInformedBy ex:calculate-mean-wages .
 				</pre>
 
-				<p>We see in this example how we can use PROV to represent links between activities: here we suppose that the "Produce study" activity uses the results of the "Calculate mean wages" task.</p>
+				<p>We see in this example how we can use PROV to represent links between activities: here we suppose that the “Produce study” activity uses the results of the “Calculate mean wages” task.</p>
 
 				<figure id="image-ex1">
 					<img src="img/coos-ex1.png" alt="Using PROV with COOS constructs" title="Using PROV with COOS constructs"/>
@@ -639,6 +639,7 @@
 		</section>
 
 		<section id="products">
+
 			<h2>Products</h2>
 
 			<p>Finally, we need to describe the information that activities, capabilities and processes use and produce. This is captured by an <code>InformationObject</code> class that aligns with the notion of “information object” in GSIM, i.e. all GSIM classes are going to be sub-classes of <code>InformationObject</code>. A <code>StatisticalInformationObject</code> is essentially an <code>InformationObject</code> representing statistical information, i.e. they are the inputs and outputs in the design and production of statistics. Some of those statistical information objects are also entities in the <code>Prov</code> sense, which are captured by the <code>StatisticalProduct</code> and <code>StatisticalDataset</code> classes, corresponding to the GSIM Product and GSIM Data Set, respectively. </p>
@@ -662,13 +663,13 @@
 
 			<p>The types are defined roughly as follows:</p>
 
-			<ol>
+			<ul>
 				<li>rectangular (or wide) - rows are units and columns are variables</li>
 				<li>transposed (or event history, tall or long) - rows are based on the value for each variable, one unit at a time</li>
 				<li>dimensional - a pre-defined set of cells defined by the combination of categories, one from each of a set of dimensions (category sets), used to handle the value of some measure (variable) restricted to the cell</li>
 				<li>key-value - a set of values, each associated with some key</li>
 				<li>graph - datapoints are nodes and relationships between them are edges in a graph structure</li>
-			</ol>
+			</ul>
 
 			<p>Dimensional data are usually associated with aggregates. Key-value data are often taken from scraping the web. Even-history (transposed) is used to describe events over some time period.</p>
 
@@ -691,10 +692,18 @@
 
 			<p>No specific type of data set is defined for metadata, since sets of metadata can have any of the structures defined. However, COOS specifies the <code>metadataFor</code> property that can be used to associate a set of metadata to the dataset that it qualifies.</p>
 
+			<p>To further qualify statistical data sets, COOS defines two properties: <code>content</code> and <code>presentation</code>, that take their values in controlled vocabularies (represented as SKOS concept schemes). More specifically:</p>
+			<ul>
+				<li><code>content</code> can be “Data”, “Metadata”, “Analysis” or “Model”</li>
+				<li><code>presentation</code> can be “Dataset”, “Publication”, “Viualization”, “Infographic”, “Thematic Map” or “Interactive”</li>
+			</ul>
+
 		</section>
 
 		<section id="conclusion">
+
 			<h2>Conclusion</h2>
+
 			<p>This paper introduced COOS, the Core Ontology for Official Statistics. COOS main purpose is to serve as an integration ontology for the core set of ModernStats standards backed by elements of well-known standard vocabularies.</p>
 
 			<p>ModernStats standards have been developed independently over the course of more than a decade by a diverse group of specialists with different viewpoints, stakeholders and ideas. This created misalignments and impedance mismatch between the underlying models that should otherwise work well together and complement each other: Information objects (GSIM) describe the data and metadata necessary to produce statistics where capabilities (CSDA) are the essential building blocks enabling activities (GAMSO) to be implemented via business processes (GSBPM).</p>
@@ -704,6 +713,7 @@
 			<p>Model management is a big part of the standards integration story: the underlying models evolve and to maintain alignment the COOS needs to evolve with them. COOS includes an initial governance framework complementing each model’s own governance processes. This governance framework includes a core set of principles and a process for managing change.</p>
 
 			<p>Moving forward, we will investigate the feasibility and benefits of integrating other aspects of standards already included, e.g. GSIM statistical concepts, and look into new standards and architectures, e.g. the Common Statistical Production Architecture (CSPA), the ESS Enterprise Architecture Reference Framework, and the European Interoperability Framework (EIF) and Reference Architecture (EIRA), and the Single Integrated Metadata Structure (SIMS), among others.</p>
+
 		</section>
 
 		<section class='appendix'>
