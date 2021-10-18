@@ -161,7 +161,7 @@ coos:StatisticalProduct a rdfs:Class , owl:Class ;
     rdfs:label "Statistical product"@en , "Produit statistique"@fr , "Producto estadístico"@es ;
     rdfs:comment "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr , "Corresponde a producto en GSIM."@es ;
     skos:definition "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr , "Corresponde a producto en GSIM."@es ;
-    rdfs:subClassOf prov:Entity ;
+    rdfs:subClassOf coos:StatisticalEntity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalDataset a rdfs:Class , owl:Class ;
