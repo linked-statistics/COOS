@@ -360,7 +360,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/activityArea/2> a coos:ActivityArea ;
     skos:notation "2" ;
-    skos:prefLabel "Capability Development"@en , "Desarrollo de capacidades"@es , "Développement des capacités" ;
+    skos:prefLabel "Capability Development"@en , "Desarrollo de capacidades"@es , "Développement des capacités"@fr ;
     skos:inScheme <http://id.unece.org/activities/gamso> ;
     skos:broader <http://id.unece.org/activities/officialStatistics> ;
     skos:narrower <http://id.unece.org/activities/activity/2.1> , <http://id.unece.org/activities/activity/2.2> , <http://id.unece.org/activities/activity/2.3> , <http://id.unece.org/activities/activity/2.4> ;
@@ -491,7 +491,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 <http://id.unece.org/activities/activity/3.9> a coos:Activity ;
     skos:notation "3.9" ;
-    skos:prefLabel "Manage Information Technology (IT)"@en , "Administrar las Tecnologías de la Información (TI)"@es , "Gérer les technologies de l'information" ;
+    skos:prefLabel "Manage Information Technology (IT)"@en , "Administrar las Tecnologías de la Información (TI)"@es , "Gérer les technologies de l'information"@fr ;
     skos:inScheme <http://id.unece.org/activities/gamso> ;
     skos:broader <http://id.unece.org/activities/activityArea/3> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
