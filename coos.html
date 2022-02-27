@@ -7,9 +7,12 @@
 		<script src='https://www.w3.org/Tools/respec/respec-w3c' class='remove' defer></script>
 		<script class='remove'>
 			var respecConfig = {
-				specStatus: "CG-DRAFT",
+				specStatus: "base",
+				noRecTrack: true,
 				shortName: "COOS",
 				subtitle: "A Core Ontology for Official Statistics",
+				latestVersion: "https://linked-statistics.github.io/COOS/coos.html",
+				// publishDate:  "2022-xx-xx",
 				editors: [
 					{ name: "Franck Cotton", company: "Insee", companyURL: "http://www.insee.fr/" }
 				],
@@ -21,9 +24,19 @@
 				wg: "High-Level Group for the Modernisation of Official Statistics",
 				wgURI: "https://statswiki.unece.org/display/hlgbas/Modernisation+Groups",
 				wgPatentURI: "https://creativecommons.org/licenses/by/3.0/igo/",
-				latestVersion: "https://github.com/linked-statistics/COOS",
-				edDraftURI: "https://github.com/linked-statistics/COOS",
-				github: "https://github.com/linked-statistics/COOS",
+				github: {
+					repoURL: "https://github.com/linked-statistics/COOS",
+					branch: " ", // avoids default 'gh-pages' 
+				},
+				logos: [{
+					src: "https://unece.org/themes/custom/unece/logo.png",
+					url: "https://unece.org/",
+					alt: "Unece",
+					width: 267,
+					height: 66,
+					id: "unece-logo"
+				}],
+
 				localBiblio: {
 					"CSDA": {
 						"date": "Novembre 2018",
@@ -99,6 +112,10 @@
 		</script>
 	</head>
 	<body>
+
+	<p class='copyright'>Copyright © 2022 <a href='https://www.unece.org/'>Unece</a>, All Rights Reserved</p >
+
+	<p style="font-size:80%"><em>(Authors affiliations were recorded at the beginning of the writing of this document and might have changed since.)</em></p>
 
 		<div class="issue" title="Remaining issues">
 			<ul>
