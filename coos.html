@@ -408,7 +408,7 @@
 					<tr>
 						<td>pav</td>
 						<td>http://purl.org/pav/</td>
-						<td>PAV - Provenance, Authoring and Versioning ([[!PAV]])</</td>
+						<td>PAV - Provenance, Authoring and Versioning ([[!PAV]])</td>
 					</tr>
 					<tr>
 						<td>prov</td>
@@ -496,7 +496,7 @@
 					dcterms:isPartOf &lt;http://id.unece.org/activities/phase/2&gt; .
 				</pre>
 
-				<p>The [[[#image-gsbpm]]] summarizes the vocabulary terms defined so far in this document.</p>
+				<p>[[[#image-gsbpm]]] summarizes the vocabulary terms defined so far in this document.</p>
 
 				<figure id="image-gsbpm">
 					<img src="img/coos-gsbpm.png" alt="GSBPM vocabulary overview" title="GSBPM vocabulary overview"/>
@@ -554,7 +554,7 @@
 					coos:supports &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; .
 				</pre>
 
-				<p>The [[[#image-gamso]]] gives an overview of the COOS elements defined so far in this document.</p>
+				<p>[[[#image-gamso]]] gives an overview of the COOS elements defined so far in this document.</p>
 
 				<figure id="image-gamso">
 					<img src="img/coos-gamso.png" alt="GAMSO vocabulary overview" title="GAMSO vocabulary overview"/>
@@ -597,7 +597,7 @@
 
 				<p>Also, the European Statistical System has published a <a href="https://joinup.ec.europa.eu/collection/statistical-enterprise-architecture/document/ess-earf-business-capabilities-model">Business Capabilities Model</a> that defines a number of capabilities organized in three levels.</p>
 
-				<p>To represent the link between a capability and the activities it allows to perform, COOS defines the <code>enables</code> property. The [[[#image-csda-ex]]] below shows an example using this property.</p>
+				<p>To represent the link between a capability and the activities it allows to perform, COOS defines the <code>enables</code> property. [[[#image-csda-ex]]] below shows an example using this property.</p>
 
 				<figure id="image-csda-ex">
 					<img src="img/coos-csda-ex.png" alt="Linking COOS capabilities and activities" title="Linking COOS capabilities and activities"/>
@@ -628,7 +628,7 @@
 					<figcaption>Using PROV with COOS constructs</figcaption>
 				</figure>
 
-				<p>As mentioned previously, the Task class can be used by statistical organizations to create instances for their own needs. Two statistical organizations can create their own "Calculate mean wages" task, and only their labels would indicate that they do similar things. In certain cases however, it could be useful to define standard sub-classes of Task for some widely used and specific types of tasks, for example record linkage or hot-deck imputation. This would allow for example to refer to relevant methodology.</p>
+				<p>As mentioned previously, the <code>Task</code> class can be used by statistical organizations to create instances for their own needs. Two statistical organizations can create their own "Calculate mean wages" task, and only their labels would indicate that they do similar things. In certain cases however, it could be useful to define standard sub-classes of <code>Task</code> for some widely used and specific types of tasks, for example record linkage or hot-deck imputation. This would allow for example to refer to relevant methodology.</p>
 
 			</section>
 
@@ -638,9 +638,9 @@
 
 			<h2>Organizations</h2>
 
-			<p>So far, this document has discussed how the ontology represents what the official statistics community does in the form of activities, capabilities and processes. The next section describes how to represent how this community is organized.</p> 
+			<p>So far, this document has discussed how the ontology represents what the official statistics community does in the form of activities, capabilities and processes. This section describes the ontology part that captures how this community is organized.</p>
 
-			<p>Essentially, what is needed is the notion of a collection of people organized as a group in some formal structure. <code>org:Organization</code> and <code>prov:Organization</code> are used for representing that notion. Then a <code>StatisticalOrganization</code> is defined as an organization, or unit within an organization, whose primary role is the production of official statistics. This <code>StatisticalOrganization</code> class is further specialized into two sub-classes:</p>
+			<p>Essentially, what is needed is the notion of a collection of people organized as a group in some formal structure, which is represented using <code>org:Organization</code> and <code>prov:Organization</code>. Then a <code>StatisticalOrganization</code> is defined as an organization, or unit within an organization, whose primary role is the production of official statistics. This <code>StatisticalOrganization</code> class is further specialized into two sub-classes:</p>
 
 			<ul>
 				<li><code>NationalStatisticalInstitute</code>: The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system. The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc.</li>
