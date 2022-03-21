@@ -408,7 +408,7 @@
 					<tr>
 						<td>pav</td>
 						<td>http://purl.org/pav/</td>
-						<td>PAV - Provenance, Authoring and Versioning ([[!PAV]])</</td>
+						<td>PAV - Provenance, Authoring and Versioning ([[!PAV]])</td>
 					</tr>
 					<tr>
 						<td>prov</td>
@@ -496,7 +496,7 @@
 					dcterms:isPartOf &lt;http://id.unece.org/activities/phase/2&gt; .
 				</pre>
 
-				<p>The following figure summarizes the vocabulary terms defined until now.</p>
+				<p>[[[#image-gsbpm]]] summarizes the vocabulary terms defined so far in this document.</p>
 
 				<figure id="image-gsbpm">
 					<img src="img/coos-gsbpm.png" alt="GSBPM vocabulary overview" title="GSBPM vocabulary overview"/>
@@ -554,7 +554,7 @@
 					coos:supports &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; .
 				</pre>
 
-				<p>The following figure gives an overview of the COOS elements defined until now.</p>
+				<p>[[[#image-gamso]]] gives an overview of the COOS elements defined so far in this document.</p>
 
 				<figure id="image-gamso">
 					<img src="img/coos-gamso.png" alt="GAMSO vocabulary overview" title="GAMSO vocabulary overview"/>
@@ -570,15 +570,15 @@
 
 				<h3>Adding GSIM and CSDA</h3>
 
-				<p>Adding the Generic Statistical Information Model (GSIM) in this framework allows us to refine <code>StatisticalActivity</code> even further. Parallel to <code>StatisticalProductionActivity</code> we can define two additional sub-classes of <code>StatisticalActivity</code>:</p>
+				<p>Adding the Generic Statistical Information Model (GSIM) in this framework allows us to refine <code>StatisticalActivity</code> even further. In parallel to <code>StatisticalProductionActivity</code>, two additional sub-classes of <code>StatisticalActivity</code> can be defined:</p>
 				<ul>
 					<li><code>StatisticalProgram</code>: it is essentially a set of activities carried out to produce statistics. These statistics are about the set of units in scope for the program, e.g. “All persons with a university degree”, within a given subject field, e.g. income statistics, tourism, etc.</li>
 					<li><code>StatisticalProgramCycle</code>: statistical program activities are often repeated over time in iterations called cycles. A StatisticalProgramCycle is one of those iterations for a specific time and geography.</li>
 				</ul>
 
-				<p>Another dimension to consider is that of information capabilities. A capability is an ability a statistical organization possesses to undertake a specific activity. It is only achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills). The notion of capability is often used in enterprise architecture approaches like TOGAF or, in the statistical domain, the Common Statistical Data Architecture [[CSDA]]. Capabilities can be mapped to strategic goals and objectives and provide a useful starting point to map lower level elements such as business process and functions, applications and technology assets.</p>
+				<p>Another dimension to consider is information capabilities. A capability is an ability a statistical organization possesses to undertake a specific activity. It is achieved through the integration of all relevant capability elements (e.g. methods, processes, standards and frameworks, IT systems and people skills). The notion of capability is often used in enterprise architecture approaches like <a href="https://www.opengroup.org/togaf">TOGAF</a> (The Open Group Architecture Framework) or, in the statistical domain, the Common Statistical Data Architecture [[CSDA]]. Capabilities can be mapped to strategic goals and objectives and provide a useful starting point to map lower level elements such as business process and functions, applications and technology assets.</p>
 
-				<p>Following CSDA, we distinguish two types of capabilities:</p>
+				<p>Following CSDA, two types of capabilities are distinguished:</p>
 				<ul>
 					<li><code>Core capabilities: </code> capabilities the organization needs to execute its core business, i.e. the production of statistics. They generally map to phases in GSBPM.</li>
 					<li><code>Cross-cutting capabilities: </code>capabilities used to formulate and implement the policies that the organization chooses for its internal operations. They generally map to corporate support in GAMSO and overarching processes in GSBPM.</li>
@@ -597,7 +597,7 @@
 
 				<p>Also, the European Statistical System has published a <a href="https://joinup.ec.europa.eu/collection/statistical-enterprise-architecture/document/ess-earf-business-capabilities-model">Business Capabilities Model</a> that defines a number of capabilities organized in three levels.</p>
 
-				<p>To represent the link between a capability and the activities it allows to perform, COOS defines the <code>enables</code> property. The figure below shows an example using this property.</p>
+				<p>To represent the link between a capability and the activities it allows to perform, COOS defines the <code>enables</code> property. [[[#image-csda-ex]]] below shows an example using this property.</p>
 
 				<figure id="image-csda-ex">
 					<img src="img/coos-csda-ex.png" alt="Linking COOS capabilities and activities" title="Linking COOS capabilities and activities"/>
@@ -611,7 +611,7 @@
 
 			<section id="activities-task">
 				<h3>More detailed activities</h3>
-				<p>The previous definitions stay in the framework of the GAMSO/GSBPM/GSIM/CSDA, but more precise notions will be needed by the NSIs for the more detailed modelling of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less granular and form hierarchies.</p>
+				<p>The previous definitions stay in the framework of the GAMSO/GSBPM/GSIM/CSDA, but more precise notions will be needed by the statistical organizations for the more detailed modelling of their statistical activities. COOS users can adopt different names for these more specific activities that are scoped by a given GSBPM sub-process or overarching activity, but COOS defines the generic <code>Task</code> class as a common term for better interoperability. Tasks can be more or less granular and form hierarchies.</p>
 
 				<pre class="example" title="Example of tasks">
 				ex:calculate-mean-wages a coos:Task ;
@@ -621,14 +621,14 @@
 				ex:produce-study prov:wasInformedBy ex:calculate-mean-wages .
 				</pre>
 
-				<p>We see in this example how we can use PROV to represent links between activities: here we suppose that the “Produce study” activity uses the results of the “Calculate mean wages” task.</p>
+				<p>[[[#image-ex1]]] shows how PROV can be used to represent links between activities: here it is supposed that the “Produce study” activity uses the results of the “Calculate mean wages” task.</p>
 
 				<figure id="image-ex1">
 					<img src="img/coos-ex1.png" alt="Using PROV with COOS constructs" title="Using PROV with COOS constructs"/>
 					<figcaption>Using PROV with COOS constructs</figcaption>
 				</figure>
 
-				<p>As mentioned previously, the Task class can be used by NSIs to create instances for their own needs. Two NSIs can create their own "Calculate mean wages" task, and only their labels would indicate that they do similar things. In certain cases however, it could be useful to define standard sub-classes of Task for some widely used and specific types of tasks, for example record linkage or hot-deck imputation. This would allow for example to refer to relevant methodology.</p>
+				<p>As mentioned previously, the <code>Task</code> class can be used by statistical organizations to create instances for their own needs. Two statistical organizations can create their own "Calculate mean wages" task, and only their labels would indicate that they do similar things. In certain cases however, it could be useful to define standard sub-classes of <code>Task</code> for some widely used and specific types of tasks, for example record linkage or hot-deck imputation. This would allow for example to refer to relevant methodology.</p>
 
 			</section>
 
@@ -638,9 +638,9 @@
 
 			<h2>Organizations</h2>
 
-			<p>We have discussed so far how to represent in the ontology what the official statistics community does in the form of activities, capabilities and processes. Now we need to represent how this community is organized.</p> 
+			<p>So far, this document has discussed how the ontology represents what the official statistics community does in the form of activities, capabilities and processes. This section describes the ontology part that captures how this community is organized.</p>
 
-			<p>Essentially, what we need is the notion of a collection of people organized as a group in some formal structure. We use <code>org:Organization</code> and <code>prov:Organization</code> for representing that notion. We then define a <code>StatisticalOrganization</code> as an organization, or unit within an organization, whose primary role is the production of official statistics. This <code>StatisticalOrganization</code> class is further specialized into two sub-classes:</p>
+			<p>Essentially, what is needed is the notion of a collection of people organized as a group in some formal structure, which is represented using <code>org:Organization</code> and <code>prov:Organization</code>. Then a <code>StatisticalOrganization</code> is defined as an organization, or unit within an organization, whose primary role is the production of official statistics. This <code>StatisticalOrganization</code> class is further specialized into two sub-classes:</p>
 
 			<ul>
 				<li><code>NationalStatisticalInstitute</code>: The main producer of official statistics in a country and/or the organization responsible for coordinating all activities related to the development, production, and dissemination of official statistics in the national statistical system. The actual name given to the national statistical office in a country may be National Statistical Institute (NSI), National Bureau of Statistics (NBS), Central Bureau of Statistics (CBS), National Statistical Agency (NSA), Central Statistical Agency (CSA), Central Statistics Agency (CSA), etc.</li>
@@ -652,7 +652,7 @@
 				<figcaption>Organizations vocabulary overview</figcaption>
 			</figure>
 
-			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the NSI that conducts it.</p>
+			<p>The use of <code>org:Organization</code> as a mother class allows to benefit from all the constructs of the ORG ontology, for example the <code>org:hasUnit</code>/<code>org:unitOf</code> properties for the representation of the hierarchical links between organizations. The use of <code>prov:Organization</code> allows to capture the relations between organizations, activities and products, for example <code>prov:wasAssociatedWith</code> can link a statistical activity to the statistical organization that conducts it.</p>
 
 			<p>It would also be useful to include in the base ontology instances of <code>StatisticalOrganization</code> representing the existing national statistical institutes and international statistical organizations. This would provide in particular a shared global identifier for each of these organisms.</p>
 
@@ -662,7 +662,7 @@
 
 			<h2>Products</h2>
 
-			<p>Finally, we need to describe the information that activities, capabilities and processes use and produce. This is captured by an <code>InformationObject</code> class that aligns with the notion of “information object” in GSIM, i.e. all GSIM classes are going to be sub-classes of <code>InformationObject</code>. A <code>StatisticalInformationObject</code> is essentially an <code>InformationObject</code> representing statistical information, i.e. they are the inputs and outputs in the design and production of statistics. Some of those statistical information objects are also entities in the <code>Prov</code> sense, which are captured by the <code>StatisticalProduct</code> and <code>StatisticalDataset</code> classes, corresponding to the GSIM Product and GSIM Data Set, respectively. </p>
+			<p>Finally, the information that activities, capabilities and processes use and produce needs to be described. This is captured by an <code>InformationObject</code> class that aligns with the notion of “information object” in GSIM, i.e. all GSIM classes are going to be sub-classes of <code>InformationObject</code>. A <code>StatisticalInformationObject</code> is essentially an <code>InformationObject</code> representing statistical information, i.e. they are the inputs and outputs in the design and production of statistics. Some of those statistical information objects are also entities in the <code>Prov</code> sense, which are captured by the <code>StatisticalProduct</code> and <code>StatisticalDataset</code> classes, corresponding to the GSIM Product and GSIM Data Set, respectively. </p>
 
 			<p>Here again, the PROV vocabulary is useful, in particular to provide provenance information on products and to link them to activities and organizations (for example <code>prov:wasGeneratedBy</code> from a product to an activity).</p>
 
@@ -673,7 +673,7 @@
 				<figcaption>Products vocabulary main classes</figcaption>
 			</figure>
 
-			<p>In DDI-CDI ([[DDI-CDI]]), four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Here we add the 'graph' type, which also covers tree-like data, and rename 'event history' as 'transposed'. Several of the types could be used to structure the same data. There is no canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
+			<p>In DDI-CDI ([[DDI-CDI]]), four basic structural types of organizing data sets have been defined: rectangular, event history, key-value pair, and dimensional. Here the 'graph' type is added, which also covers tree-like data, and rename 'event history' as 'transposed'. Several of the types could be used to structure the same data. There is no canonical structure in all cases, though some data is much more amenable to one structure over the others.</p>
 
 			<p>The types are defined roughly as follows:</p>
 
@@ -685,7 +685,7 @@
 				<li>graph - datapoints are nodes and relationships between them are edges in a graph structure</li>
 			</ul>
 
-			<p>Dimensional data are usually associated with aggregates. Key-value data are often taken from scraping the web. Even-history (transposed) is used to describe events over some time period.</p>
+			<p>Dimensional data are usually associated with aggregates. Key-value data are often taken from scraping the web. Event-history (transposed) is used to describe events over some time period.</p>
 
 			<p>The nominal, ordinal, interval, ratio are not used to differentiate datasets. Rather, they are families of datatypes used to describe variables. Nominal data are those conforming to a finite set of categories with no other conditions (sex categories). Ordinal data are those conforming to an ordered finite set of categories, but the difference between adjacent categories is not necessarily uniform (Likert scale measures of satisfaction). Interval data are numeric with no zero (absence of quantity) defined (Celsius temperature). Ratio data are numeric with a defined zero (Kelvin temperature). These apply to any kind of statistical data.</p>
 
@@ -697,7 +697,7 @@
 
 			<p>Mode of transmission is not definitional for a dataset, as a single dataset can be obtained multiple ways. The phases of GSBPM may not be useful, as a single dataset can pass through a phase without change. Further, the phases impose a usage criterion (data for collection; data for editing; etc.) that seems arbitrary and would be useless in another domain (outside statistics).</p>
 
-			<p>Similarly, the explorative, temporary, and organizational categorization is based on intent, rather than the data per se. Plus, the categorization could change without any change to the data. If we change the organizational structure described above (rectangular, etc.), then we should call that a new dataset.</p>
+			<p>Similarly, the explorative, temporary, and organizational categorization is based on intent, rather than the data per se. Plus, the categorization could change without any change to the data. If the organizational structure described above (rectangular, etc.) is changed, then it should be called a new dataset.</p>
 
 			<figure id="image-ds">
 				<img src="img/coos-ds.png" alt="Dataset types" title="Dataset types"/>
@@ -726,7 +726,7 @@
 
 			<p>Model management is a big part of the standards integration story: the underlying models evolve and to maintain alignment the COOS needs to evolve with them. COOS includes an initial governance framework complementing each model’s own governance processes. This governance framework includes a core set of principles and a process for managing change.</p>
 
-			<p>Moving forward, we will investigate the feasibility and benefits of integrating other aspects of standards already included, e.g. objects of the GSIM Concept Group, and look into new standards and architectures, e.g. the Common Statistical Production Architecture (CSPA), the ESS Enterprise Architecture Reference Framework, and the European Interoperability Framework (EIF) and Reference Architecture (EIRA), and the Single Integrated Metadata Structure (SIMS), among others.</p>
+			<p>Moving forward, this group will investigate the feasibility and benefits of integrating other aspects of standards already included, e.g. objects of the GSIM Concept Group, and look into new standards and architectures, e.g. the Common Statistical Production Architecture (CSPA), the ESS Enterprise Architecture Reference Framework, and the European Interoperability Framework (EIF) and Reference Architecture (EIRA), and the Single Integrated Metadata Structure (SIMS), among others.</p>
 
 		</section>
 
