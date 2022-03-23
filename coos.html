@@ -511,7 +511,7 @@
 
 				<p>Introducing GAMSO in this framework is not very difficult. The terminology used in the model shows that the main concepts are activities and activity areas. GAMSO describes two kinds of activities: those that are of statistical nature, for example “Manage Statistical Methodology”, and those that are in support of statistical activities, like “Manage Finances”. To account for this distinction, COOS defines two different classes: <code>StatisticalActivity</code> and <code>Activity</code>. <code>Activity</code> is a daughter of <code>prov:Activity</code> and a mother of <code>StatisticalActivity</code>, which in turn is a mother of the <code>StatisticalProductionActivity</code> introduced previously.</p>
 
-				<p>The GAMSO activity areas are not really activities by themselves, but rather “boxes” used to classify the activities. This makes them instances of <code>skos:Concept</code> to represent this “taxonomic” nature, or more precisely of a specific <code>StatisticalActivityArea</code> class, which is a sub-class of <code>skos:Concept</code>.</p>
+				<p>The GAMSO activity areas are not really activities by themselves, but rather “boxes” used to classify the activities. This makes them instances of <code>skos:Concept</code> to represent this “taxonomic” nature, or more precisely of a specific <code>ActivityArea</code> class, which is a sub-class of <code>skos:Concept</code>.</p>
 
 				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity">
 				&lt;http://id.unece.org/activities/activityArea/1&gt; a coos:ActivityArea ;
