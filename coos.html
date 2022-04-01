@@ -139,42 +139,38 @@
 
 			<h2>Introduction</h2>
 
-			<section>
+			<section id="motivation">
 
-				<h3>Background and Motivation</h3>
+				<h3>Motivation</h3>
 
-				<p>Over a number of years, the Official Statistics community has defined business models that aim to build common representations of its processes and information. These works, mostly conducted under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics (ModernStats), include the Generic Statistical Business Process Model (GSBPM), the Generic Activity Model for Statistical Organisations (GAMSO), the Generic Statistical Information Model (GSIM), and the Common Statistical Data Architecture (CSDA).</p>
+				<p>This paper introduces COOS, the Core Ontology for Official Statistics. COOS main purpose is to serve as an integration model for the core set of ModernStats standards backed by elements of well-known standard vocabularies. These ModernStats standards, mostly developed under the auspices of the UNECE High-Level Group for the Modernisation of Official Statistics, include the Generic Statistical Business Process Model (GSBPM), the Generic Activity Model for Statistical Organisations (GAMSO), the Generic Statistical Information Model (GSIM), and the Common Statistical Data Architecture (CSDA).</p>
 
+				<p>As more statistical offices are turning to semantic standards to formalize their data and metadata, it became necessary to establish common foundations on which the different standards can develop in a coherent way using a formal framework that allows interoperability, machine-actionability and globally unique identification.</p>
+
+				<p>ModernStats standards have been developed independently over the course of more than a decade by a diverse group of specialists with different viewpoints, stakeholders and ideas. This created misalignments and impedance mismatches between the underlying models that should otherwise work well together and complement each other: Information objects (GSIM) describe the data and metadata necessary to produce statistics where capabilities (CSDA) are the essential building blocks enabling activities (GAMSO) to be implemented via business processes (GSBPM).</p>
+
+				<p>COOS defines a conceptual integration framework to provide semantic coherence across these models based on a common vocabulary of terms, definitions and a well-defined set of inter- and intra-model relationships formalized in RDF/OWL using standards vocabularies, e.g. SKOS, PROV, DCAT, DC, ORG, etc. COOS provides a powerful mechanism to describe complex aspects of statistical production to support business discussions and technical solution implementations.</p>
+
+				<p>Model management is a big part of the standards integration story: the underlying models evolve and to maintain alignment the COOS needs to evolve with them. COOS includes an initial governance framework complementing each model’s own governance processes. This governance framework includes a core set of principles and a process for managing change.</p>
+
+			</section>	
+			
+			<section id="background">
+
+				<h3>Background</h3>
+
+				<p>ModernStats standards consist of conceptual models and supporting documentation developed for the official statistics domain describing information entities and capabilities together with business processes and activities. The essence of this core set of standards is described below.</p>
+				
 				<p>GSBPM provides a framework to describe the building blocks of statistical production in terms of sub-processes. Its main goal is to help statistical organizations standardize their statistical production processes. It was the first ModernStats model to be published, back in 2008, and has been widely used by national and international statistical agencies since then.</p>
-
+				
 				<p>GAMSO provides a framework to describe the building blocks of statistical production in terms of activities. It complements the GSBPM in two ways: (i) by covering areas beyond the scope of GSBPM, and (ii) by providing a business capability view of statistical production itself.</p>
 
 				<p>GSIM complements both GSBPM and GAMSO by providing a catalogue of information objects to describe statistical data and metadata. It functions as a reference framework consisting of a set of standardised information objects to be used in statistical production.</p>
 
 				<p>CSDA provides a capability framework cataloguing the major abilities a statistical organization has to use, produce, share and manage data and metadata. CSDA integrates with the GSBPM and GAMSO by enabling processes and activities related to the lifecycle management of GSIM information objects.</p>
 
-				<p>As more statistical offices turn to semantic standards in order to formalize their data and metadata, it is time to build on these core international models to establish common foundations on which the different models can develop in a coherent way. This should be done using a formal framework that allows interoperability, machine-actionability and globally unique identification.</p>
-
-			</section>
-
-			<section id="objectives">
-
-				<h3>Objectives and Scope</h3>
-
-				<p>This paper proposes a first attempt at producing a base OWL ([[owl2-overview]]) vocabulary for Official Statistics. It suggests formal representations for the core concepts used in the Official Statistics domain and builds on a set of well-known OWL vocabularies, namely SKOS, PROV, ORG, DCAT and the Dublin Core.</p>
-
-				<p>The ontology does not aim to cover the domain exhaustively. Inclusion criteria for a concept are:</p>
-				<ul>
-					<li>The concept helps to clarify and harmonize the terminology</li>
-					<li>The concept helps to bridge constructs from different models</li>
-					<li>The concept helps to connect statistical models to other well-known vocabularies</li>
-				</ul>
-				<p>In the following sections, de document stays at high level and deals with the following domains: statistical activities, products and actors. For more precise definitions like those that can be found in the GSBPM or in GSIM, refer to previous works: [[GSBPM-LM]] and [[GSIM-LM]] respectively.</p>
-
-				<p>The ontology also defines a large number of individuals (class instances) in order to standardize their naming and identification.</p>
-
-			</section>
-
+			</section>			
+			
 			<section id="overview">
 
 				<h3>Overview</h3>
@@ -718,15 +714,9 @@
 
 			<h2>Conclusion</h2>
 
-			<p>This paper introduced COOS, the Core Ontology for Official Statistics. COOS main purpose is to serve as an integration ontology for the core set of ModernStats standards backed by elements of well-known standard vocabularies.</p>
+			<p>This paper introduced COOS, an ontology that serves as an integration model for the core set of ModernStats standards. During the development of COOS, it became evident that the natural misalignments and inconsistencies found among models developed independently are often diminished, and occasionally eliminated altogether, by the presence of a solid integration framework.</p>
 
-			<p>ModernStats standards have been developed independently over the course of more than a decade by a diverse group of specialists with different viewpoints, stakeholders and ideas. This created misalignments and impedance mismatch between the underlying models that should otherwise work well together and complement each other: Information objects (GSIM) describe the data and metadata necessary to produce statistics where capabilities (CSDA) are the essential building blocks enabling activities (GAMSO) to be implemented via business processes (GSBPM).</p>
-
-			<p>COOS defines a conceptual integration framework to provide semantic coherence across these models based on a common vocabulary of terms, definitions and a well-defined set of inter- and intra-model relationships formalized in RDF/OWL using standards vocabularies, e.g. SKOS, PROV, DCAT, DC, ORG, etc. COOS provides a powerful mechanism to describe complex aspects of statistical production to support business discussions and technical solution implementations.</p>
-
-			<p>Model management is a big part of the standards integration story: the underlying models evolve and to maintain alignment the COOS needs to evolve with them. COOS includes an initial governance framework complementing each model’s own governance processes. This governance framework includes a core set of principles and a process for managing change.</p>
-
-			<p>Moving forward, this group will investigate the feasibility and benefits of integrating other aspects of standards already included, e.g. objects of the GSIM Concept Group, and look into new standards and architectures, e.g. the Common Statistical Production Architecture (CSPA), the ESS Enterprise Architecture Reference Framework, and the European Interoperability Framework (EIF) and Reference Architecture (EIRA), and the Single Integrated Metadata Structure (SIMS), among others.</p>
+			<p>Future work includes investigating the feasibility and benefits of integrating other aspects of standards already included, e.g. objects of the GSIM Concept Group, and look into new standards and architectures, e.g. the Common Statistical Production Architecture (CSPA), the ESS Enterprise Architecture Reference Framework, and the European Interoperability Framework (EIF) and Reference Architecture (EIRA), and the Single Integrated Metadata Structure (SIMS), among others.</p>
 
 		</section>
 
