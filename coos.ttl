@@ -146,6 +146,7 @@ coos:StatisticalInformationObject a rdfs:Class , owl:Class ;
     rdfs:label "Statistical information object"@en , "Objeto de información estadística"@es , "Objet informationnel statistique"@fr ;
     rdfs:comment "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
     skos:definition "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
+	rdfs:subClassOf coos:InformationObject ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalEntity a rdfs:Class , owl:Class ;
