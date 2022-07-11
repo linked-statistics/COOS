@@ -146,6 +146,7 @@ coos:StatisticalInformationObject a rdfs:Class , owl:Class ;
     rdfs:label "Statistical information object"@en , "Objeto de información estadística"@es , "Objet informationnel statistique"@fr ;
     rdfs:comment "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
     skos:definition "Information object representing statistical information."@en , "Objeto de información que representa información estadística."@es , "Objet informationnel représentant de l'information statistique."@fr ;
+	rdfs:subClassOf coos:InformationObject ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:StatisticalEntity a rdfs:Class , owl:Class ;
@@ -208,11 +209,13 @@ coos:TransposedDataset a rdfs:Class , owl:Class ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:ProductPresentation a owl:Class , rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:seeAlso coos:productPresentations ;
     skos:prefLabel "Product presentation"@en , "Presentación del producto"@es , "Présentation de produit"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:ProductContent a owl:Class , rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:seeAlso coos:productContents ;
     skos:prefLabel "Product content"@en , "Contenido del producto"@es , "Contenu de produit"@fr ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .

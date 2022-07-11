@@ -702,11 +702,12 @@
 
 			<p>No specific type of data set is defined for metadata, since sets of metadata can have any of the structures defined. However, COOS specifies the <code>metadataFor</code> property that can be used to associate a set of metadata to the dataset that it qualifies.</p>
 
-			<p>To further qualify statistical data sets, COOS defines two properties: <code>content</code> and <code>presentation</code>, that take their values in controlled vocabularies (represented as SKOS concept schemes). More specifically:</p>
+			<p>To further qualify statistical products, COOS defines two properties: <code>content</code> and <code>presentation</code>, that take their values in controlled vocabularies (represented as SKOS concept schemes). More specifically, COOS defines the following values for these properties:</p>
 			<ul>
 				<li><code>content</code> can be “Data”, “Metadata”, “Analysis” or “Model”</li>
 				<li><code>presentation</code> can be “Dataset”, “Publication”, “Viualization”, “Infographic”, “Thematic Map” or “Interactive”</li>
 			</ul>
+			<p>Implementors can define additional instances of the <code>coos:ProductContent</code> of <code>coos:ProductPresentation</code> for their specific needs.</p>
 
 		</section>
 
