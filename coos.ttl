@@ -307,8 +307,8 @@ coos:enables a rdfs:Property , owl:ObjectProperty ;
 
 coos:informs a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "informs"@en , "informe"@fr ;
-    rdfs:comment "To provide information useful for an activity."@en , "Fournir des informations utiles pour une activité"@fr ;
-    skos:definition "To provide information useful for an activity."@en , "Fournir des informations utiles pour une activité"@fr ;
+    rdfs:comment "To provide supporting information for performing an activity."@en , "Fournir des informations de support pour l'exécution d'une activité."@fr ;
+    skos:definition "To provide supporting information for performing an activity."@en , "Fournir des informations utiles pour une activité."@fr ;
     rdfs:domain coos:ReferenceDocument ;
     rdfs:range coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
