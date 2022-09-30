@@ -300,7 +300,9 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
 coos:enables a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "enables"@en , "habilita"@es , "permet"@fr ;
     rdfs:comment "To provide the means for."@en ;
+    rdfs:comment "Proveer medios para."@es ;
     skos:definition "To provide the means for."@en ;
+    skos:definition "Proveer medios para."@es ;
     rdfs:domain coos:Capability ;
     rdfs:range coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -940,12 +942,12 @@ coos:productPresentations a skos:ConceptScheme ;
     rdfs:seeAlso coos:ProductPresentation ;
     skos:hasTopConcept coos:datasetPresentation , coos:publicationPresentation , coos:viualizationPresentation , coos:infographicPresentation , coos:thematicMapPresentation , coos:interactivePresentation ;
     skos:notation "CL_PROD_PRES" ;
-    skos:prefLabel "Product presentations"@en , "Présentations de produit"@fr ;
+    skos:prefLabel "Product presentations"@en , "Présentations de produit"@fr , "Presentaciones de producto"@en  ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:datasetPresentation a coos:ProductPresentation , skos:Concept ;
     skos:inScheme coos:productPresentations ;
-    skos:prefLabel "Dataset"@en , "Jeu de données"@fr ;
+    skos:prefLabel "Dataset"@en , "Jeu de données"@fr , "Conjunto de datos"@es ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:publicationPresentation a coos:ProductPresentation , skos:Concept ;
@@ -984,12 +986,12 @@ coos:productContents a skos:ConceptScheme ;
 
 coos:dataContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel "Data"@en , "Données"@fr ;
+    skos:prefLabel "Data"@en , "Données"@fr , "Datos"@es ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:metadataContent a coos:ProductContent , skos:Concept ;
     skos:inScheme coos:productContents ;
-    skos:prefLabel "Metadata"@en , "Métadonnées"@fr ;
+    skos:prefLabel "Metadata"@en , "Métadonnées"@fr , "Metadatos"@es;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:analysisContent a coos:ProductContent , skos:Concept ;
