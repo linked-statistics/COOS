@@ -43,7 +43,7 @@ coos:Activity a rdfs:Class , owl:Class ;
     rdfs:label "Activity"@en , "Activité"@fr , "Actividad"@es ;
     rdfs:comment "Activity that a statistical organization does."@en , "Actividad que realiza la organización estadística."@es , "Activité réalisée par une organisation statistique."@en ;
     skos:definition "Activity that a statistical organization does."@en , "Actividad que realiza la organización estadística."@es, "Activité réalisée par une organisation statistique."@en ;
-    rdfs:subClassOf skos:Concept , prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:ActivityCategory a rdfs:Class , owl:Class ;
