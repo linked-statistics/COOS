@@ -46,6 +46,13 @@ coos:Activity a rdfs:Class , owl:Class ;
     rdfs:subClassOf skos:Concept , prov:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
+coos:ActivityCategory a rdfs:Class , owl:Class ;
+    rdfs:label "Category of Activities"@en , "Catégorie d'activités"@fr ;
+    rdfs:comment "Category of activities that a statistical organization does."@en , "Catégorie d'activités réalisées par une organisation statistique."@en ;
+    skos:definition "Category of activities that a statistical organization does."@en , "Catégorie d'activités réalisées par une organisation statistique."@en ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
 coos:ActivityArea a rdfs:Class , owl:Class ;
     rdfs:label "Activity area"@en , "Secteur d'activité"@fr , "Área de actividad"@es ;
     rdfs:comment "Activity area as defined by the GAMSO."@en , "Secteur d'activité tel que défini par le GAMSO."@fr , "Área de actividad definida conforme a GAMSO."@es ;
