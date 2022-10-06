@@ -86,6 +86,11 @@ coos:Phase a rdfs:Class , owl:Class ;
     rdfs:comment "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Actividad de producción estadística que es conducida en una etapa específica de un proceso definido conforme a las fases de GSBPM"@es, "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
     skos:definition "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Actividad de producción estadística que es conducida en una etapa específica de un proceso definido conforme a las fases de GSBPM"@es, "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
     rdfs:subClassOf coos:StatisticalProductionActivity ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty dcterms:type ;
+        owl:hasValue  <http://id.unece.org/activities/phase/1>, <http://id.unece.org/activities/phase/2>, <http://id.unece.org/activities/phase/3>, <http://id.unece.org/activities/phase/4>, <http://id.unece.org/activities/phase/5>, <http://id.unece.org/activities/phase/6>, <http://id.unece.org/activities/phase/7>, <http://id.unece.org/activities/phase/8> ;
+    ] ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:SubProcess a rdfs:Class , owl:Class ;
