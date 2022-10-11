@@ -349,7 +349,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 # The Offical Statistics activity
 
-<http://id.unece.org/activities/officialStatistics> a coos:Activity ;
+<http://id.unece.org/activities/officialStatistics> a coos:ActivityCategory ;
     skos:notation "OS" ;
     skos:prefLabel "Official Statistics"@en , "Statistique Publique"@fr , "Estadísticas oficiales"@es ;
     skos:inScheme <http://id.unece.org/activities/gamso> ;
@@ -359,7 +359,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
 
 # The statistical production process
 
-<http://id.unece.org/activities/statisticalProductionProcess> a coos:StatisticalProductionActivity ;
+<http://id.unece.org/activities/statisticalProductionProcess> a coos:ActivityCategory ;
     skos:notation "SPP" ;
     skos:prefLabel "Statistical Production Process"@en , "Processus de Production Statistique"@fr , "Proceso de Producción Estadística"@es ;
     skos:inScheme <http://id.unece.org/activities/gsbpm> ;
@@ -403,7 +403,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
     rdfs:seeAlso <http://id.unece.org/activities/gsbpm> ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-<http://id.unece.org/activities/activity/1.1> a coos:Activity ;
+<http://id.unece.org/activities/activity/1.1> a coos:ActivityCategory ;
     skos:notation "1.1" ;
     skos:prefLabel "Define Vision"@en , "Definir la Visión"@es , "Définir la vision"@fr ;
     skos:inScheme <http://id.unece.org/activities/gamso> ;
