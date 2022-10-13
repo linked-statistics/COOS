@@ -107,6 +107,12 @@
 						"date": "October 2019",
 						"href": "http://ceur-ws.org/Vol-2549/article-08.pdf",
 						"title": "Using PROV-O to Represent Lineage in Statistical Processes: A Record Linkage Example"
+					},
+					"SDMX": {
+						"date": "September 2021",
+						"href": "https://sdmx.org/?page_id=5008",
+						"publisher": "SDMX Sponsor Organisations",
+						"title": "Statistical Data and Metadata eXchange Technical Specifications, version 3.0"
 					}
 				}
 			};
@@ -700,7 +706,7 @@
 				<figcaption>Dataset types</figcaption>
 			</figure>
 
-			<p>No specific type of data set is defined for metadata, since sets of metadata can have any of the structures defined. However, COOS specifies the <code>metadataFor</code> property that can be used to associate a set of metadata to the dataset that it qualifies.</p>
+			<p>No specific type of data set is defined for metadata, since sets of metadata can have any of the structures defined. However, COOS specifies the <code>metadataFor</code> property that can be used to associate a set of metadata to the dataset (or other resource) that it qualifies. For example, the [[SDMX]] standard defines the notion of a <code>MetadataSet</code> which conforms to a <code>MetadataStructureDefinition</code> and can be attached to differents types of targets. Note that the notion of metadata is contextual: a table of exchange rates can be viewed as a data set in the framework of a financial study but as metadata for a set of international consumer prices. The range of the <code>metadataFor</code> property is intentionally left open in order to allow for cases where matadata sets are attached to studies or other kind of products.</p>
 
 			<p>To further qualify statistical products, COOS defines two properties: <code>content</code> and <code>presentation</code>, that take their values in controlled vocabularies (represented as SKOS concept schemes). More specifically, COOS defines the following values for these properties:</p>
 			<ul>
