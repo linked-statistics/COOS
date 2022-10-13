@@ -549,25 +549,25 @@
 					skos:prefLabel "Monitor Capability Improvements"@en .
 				</pre>
 				
-				<p>Finally, two properties are needed to describe how a GAMSO <code>Activity</code> relates to a GSBPM <code>StatisticalProductionActivity</code>:</p>
+				<p>Finally, two properties are needed to describe how an <code>Activity</code> classified with GAMSO relates to a <code>StatisticalProductionActivity</code> classified with GSBPM:</p>
 
 				<ul>
-					<li><code>supports</code>: an <code>Activity</code>, for example a GAMSO individual, helps to perform a <code>StatisticalProductionActivity</code>, e.g. a sub-process;</li>
-					<li><code>uses</code>: conversely, a statistical production activity will require one or several GAMSO activities in order to function.</li>
+					<li><code>supports</code>: an <code>Activity</code>, for example of type a GAMSO individual, helps to perform a <code>StatisticalProductionActivity</code>, e.g. a sub-process;</li>
+					<li><code>uses</code>: conversely, a statistical production activity will require one or several activities of type in GAMSO in order to function.</li>
 				</ul>
 
 				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They represent weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas partitive relations are about constitution. An obvious example of <code>uses</code>/<code>supports</code> relation is included in the ontology for reference:</p>
 
 				<pre class="example nohighlight" title="Examples of “uses” and “supports” properties">
-				ex:manage-quality a coos:OverarchingActivity ;
+				ex:quality-management a coos:OverarchingActivity ;
 					skos:prefLabel "Quality Management"@en ;
 					dcterms:type &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; ;
-					coos:uses &lt;http://id.unece.org/activities/activity/3.3&gt; .
+					coos:uses ex:manage-quality .
 
-				&lt;http://id.unece.org/activities/activity/3.3> a coos:Activity ;
-					skos:notation "3.3" ;
+				ex:manage-quality a coos:Activity ;
 					skos:prefLabel "Manage Quality"@en ;
-					coos:supports &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; .
+					dcterms:type &lt;http://id.unece.org/activities/activity/3.3&gt; ;
+					coos:supports ex:quality-management .
 				</pre>
 
 				<p>[[[#image-gamso]]] gives an overview of the COOS elements defined so far in this document.</p>
