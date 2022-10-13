@@ -234,6 +234,10 @@
 						<td><a href="#activities">Section 3. Activities</a></td>
 					</tr>
 					<tr>
+						<td>coos:ActivityCategory</td>
+						<td><a href="#activities">Section 3. Activities</a></td>
+					</tr>
+					<tr>
 						<td>coos:StatisticalActivity</td>
 						<td><a href="#activities">Section 3. Activities</a></td>
 					</tr>
@@ -462,21 +466,20 @@
 
 				<p>A first approach to OWL modelling of statistical activities based on the GSBPM is presented in [[GSBPM-LM]].</p>
 				
-				<p>The ontology defines an individual for each GSBPM phase and sub-process, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents the statistical production process as a whole.</p>
+				<p>To render the GSBPM as a global taxonomy of statistical activities, the ontology defines a class <code>ActivityCategory</code> that is a sub-class of <code>skos:Concept</code>. For each GSBPM phase and sub-process an invidual is then defined, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>ActivityCategory</code> that represents the statistical production process as a whole.</p>
 
-				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
+				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
 				
 				<pre class="example nohighlight" title="Example of GSBPM phase and sub-process">
-				&lt;http://id.unece.org/activities/phase/2&gt; a coos:Phase ;
+				&lt;http://id.unece.org/activities/phase/2&gt; a coos:ActivityCategory ;
 					skos:notation "2" ;
 					skos:prefLabel "Design"@en ;
 					skos:narrower &lt;http://id.unece.org/activities/subProcess/2.3&gt; .
 
-				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
+				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:ActivityCategory ;
 					skos:notation "2.3" ;
 					skos:prefLabel "Design collection"@en ;
-					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; ;
-					dcterms:isPartOf &lt;http://id.unece.org/activities/phase/2&gt; .
+					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; .
 				</pre>
 				
 				<p>Basically, three classes are defined in this GSBPM ontology: <code>StatisticalProductionActivity</code>, <code>Phase</code> and <code>SubProcess</code>.</p>
