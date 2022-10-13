@@ -526,17 +526,7 @@
 				<p>Introducing GAMSO in this framework is not very difficult. The terminology used in the model shows that the main concepts are activity and activity areas. GAMSO describes two kinds of activities: those that are of statistical nature, for example “Manage Statistical Methodology”, and those that are in support of statistical activities, like “Manage Finances”. To account for this distinction, COOS defines two different classes: <code>StatisticalActivity</code> and <code>Activity</code>. <code>Activity</code> is a daughter of <code>prov:Activity</code> and a mother of <code>StatisticalActivity</code>, which in turn is a mother of the <code>StatisticalProductionActivity</code> introduced previously.</p>
 
 				<p>The GAMSO activity areas are not really activities by themselves, but rather “boxes” used to classify the activities. This makes them instances of <code>skos:Concept</code> to represent this “taxonomic” nature, or more precisely of a specific <code>ActivityArea</code> class, which is a sub-class of <code>skos:Concept</code>.</p>
-
-				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity category">
-				&lt;http://id.unece.org/activities/activityArea/1&gt; a coos:ActivityArea ;
-					skos:notation "1" ;
-					skos:prefLabel "Strategy and Leadership"@en .
-
-				&lt;http://id.unece.org/activities/activity/2.3&gt; a coos:ActivityCategory ;
-					skos:notation "2.3" ;
-					skos:prefLabel "Monitor Capability Improvements"@en .
-				</pre>
-
+				
 				<p>In addition, COOS defines the <code>OverarchingActivity</code> class, which represents a supporting activity that applies to all production phases, e.g. metadata management, data management, statistical methodology management, etc. These activities correspond to the overarching processes in the GSBPM and the statistical activities in Corporate Support in GAMSO. These activities support the execution of phases and sub-processes effectively. When harmonized and standardized, overarching activities enable the efficient execution of the entire statistical production process.</p>
 				
 				<p>Three individuals of <code>ActivityCategory</code> are define in the ontology to model the types of overarching activities provided by GSBPM</p>
@@ -547,8 +537,18 @@
 					skos:prefLabel "Metadata Management"@en .
 				</pre>
 
-				<p>As with GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the activities they contain. At the top of the scheme, an instance of <code>ActivityCategory</code> represents the whole activity of statistical organizations and is named <code>officialStatistics</code>.</p>
+				<p>As with GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the categories of activity they contain. At the top of the scheme, an instance of <code>ActivityCategory</code> represents the whole activity of statistical organizations and is named <code>officialStatistics</code>.</p>
 
+				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity category">
+				&lt;http://id.unece.org/activities/activityArea/1&gt; a coos:ActivityArea ;
+					skos:notation "1" ;
+					skos:prefLabel "Strategy and Leadership"@en .
+
+				&lt;http://id.unece.org/activities/activity/2.3&gt; a coos:ActivityCategory ;
+					skos:notation "2.3" ;
+					skos:prefLabel "Monitor Capability Improvements"@en .
+				</pre>
+				
 				<p>Finally, two properties are needed to describe how a GAMSO <code>Activity</code> relates to a GSBPM <code>StatisticalProductionActivity</code>:</p>
 
 				<ul>
