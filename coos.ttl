@@ -306,7 +306,7 @@ coos:enables a rdfs:Property , owl:ObjectProperty ;
 # Links between reference documents and activities
 
 coos:informs a rdfs:Property , owl:ObjectProperty ;
-    rdfs:label "informs"@en , "informe"@fr ;
+    rdfs:label "informs"@en , "informe"@fr , "informa"@es ;
     rdfs:comment "To provide supporting information for performing an activity."@en , "Fournir des informations de support pour l'exécution d'une activité."@fr ;
     skos:definition "To provide supporting information for performing an activity."@en , "Fournir des informations utiles pour une activité."@fr ;
     rdfs:domain coos:ReferenceDocument ;
