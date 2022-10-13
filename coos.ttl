@@ -28,9 +28,9 @@
     vann:preferredNamespaceUri <http://id.unece.org/def/coos#> ;
     dc:rights "Copyright © 2021 Unece" ;
     cc:license <https://creativecommons.org/licenses/by/3.0/igo/> ;
-    voaf:classNumber "28"^^xsd:integer ;
-    voaf:propertyNumber "6"^^xsd:integer ;
-    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" , "Version 0.7 - 2021-09-13" , "Version 0.8 - 2021-10-14" .
+    voaf:classNumber "29"^^xsd:integer ;
+    voaf:propertyNumber "7"^^xsd:integer ;
+    owl:versionInfo "Version 0.1 - 2019-04-04" , "Version 0.3 - 2019-07-02" , "Version 0.4 - 2019-08-29" , "Version 0.5 - 2021-05-03" , "Version 0.6 - 2021-06-30" , "Version 0.7 - 2021-09-13" , "Version 0.8 - 2021-10-14 0.9 - 2022-09-22" .
 
 
 #################################################################
@@ -154,6 +154,13 @@ coos:StatisticalEntity a rdfs:Class , owl:Class ;
     rdfs:comment "Statistical information object which is also an entity in the sense of PROV."@en , "Objeto de información estadística, el cual es tambien una entidad en el sentido de PROV."@es , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
     skos:definition "Statistical information object which is also an entity in the sense of PROV."@en , "Objeto de información estadística, el cual es tambien una entidad en el sentido de PROV."@es , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
     rdfs:subClassOf coos:StatisticalInformationObject , prov:Entity ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+coos:ReferenceDocument a rdfs:Class , owl:Class ;
+    rdfs:label "Reference document"@en , "Document de référence"@fr ;
+    rdfs:comment "Document that is used to support, inform and guide the business processes."@en , "Document utilisé pour assister, informer ou guider les processus métier."@fr ;
+    skos:definition "Document that is used to support, inform and guide the business processes."@en , "Document utilisé pour assister, informer ou guider les processus métier."@fr ;
+    rdfs:subClassOf coos:StatisticalInformationObject , prov:Entity , foaf:Document ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Classes related to the 'products' domain
@@ -304,6 +311,16 @@ coos:enables a rdfs:Property , owl:ObjectProperty ;
     skos:definition "To provide the means for."@en ;
     skos:definition "Proveer medios para."@es ;
     rdfs:domain coos:Capability ;
+    rdfs:range coos:Activity ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+
+# Links between reference documents and activities
+
+coos:informs a rdfs:Property , owl:ObjectProperty ;
+    rdfs:label "informs"@en , "informe"@fr , "informa"@es ;
+    rdfs:comment "To provide supporting information for performing an activity."@en , "Fournir des informations de support pour l'exécution d'une activité."@fr ;
+    skos:definition "To provide supporting information for performing an activity."@en , "Fournir des informations utiles pour une activité."@fr ;
+    rdfs:domain coos:ReferenceDocument ;
     rdfs:range coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
