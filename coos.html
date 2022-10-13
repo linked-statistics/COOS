@@ -460,7 +460,26 @@
 					<li>Level 2, the sub-processes within each phase.</li>
 				</ul>
 
-				<p>A first approach to OWL modelling of statistical activities based on the GSBPM is presented in [[GSBPM-LM]]. Basically, three classes are defined in this GSBPM ontology: <code>StatisticalProductionActivity</code>, <code>Phase</code> and <code>SubProcess</code>.</p>
+				<p>A first approach to OWL modelling of statistical activities based on the GSBPM is presented in [[GSBPM-LM]].</p>
+				
+				<p>The ontology defines an individual for each GSBPM phase and sub-process, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents the statistical production process as a whole.</p>
+
+				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
+				
+				<pre class="example nohighlight" title="Example of GSBPM phase and sub-process">
+				&lt;http://id.unece.org/activities/phase/2&gt; a coos:Phase ;
+					skos:notation "2" ;
+					skos:prefLabel "Design"@en ;
+					skos:narrower &lt;http://id.unece.org/activities/subProcess/2.3&gt; .
+
+				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
+					skos:notation "2.3" ;
+					skos:prefLabel "Design collection"@en ;
+					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; ;
+					dcterms:isPartOf &lt;http://id.unece.org/activities/phase/2&gt; .
+				</pre>
+				
+				<p>Basically, three classes are defined in this GSBPM ontology: <code>StatisticalProductionActivity</code>, <code>Phase</code> and <code>SubProcess</code>.</p>
 
 				<p><code>StatisticalProductionActivity</code> is a sub-class of both <code>prov:Activity</code> and <code>skos:Concept</code>. Using PROV allows to specify who undertakes an activity and what entities it consumes or produces. Using SKOS allows to organize the activities in schemes, like GSBPM or GAMSO.</p>
 
@@ -479,24 +498,7 @@
 				&lt;http://id.unece.org/activities/subProcess/7.2&gt; a coos:SubProcess ;
 					skos:notation "7.2" ;
 					skos:prefLabel "Produce dissemination products"@en .
-				</pre>
-
-				<p>The ontology defines an individual for each GSBPM phase and sub-process, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents the statistical production process as a whole.</p>
-
-				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
-
-				<pre class="example nohighlight" title="Example of GSBPM phase and sub-process">
-				&lt;http://id.unece.org/activities/phase/2&gt; a coos:Phase ;
-					skos:notation "2" ;
-					skos:prefLabel "Design"@en ;
-					skos:narrower &lt;http://id.unece.org/activities/subProcess/2.3&gt; .
-
-				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
-					skos:notation "2.3" ;
-					skos:prefLabel "Design collection"@en ;
-					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; ;
-					dcterms:isPartOf &lt;http://id.unece.org/activities/phase/2&gt; .
-				</pre>
+				</pre>				
 
 				<p>[[[#image-gsbpm]]] summarizes the vocabulary terms defined so far in this document.</p>
 
