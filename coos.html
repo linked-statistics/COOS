@@ -466,7 +466,9 @@
 
 				<p>A first approach to OWL modelling of statistical activities based on the GSBPM is presented in [[GSBPM-LM]].</p>
 				
-				<p>To render the GSBPM as a global taxonomy of statistical activities, the ontology defines a class <code>ActivityCategory</code> that is a sub-class of <code>skos:Concept</code>. For each GSBPM phase and sub-process an invidual is then defined, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>ActivityCategory</code> that represents the statistical production process as a whole.</p>
+				<p>In COOS, a sub-class of <code>skos:Concept</code> named <code>ActivityCategory</code> is created. Each GSBPM phase and sub-process is defined as an instance of <code>ActivityCategory</code> and included (with a <code>skos:inScheme</code> relation) in a <code>skos:ConceptScheme</code> named <code>GSBPM</code>: the scheme of all the GSBPM phase and sub-process categories.</p>
+
+				<p>In addition, the <code>statisticalProductionProcess</code> individual, representing the statistical production process as a whole, is also declared as an instance of <code>ActivityCategory</code> and included in the <code>GSBPM</code> concept scheme.</p>
 
 				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
 				
