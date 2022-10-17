@@ -510,7 +510,17 @@
 					rdfs:label "Run collection of census 2021"@en ;
 					dcterms:isPartOf ex:collect-census-2021 ;
 					dcterms:type &lt;http://id.unece.org/activities/subProcess/4.3&gt; .
-				</pre>				
+				</pre>	
+				
+				<p>In addition, COOS defines the <code>OverarchingActivity</code> class, which represents a supporting activity that applies to all production phases, e.g. metadata management, data management, statistical methodology management, etc. These activities correspond to the overarching processes in the GSBPM and the statistical activities in Corporate Support in GAMSO. These activities support the execution of phases and sub-processes effectively. When harmonized and standardized, overarching activities enable the efficient execution of the entire statistical production process.</p>
+				
+				<p>Three individuals of <code>ActivityCategory</code> are define in the ontology to model the types of overarching activities provided by GSBPM</p>
+
+				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
+				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:ActivityCategory ;
+					skos:notation "0.2"	;
+					skos:prefLabel "Metadata Management"@en .
+				</pre>
 
 				<p>[[[#image-gsbpm]]] summarizes the vocabulary terms defined so far in this document.</p>
 
@@ -529,16 +539,6 @@
 
 				<p>The GAMSO activity areas are not really activities by themselves, but rather “boxes” used to classify the activities. This makes them instances of <code>skos:Concept</code> to represent this “taxonomic” nature, or more precisely of a specific <code>ActivityArea</code> class, which is a sub-class of <code>skos:Concept</code>.</p>
 				
-				<p>In addition, COOS defines the <code>OverarchingActivity</code> class, which represents a supporting activity that applies to all production phases, e.g. metadata management, data management, statistical methodology management, etc. These activities correspond to the overarching processes in the GSBPM and the statistical activities in Corporate Support in GAMSO. These activities support the execution of phases and sub-processes effectively. When harmonized and standardized, overarching activities enable the efficient execution of the entire statistical production process.</p>
-				
-				<p>Three individuals of <code>ActivityCategory</code> are define in the ontology to model the types of overarching activities provided by GSBPM</p>
-
-				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
-				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:ActivityCategory ;
-					skos:notation "0.2"	;
-					skos:prefLabel "Metadata Management"@en .
-				</pre>
-
 				<p>As with GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the categories of activity they contain. At the top of the scheme, an instance of <code>ActivityCategory</code> represents the whole activity of statistical organizations and is named <code>officialStatistics</code>.</p>
 
 				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity category">
