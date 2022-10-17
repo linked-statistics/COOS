@@ -67,7 +67,7 @@ coos:StatisticalActivity a rdfs:Class , owl:Class ;
     rdfs:subClassOf coos:Activity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:StatisticalProductionActivity a rdfs:Class , owl:Class ;
+coos:ProductionActivity a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production activity"@en , "Activité de production statistique"@fr , "Actividad de producción estadística"@es ;
     rdfs:comment "Activity that is conducted as a part of a process to produce statistics"@en , "Activité conduite dans le cadre d'un processus de production de statistiques."@fr ;
     skos:definition "Activity that is conducted as a part of a process to produce statistics"@en , "Activité conduite dans le cadre d'un processus de production de statistiques."@fr , "Actividad de producción estadística cubierta por GSBPM."@es ;
@@ -78,14 +78,14 @@ coos:OverarchingActivity a rdfs:Class , owl:Class ;
     rdfs:label "Overarching statistical production activity"@en , "Activité de production statistique transverse"@fr , "Actividad transversal de producción estadística"@es ;
     rdfs:comment "Activity defined as overarching process by the GSBPM."@en , "Activité définie comme processus transverse par le GSBPM."@fr , "Actividad definida como proceso transversal de acuerdo a GSBPM"@es ;
     skos:definition "Activity defined as overarching process by the GSBPM."@en , "Activité définie comme processus transverse par le GSBPM."@fr , "Actividad definida como proceso transversal de acuerdo a GSBPM"@es ;
-    rdfs:subClassOf coos:StatisticalProductionActivity ;
+    rdfs:subClassOf coos:ProductionActivity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:Phase a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production process phase"@en , "Phase du processus de production statistique"@fr , "Fase del proceso de producción estadística"@es ;
     rdfs:comment "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Actividad de producción estadística que es conducida en una etapa específica de un proceso definido conforme a las fases de GSBPM"@es, "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
     skos:definition "Statistical production activity that is conducted at a specific stage of a process as defined by GSBPM phases"@en , "Actividad de producción estadística que es conducida en una etapa específica de un proceso definido conforme a las fases de GSBPM"@es, "Activité de production statistique conduite à une étape spécifique d'un processus comme défini par les phases du GSBPM."@fr ;
-    rdfs:subClassOf coos:StatisticalProductionActivity ;
+    rdfs:subClassOf coos:ProductionActivity ;
     owl:equivalentClass [
         a owl:Restriction ;
         owl:onProperty dcterms:type ;
@@ -97,7 +97,7 @@ coos:SubProcess a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production sub-process"@en , "Sous-processus de production statistique"@fr , "Subproceso de producción estadística"@es ;
     rdfs:comment "Statistical production activity that is scoped by a given Phase"@en , "Actividad de producción estadística delimitada por una fase específica"@es , "Activité de production statistique incluse dans une Phase."@fr ;
     skos:definition "Statistical production activity that is scoped by a given Phase"@en , "Actividad de producción estadística delimitada por una fase específica"@es , "Activité de production statistique incluse dans une Phase."@fr ;
-    rdfs:subClassOf coos:StatisticalProductionActivity ;
+    rdfs:subClassOf coos:ProductionActivity ;
     owl:equivalentClass [
         a owl:Restriction ;
         owl:onProperty dcterms:type ;
@@ -305,7 +305,7 @@ coos:uses a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "uses"@en , "utilise"@fr , "usos"@es ;
     rdfs:comment "To require to perform or function"@en , "Requerir la realización o funcionamiento"@es ;
     skos:definition "To require to perform or function"@en , "Requerir la realización o funcionamiento"@es ;
-    rdfs:domain coos:StatisticalProductionActivity ;
+    rdfs:domain coos:ProductionActivity ;
     rdfs:range coos:Activity ;
     owl:inverseOf coos:supports ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
@@ -315,7 +315,7 @@ coos:supports a rdfs:Property , owl:ObjectProperty ;
     rdfs:comment "To enable to perform or function."@en , "Permitir la realización o funcioamiento."@es ;
     skos:definition "To enable to perform or function."@en , "Permitir la realización o funcioamiento."@es ;
     rdfs:domain coos:Activity ;
-    rdfs:range coos:StatisticalProductionActivity ;
+    rdfs:range coos:ProductionActivity ;
     owl:inverseOf coos:uses ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
