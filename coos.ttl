@@ -166,7 +166,7 @@ coos:StatisticalInformationObject a rdfs:Class , owl:Class ;
 	rdfs:subClassOf coos:InformationObject ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:StatisticalEntity a rdfs:Class , owl:Class ;
+coos:Entity a rdfs:Class , owl:Class ;
     rdfs:label "Statistical entity"@en , "Entité statistique"@fr , "Entidad estadística"@es ;
     rdfs:comment "Statistical information object which is also an entity in the sense of PROV."@en , "Objeto de información estadística, el cual es tambien una entidad en el sentido de PROV."@es , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
     skos:definition "Statistical information object which is also an entity in the sense of PROV."@en , "Objeto de información estadística, el cual es tambien una entidad en el sentido de PROV."@es , "Objet informationnel qui est aussi une entité au sens de PROV."@fr ;
@@ -186,10 +186,10 @@ coos:Product a rdfs:Class , owl:Class ;
     rdfs:label "Statistical product"@en , "Produit statistique"@fr , "Producto estadístico"@es ;
     rdfs:comment "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr , "Corresponde a producto en GSIM."@es ;
     skos:definition "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr , "Corresponde a producto en GSIM."@es ;
-    rdfs:subClassOf coos:StatisticalEntity ;
+    rdfs:subClassOf coos:Entity ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
-coos:StatisticalDataset a rdfs:Class , owl:Class ;
+coos:Dataset a rdfs:Class , owl:Class ;
     rdfs:label "Statistical dataset"@en , "Jeu de données statistiques"@fr , "Conjunto de datos estadísticos"@es ;
     rdfs:comment "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es ;
     skos:definition "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es ;
@@ -200,7 +200,7 @@ coos:DimensionalDataset a rdfs:Class , owl:Class ;
     rdfs:label "Dimensional dataset"@en , "Conjunto de datos dimensional"@es ;
     rdfs:comment "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en , "Colección de datos en los que cada punto de datos es definido unívocamente por la combinación de una categoría de de cada dimensión pre-especificada"@es ;
     skos:definition "Collection of data where each datapoint is uniquely defined by combining one category from each prespecified dimension"@en , "Colección de datos en los que cada punto de datos es definido unívocamente por la combinación de una categoría de de cada dimensión pre-especificada"@es ;
-    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:subClassOf coos:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:GraphDataset a rdfs:Class , owl:Class ;
@@ -208,28 +208,28 @@ coos:GraphDataset a rdfs:Class , owl:Class ;
     rdfs:comment "Collection of data organized in a graph-like (including tree-like) structure"@en , "Colección de datos organizados en una estructura parecida a la de un grafo (incluyendo la de árbol)"@es ;
     skos:definition "Collection of data organized in a graph-like (including tree-like) structure"@en , "Colección de datos organizados en una estructura parecida a la de un grafo (incluyendo la de árbol)"@es ;
     skos:scopeNote "This includes RDF, property graphs and XML"@en ;
-    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:subClassOf coos:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:KeyValueDataset a rdfs:Class , owl:Class ;
     rdfs:label "Key-value dataset"@en , "Conjunto de datos clave-valor"@es ;
     rdfs:comment "Collection of data where each datapoint is paired with a key"@en , "Colección de datos donde cada punto de datos es emparejado con una clave"@es ;
     skos:definition "Collection of data where each datapoint is paired with a key"@en , "Colección de datos donde cada punto de datos es emparejado con una clave"@es ;
-    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:subClassOf coos:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:RectangularDataset a rdfs:Class , owl:Class ;
     rdfs:label "Rectangular dataset"@en , "Conjunto de datos rectángular"@es ;
     rdfs:comment "Collection of data where variables are represented with columns"@en , "Colección de datos en el que las variables son representadas con columnas"@es ;
     skos:definition "Collection of data where variables are represented with columns"@en , "Colección de datos en el que las variables son representadas con columnas"@es ;
-    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:subClassOf coos:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:TransposedDataset a rdfs:Class , owl:Class ;
     rdfs:label "Transposed dataset"@en , "Conjunto de datos transpuesto"@es ;
     rdfs:comment "Collection of data where variables are represented with rows"@en , "Colección de datos en el que las variables son representadas con filas"@es ;
     skos:definition "Collection of data where variables are represented with rows"@en , "Colección de datos en el que las variables son representadas con filas"@es ;
-    rdfs:subClassOf coos:StatisticalDataset ;
+    rdfs:subClassOf coos:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:ProductPresentation a owl:Class , rdfs:Class ;
@@ -347,7 +347,7 @@ coos:metadataFor a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "metadata for"@en , "métadonnées pour"@fr , "metadatos por"@es ;
     rdfs:comment "Indicates that a dataset contains metadata attached to a given resource"@en , "Indica que un conjunto de datos contiene metadatos adjuntos a un recurso dado"@es ;
     skos:definition "Indicates that a dataset contains metadata attached to a given resource"@en , "Indica que un conjunto de datos contiene metadatos adjuntos a un recurso dado"@es ;
-    rdfs:domain coos:StatisticalDataset ;
+    rdfs:domain coos:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 # Property for product presentation
