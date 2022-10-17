@@ -182,7 +182,7 @@ coos:ReferenceDocument a rdfs:Class , owl:Class ;
 
 # Classes related to the 'products' domain
 
-coos:StatisticalProduct a rdfs:Class , owl:Class ;
+coos:Product a rdfs:Class , owl:Class ;
     rdfs:label "Statistical product"@en , "Produit statistique"@fr , "Producto estadístico"@es ;
     rdfs:comment "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr , "Corresponde a producto en GSIM."@es ;
     skos:definition "Corresponds to the GSIM Product."@en , "Correspond au Product GSIM."@fr , "Corresponde a producto en GSIM."@es ;
@@ -193,7 +193,7 @@ coos:StatisticalDataset a rdfs:Class , owl:Class ;
     rdfs:label "Statistical dataset"@en , "Jeu de données statistiques"@fr , "Conjunto de datos estadísticos"@es ;
     rdfs:comment "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es ;
     skos:definition "Corresponds to the GSIM Data Set."@en , "Correspond au Data Set GSIM."@fr , "Corresponde a Conjunto de Datos en GSIM"@es ;
-    rdfs:subClassOf coos:StatisticalProduct , dcat:Dataset ;
+    rdfs:subClassOf coos:Product , dcat:Dataset ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
 coos:DimensionalDataset a rdfs:Class , owl:Class ;
@@ -356,7 +356,7 @@ coos:presentation a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "presentation"@en , "presentación"@es , "présentation"@fr ;
     rdfs:comment "Type of presentation of a statistical product"@en , "Tipo de presentación de un producto estadístico"@es , "Type de présentation d'un produit statistique"@fr ;
     skos:definition "Type of presentation of a statistical product"@en , "Tipo de presentación de un producto estadístico"@es , "Type de présentation d'un produit statistique"@fr ;
-    rdfs:domain coos:StatisticalProduct ;
+    rdfs:domain coos:Product ;
     rdfs:range coos:ProductPresentation ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -366,7 +366,7 @@ coos:content a rdfs:Property , owl:ObjectProperty ;
     rdfs:label "content"@en , "contenido"@es , "contenu"@fr ;
     rdfs:comment "Type of content of a statistical product"@en , "Tipo de contenido de un producto estadístico"@es , "Type de contenu d'un produit statistique"@fr ;
     skos:definition "Type of content of a statistical product"@en , "Tipo de contenido de un producto estadístico"@es , "Type de contenu d'un produit statistique"@fr ;
-    rdfs:domain coos:StatisticalProduct ;
+    rdfs:domain coos:Product ;
     rdfs:range coos:ProductContent ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
