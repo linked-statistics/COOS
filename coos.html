@@ -322,7 +322,7 @@
 						<td><a href="#products">Section 5. Products</a></td>
 					</tr>
 					<tr>
-						<td>coos:StatisticalDataset</td>
+						<td>coos:Dataset</td>
 						<td><a href="#products">Section 5. Products</a></td>
 					</tr>
 					<tr>
@@ -687,11 +687,11 @@
 
 			<h2>Products</h2>
 
-			<p>Finally, the information that activities, capabilities and processes use and produce needs to be described. This is captured by an <code>InformationObject</code> class that aligns with the notion of “information object” in GSIM, i.e. all GSIM classes are going to be sub-classes of <code>InformationObject</code>. A <code>StatisticalInformationObject</code> is essentially an <code>InformationObject</code> representing statistical information, i.e. they are the inputs and outputs in the design and production of statistics. Some of those statistical information objects are also entities in the <code>Prov</code> sense, which are captured by the <code>Product</code> and <code>StatisticalDataset</code> classes, corresponding to the GSIM Product and GSIM Data Set, respectively. </p>
+			<p>Finally, the information that activities, capabilities and processes use and produce needs to be described. This is captured by an <code>InformationObject</code> class that aligns with the notion of “information object” in GSIM, i.e. all GSIM classes are going to be sub-classes of <code>InformationObject</code>. A <code>StatisticalInformationObject</code> is essentially an <code>InformationObject</code> representing statistical information, i.e. they are the inputs and outputs in the design and production of statistics. Some of those statistical information objects are also entities in the <code>Prov</code> sense, which are captured by the <code>Product</code> and <code>Dataset</code> classes, corresponding to the GSIM Product and GSIM Data Set, respectively. </p>
 
 			<p>Here again, the PROV vocabulary is useful, in particular to provide provenance information on products and to link them to activities and organizations (for example <code>prov:wasGeneratedBy</code> from a product to an activity).</p>
 
-			<p>The <code>StatisticalDataset</code> class is also declared as a daughter of <code>dcat:Dataset</code>, which allows the reuse of DCAT (or StatDCAT-AP), in particular to document datasets and their different distributions, group them in catalogues, etc.</p>
+			<p>The <code>Dataset</code> class is also declared as a daughter of <code>dcat:Dataset</code>, which allows the reuse of DCAT (or StatDCAT-AP), in particular to document datasets and their different distributions, group them in catalogues, etc.</p>
 
 			<figure id="image-prod">
 				<img src="img/coos-prod.png" alt="Products vocabulary main classes" title="Products vocabulary main classes"/>
