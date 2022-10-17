@@ -365,6 +365,14 @@
 						<td>coos:presentation</td>
 						<td><a href="#products">Section 5. Products</a></td>
 					</tr>
+					<tr>
+						<td>coos:ReferenceDocument</td>
+						<td><a href="#other-terms">Section 6. Other terms</a></td>
+					</tr>
+					<tr>
+						<td>coos:informs</td>
+						<td><a href="#other-terms">Section 6. Other terms</a></td>
+					</tr>
 				</tbody>
 			</table>
 
@@ -729,6 +737,23 @@
 				<li><code>presentation</code> can be “Dataset”, “Publication”, “Viualization”, “Infographic”, “Thematic Map” or “Interactive”</li>
 			</ul>
 			<p>Implementors can define additional instances of the <code>coos:ProductContent</code> of <code>coos:ProductPresentation</code> for their specific needs.</p>
+
+		</section>
+
+		<section id="additional-terms">
+
+			<h2>Additional terms</h2>
+
+			<p>Statistical activities often rely on methodologies, guidelines, legal texts, etc. In order to capture this, COOS defines the <code>ReferenceDocument</code> class and the <code>informs</code> property.</p>
+
+			<p>As an example, statistical organisations regularly produce seasonally adjusted time series for Gross domestic product (GDP). For the creation of these statistical datasets, the unadjusted (raw) time series data and methodological guidelines and tools supporting seasonal adjustment are used. The end product is a seasonally and calendar (effects) adjusted and reconciled GDP time series data. A well-known methodological reference for seasonal adjustment is the Handbook on Seasonal Adjustment published by Eurostat.</p>
+
+			<p>This example is illustrated in the following figure.</p>
+
+			<figure id="image-informs">
+				<img src="img/coos-informs.png" alt="Example for informs and reference document" title="Example for informs and reference document"/>
+				<figcaption>The Handbook on Seasonal Adjustment informs the corresponding activity</figcaption>
+			</figure>
 
 		</section>
 
