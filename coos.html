@@ -234,6 +234,10 @@
 						<td><a href="#activities">Section 3. Activities</a></td>
 					</tr>
 					<tr>
+						<td>coos:ActivityCategory</td>
+						<td><a href="#activities">Section 3. Activities</a></td>
+					</tr>
+					<tr>
 						<td>coos:StatisticalActivity</td>
 						<td><a href="#activities">Section 3. Activities</a></td>
 					</tr>
@@ -460,42 +464,52 @@
 					<li>Level 2, the sub-processes within each phase.</li>
 				</ul>
 
-				<p>A first approach to OWL modelling of statistical activities based on the GSBPM is presented in [[GSBPM-LM]]. Basically, three classes are defined in this GSBPM ontology: <code>StatisticalProductionActivity</code>, <code>Phase</code> and <code>SubProcess</code>.</p>
+				<p>A first approach to OWL modelling of statistical activities based on the GSBPM is presented in [[GSBPM-LM]].</p>
+				
+				<p>In COOS, a sub-class of <code>skos:Concept</code> named <code>ActivityCategory</code> is created. Each GSBPM phase and sub-process is defined as an instance of <code>ActivityCategory</code> and included (with a <code>skos:inScheme</code> relation) in a <code>skos:ConceptScheme</code> named <code>GSBPM</code>: the scheme of all the GSBPM phase and sub-process categories.</p>
 
-				<p><code>StatisticalProductionActivity</code> is a sub-class of both <code>prov:Activity</code> and <code>skos:Concept</code>. Using PROV allows to specify who undertakes an activity and what entities it consumes or produces. Using SKOS allows to organize the activities in schemes, like GSBPM or GAMSO.</p>
+				<p>In addition, the <code>statisticalProductionProcess</code> individual, representing the statistical production process as a whole, is also declared as an instance of <code>ActivityCategory</code> and included in the <code>GSBPM</code> concept scheme.</p>
 
-				<pre class="example" title="Example of statistical production activity">
-				ex:produce-study a coos:StatisticalProductionActivity ;
-					rdfs:label "Produce study"@en .
-				</pre>
-
-				<p><code>Phase</code> and <code>SubProcess</code> are both sub-classes of <code>StatisticalProductionActivity</code> and represent the concepts of a GSBPM phase and GSBPM sub-process.</p>
-
-				<pre class="example nohighlight" title="Examples of GSBPM phase and sub-process">
-				&lt;http://id.unece.org/activities/phase/6&gt; a coos:Phase ;
-					skos:notation "6" ;
-					skos:prefLabel "Analyse"@en .
-
-				&lt;http://id.unece.org/activities/subProcess/7.2&gt; a coos:SubProcess ;
-					skos:notation "7.2" ;
-					skos:prefLabel "Produce dissemination products"@en .
-				</pre>
-
-				<p>The ontology defines an individual for each GSBPM phase and sub-process, as well as two specific individuals: the <code>GSBPM</code> itself, which is viewed as as a <code>skos:ConceptScheme</code> (the scheme of all the GSBPM phases and sub-processes), and <code>statisticalProductionProcess</code>, which is an instance of <code>StatisticalProductionActivity</code> that represents the statistical production process as a whole.</p>
-
-				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
-
+				<p>The links between the different individuals are represented by the usual SKOS properties: all the sub-processes of a phase have a <code>skos:broader</code> link to the phase, and each phase has a <code>skos:broader</code> link to the <code>statisticalProductionProcess</code> individual.</p>
+				
 				<pre class="example nohighlight" title="Example of GSBPM phase and sub-process">
-				&lt;http://id.unece.org/activities/phase/2&gt; a coos:Phase ;
+				&lt;http://id.unece.org/activities/phase/2&gt; a coos:ActivityCategory ;
 					skos:notation "2" ;
 					skos:prefLabel "Design"@en ;
 					skos:narrower &lt;http://id.unece.org/activities/subProcess/2.3&gt; .
 
-				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:SubProcess ;
+				&lt;http://id.unece.org/activities/subProcess/2.3&gt; a coos:ActivityCategory ;
 					skos:notation "2.3" ;
 					skos:prefLabel "Design collection"@en ;
-					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; ;
-					dcterms:isPartOf &lt;http://id.unece.org/activities/phase/2&gt; .
+					skos:broader &lt;http://id.unece.org/activities/phase/2&gt; .
+				</pre>
+				
+				<p>To materialize a clear distinction between the model itself and the statistical process which is modeled, the ontology defines classes that inherit from <code>prov:Activity</code>. Using PROV allows to describe an activity that really happens at a certain time, to specify who undertakes the activity and what entities it consumes or produces.</p>
+					
+				<p>Basically, three classes are defined in this ontology: <code>StatisticalProductionActivity</code>, <code>Phase</code> and <code>SubProcess</code>.</p>
+
+				<p><code>StatisticalProductionActivity</code> is a sub-class of <code>prov:Activity</code>. Instances of this class are intended to be larger than a GSBPM phase. If they correspond to a statistical production process they are typed using the <code>dcterms:type</code> property with the <code>statisticalProductionProcess</code> individual.</p>
+
+				<pre class="example nohighlight" title="Examples of statistical production activities">
+				ex:produce-study-2021 a coos:StatisticalProductionActivity ;
+					rdfs:label "Produce study on legal population 2021"@en .
+					
+				ex:produce-census-2021 a coos:StatisticalProductionActivity ;
+					rdfs:label "Produce census 2021"@en ;
+					dcterms:type coos:statisticalProductionProcess .
+				</pre>
+
+				<p><code>Phase</code> and <code>SubProcess</code> are both sub-classes of <code>StatisticalProductionActivity</code>. A link to the GSBPM taxonomy using the property <code>dcterms:type</code> is made on instances of these classes to formalize to what part of the GSBPM the activity that happened corresponds. Additionally, the idea that each phase is made up of its different sub-processes can be represented by using the Dublin Core <code>dcterms:hasPart</code> and <code>dcterms:isPartOf</code> properties.</p>
+
+				<pre class="example nohighlight" title="Examples of instances phase and sub-process">
+				ex:collect-census-2021 a coos:Phase ;
+					rdfs:label "Collect census 2021"@en ;
+					dcterms:type &lt;http://id.unece.org/activities/phase/6&gt; .
+
+				 ex:run-collection-census-2021 a coos:SubProcess ;
+					rdfs:label "Run collection of census 2021"@en ;
+					dcterms:isPartOf ex:collect-census-2021 ;
+					dcterms:type &lt;http://id.unece.org/activities/subProcess/4.3&gt; .
 				</pre>
 
 				<p>[[[#image-gsbpm]]] summarizes the vocabulary terms defined so far in this document.</p>
@@ -503,7 +517,15 @@
 				<figure id="image-gsbpm">
 					<img src="img/coos-gsbpm.png" alt="GSBPM vocabulary overview" title="GSBPM vocabulary overview"/>
 					<figcaption>Overview of COOS vocabulary for GSBPM</figcaption>
-				</figure>
+				</figure>	
+								
+				<p>In addition the ontology defines three individuals of <code>ActivityCategory</code> to model the types of overarching activities provided by GSBPM the “Quality Management”, the “Data Management” and the “Metadata Management”.</p>
+
+				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
+				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:ActivityCategory ;
+					skos:notation "0.2"	;
+					skos:prefLabel "Metadata Management"@en .
+				</pre>
 
 			</section>
 
@@ -511,49 +533,43 @@
 
 				<h3>Adding GAMSO</h3>
 
-				<p>Introducing GAMSO in this framework is not very difficult. The terminology used in the model shows that the main concepts are activities and activity areas. GAMSO describes two kinds of activities: those that are of statistical nature, for example “Manage Statistical Methodology”, and those that are in support of statistical activities, like “Manage Finances”. To account for this distinction, COOS defines two different classes: <code>StatisticalActivity</code> and <code>Activity</code>. <code>Activity</code> is a daughter of <code>prov:Activity</code> and a mother of <code>StatisticalActivity</code>, which in turn is a mother of the <code>StatisticalProductionActivity</code> introduced previously.</p>
+				<p>Introducing GAMSO in this framework is not very difficult. The terminology used in the model shows that the main concepts are activity and activity areas. GAMSO describes two kinds of activities: those that are of statistical nature, for example “Manage Statistical Methodology”, and those that are in support of statistical activities, like “Manage Finances”. To account for this distinction, COOS defines two different classes: <code>StatisticalActivity</code> and <code>Activity</code>. <code>Activity</code> is a subclass of <code>prov:Activity</code> and a superclass of <code>StatisticalActivity</code>, which in turn is a superclass of the <code>StatisticalProductionActivity</code> introduced previously.</p>
 
 				<p>The GAMSO activity areas are not really activities by themselves, but rather “boxes” used to classify the activities. This makes them instances of <code>skos:Concept</code> to represent this “taxonomic” nature, or more precisely of a specific <code>ActivityArea</code> class, which is a sub-class of <code>skos:Concept</code>.</p>
+				
+				<p>As with GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code>. At the top of the scheme, an instance of <code>ActivityCategory</code> represents the whole activity of statistical organizations and is named <code>officialStatistics</code>. All four activity areas have <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the categories of activity they contain. </p>
 
-				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity">
+				<pre class="example nohighlight" title="Examples of GAMSO activity area and activity category">
 				&lt;http://id.unece.org/activities/activityArea/1&gt; a coos:ActivityArea ;
 					skos:notation "1" ;
 					skos:prefLabel "Strategy and Leadership"@en .
 
-				&lt;http://id.unece.org/activities/activity/2.3&gt; a coos:Activity ;
+				&lt;http://id.unece.org/activities/activity/2.3&gt; a coos:ActivityCategory ;
 					skos:notation "2.3" ;
 					skos:prefLabel "Monitor Capability Improvements"@en .
 				</pre>
-
+				
 				<p>In addition, COOS defines the <code>OverarchingActivity</code> class, which represents a supporting activity that applies to all production phases, e.g. metadata management, data management, statistical methodology management, etc. These activities correspond to the overarching processes in the GSBPM and the statistical activities in Corporate Support in GAMSO. These activities support the execution of phases and sub-processes effectively. When harmonized and standardized, overarching activities enable the efficient execution of the entire statistical production process.</p>
-
-				<pre class="example nohighlight" title="Examples of GSBPM overarching activity">
-				&lt;http://id.unece.org/activities/overarchingActivity/0.2&gt; a coos:OverarchingActivity ;
-					skos:notation "0.2"	;
-					skos:prefLabel "Metadata Management"@en .
-				</pre>
-
-				<p>As with GSBPM, COOS defines individuals for each GAMSO activity and activity area, and the model itself is a <code>skos:ConceptScheme</code> with all four activity areas having <code>skos:broader</code> links to it and <code>skos:narrower</code> links to the activities they contain. At the top of the scheme, an instance of <code>Activity</code> represents the whole activity of statistical organizations and is named <code>officialStatistics</code>.</p>
-
-				<p>Finally, two properties are needed to describe how a GAMSO <code>Activity</code> relates to a GSBPM <code>StatisticalProductionActivity</code>:</p>
+								
+				<p>Finally, two properties are needed to describe how an <code>Activity</code> classified with GAMSO relates to a <code>StatisticalProductionActivity</code> classified with GSBPM:</p>
 
 				<ul>
-					<li><code>supports</code>: an <code>Activity</code>, for example a GAMSO individual, helps to perform a <code>StatisticalProductionActivity</code>, e.g. a sub-process;</li>
-					<li><code>uses</code>: conversely, a statistical production activity will require one or several GAMSO activities in order to function.</li>
+					<li><code>supports</code>: an <code>Activity</code> helps to perform a <code>StatisticalProductionActivity</code>, e.g. a sub-process;</li>
+					<li><code>uses</code>: conversely, a statistical production activity will require one or several activities in order to function.</li>
 				</ul>
 
 				<p>Properties <code>uses</code> and <code>supports</code> are inverses of each other. They represent weaker (looser) forms of dependencies than partitive relationships: <code>uses/supports</code> are about function whereas partitive relations are about constitution. An obvious example of <code>uses</code>/<code>supports</code> relation is included in the ontology for reference:</p>
 
 				<pre class="example nohighlight" title="Examples of “uses” and “supports” properties">
-				&lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; a coos:OverarchingActivity ;
-					skos:notation "0.1"	;
+				ex:quality-management a coos:OverarchingActivity ;
 					skos:prefLabel "Quality Management"@en ;
-					coos:uses &lt;http://id.unece.org/activities/activity/3.3&gt; .
+					dcterms:type &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; ;
+					coos:uses ex:manage-quality .
 
-				&lt;http://id.unece.org/activities/activity/3.3> a coos:Activity ;
-					skos:notation "3.3" ;
+				ex:manage-quality a coos:Activity ;
 					skos:prefLabel "Manage Quality"@en ;
-					coos:supports &lt;http://id.unece.org/activities/overarchingActivity/0.1&gt; .
+					dcterms:type &lt;http://id.unece.org/activities/activity/3.3&gt; ;
+					coos:supports ex:quality-management .
 				</pre>
 
 				<p>[[[#image-gamso]]] gives an overview of the COOS elements defined so far in this document.</p>
@@ -564,7 +580,7 @@
 				</figure>
 
 				<p><em>Note</em>:</p>
-				<p>In COOS, the relation between the “Production” <code>ActivityArea</code> of GAMSO and the GSBPM as a concept scheme is expressed by a simple pair of <code>rdfs:seeAlso</code> properties. No GAMSO <code>Activity</code> is defined in the “Production” area, that would be redundant with the “Statistical Production Process” individual, but a <code>skos:exactMatch</code> relation is made between the GAMSO activity area and the GSBPM individual. It is possible that GAMSO and GSBPM evolve in the future towards a totally integrated view. In such an approach, all GSBPM and GAMSO artefacts would go into a single <code>skos:ConceptScheme</code> and the GSBPM would not be a concept scheme anymore but rather a <code>skos:Collection</code>.</p>
+				<p>In COOS, the relation between the “Production” <code>ActivityArea</code> of GAMSO and the GSBPM as a concept scheme is expressed by a simple pair of <code>rdfs:seeAlso</code> properties. No GAMSO <code>ActivityCategory</code> is defined in the “Production” area, that would be redundant with the “Statistical Production Process” individual, but a <code>skos:exactMatch</code> relation is made between the GAMSO activity area and the GSBPM individual. It is possible that GAMSO and GSBPM evolve in the future towards a totally integrated view. In such an approach, all GSBPM and GAMSO artefacts would go into a single <code>skos:ConceptScheme</code> and the GSBPM would not be a concept scheme anymore but rather a <code>skos:Collection</code>.</p>
 
 			</section>
 
@@ -617,8 +633,7 @@
 
 				<pre class="example" title="Example of tasks">
 				ex:calculate-mean-wages a coos:Task ;
-					rdfs:label "Calculate mean wages"@en ;
-					skos:broader &lt;http://id.unece.org/activities/subProcess/5.7&gt; .
+					rdfs:label "Calculate mean wages"@en .
 
 				ex:produce-study prov:wasInformedBy ex:calculate-mean-wages .
 				</pre>
