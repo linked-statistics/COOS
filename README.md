@@ -8,23 +8,26 @@ The COOS activity is conducted under the umbrella of the "Supporting Standards" 
 
 ## Products
 
-The ontology is expressed as a [Turtle file](https://github.com/linked-statistics/COOS/blob/master/coos.ttl). This is the authoritative version of the vocabulary. See also the [WebOWL visualization](http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/linked-statistics/COOS/master/coos.ttl) of the ontology.
+The ontology is expressed as a [Turtle file](https://github.com/linked-statistics/COOS/blob/master/coos.ttl). This is the authoritative version of the vocabulary.
 
 A [specification document](https://linked-statistics.github.io/COOS/coos.html) is also available. This is work in progress, using the template of a W3C Community Group report for practical purposes, but that does not presume of the final form of the document.
+
+Other documents produced by the COOS activity are:
+
+* a [URI and naming Policy](uri-policy.md)
+* a [governance document](governance.md)
 
 
 ## Current work
 
-Work on the COOS started in 2019 and produced a first version of the ontology (v0.4). The activity was paused in 2020, and restarted in 2021.
+Work on the COOS started in 2019 and produced a first version of the ontology (v0.4). The activity was paused in 2020, and restarted in 2021, leading to an expert review later that year. The ontology was enriched during 2022 and a public review was launched in November.
 
 
 ### Roadmap
 
-The projected roadmap is:
-  - January: Roadmap for 2021 activities
-  - February-April: Articulation with work on GSIM and Metadata Glossary
-  - May-June: Work on governance
-  - July: Expert review
-  - August: Final version 1 of the ontology
-  - September-October: Document on governance
-  - November: Submission to HLG-MOS for adoption
+Work on COOS will resume mid-2023, with the following activity plan:
+
+* July: integration of public review feedback
+* September: discussion of [issues remaining](https://github.com/linked-statistics/COOS/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Version+2+of+COOS%22)
+* October: development of working examples and use cases
+* November: submission to HLG-MOS for adoption
