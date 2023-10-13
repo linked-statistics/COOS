@@ -89,7 +89,19 @@ coos:Phase a rdfs:Class , owl:Class ;
     owl:equivalentClass [
         a owl:Restriction ;
         owl:onProperty dcterms:type ;
-        owl:hasValue  <http://id.unece.org/activities/phase/1>, <http://id.unece.org/activities/phase/2>, <http://id.unece.org/activities/phase/3>, <http://id.unece.org/activities/phase/4>, <http://id.unece.org/activities/phase/5>, <http://id.unece.org/activities/phase/6>, <http://id.unece.org/activities/phase/7>, <http://id.unece.org/activities/phase/8> ;
+        owl:someValuesFrom [ 
+            rdf:type owl:Class ;
+            owl:oneOf ( 
+                <http://id.unece.org/activities/phase/1>
+                <http://id.unece.org/activities/phase/2>
+                <http://id.unece.org/activities/phase/3>
+                <http://id.unece.org/activities/phase/4>
+                <http://id.unece.org/activities/phase/5>
+                <http://id.unece.org/activities/phase/6>
+                <http://id.unece.org/activities/phase/7>
+                <http://id.unece.org/activities/phase/8>
+            )
+        ]                               
     ] ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
@@ -101,7 +113,55 @@ coos:SubProcess a rdfs:Class , owl:Class ;
     owl:equivalentClass [
         a owl:Restriction ;
         owl:onProperty dcterms:type ;
-        owl:hasValue <http://id.unece.org/activities/subProcess/1.1>, <http://id.unece.org/activities/subProcess/1.2>, <http://id.unece.org/activities/subProcess/1.3>, <http://id.unece.org/activities/subProcess/1.4>, <http://id.unece.org/activities/subProcess/1.5>, <http://id.unece.org/activities/subProcess/1.6>, <http://id.unece.org/activities/subProcess/2.1>, <http://id.unece.org/activities/subProcess/2.2>, <http://id.unece.org/activities/subProcess/2.3>, <http://id.unece.org/activities/subProcess/2.4>, <http://id.unece.org/activities/subProcess/2.5>, <http://id.unece.org/activities/subProcess/2.6>, <http://id.unece.org/activities/subProcess/3.1>, <http://id.unece.org/activities/subProcess/3.2>, <http://id.unece.org/activities/subProcess/3.3>, <http://id.unece.org/activities/subProcess/3.4>, <http://id.unece.org/activities/subProcess/3.5>, <http://id.unece.org/activities/subProcess/3.6>, <http://id.unece.org/activities/subProcess/3.7>, <http://id.unece.org/activities/subProcess/4.1>, <http://id.unece.org/activities/subProcess/4.2>, <http://id.unece.org/activities/subProcess/4.3>, <http://id.unece.org/activities/subProcess/4.4>, <http://id.unece.org/activities/subProcess/5.1>, <http://id.unece.org/activities/subProcess/5.2>, <http://id.unece.org/activities/subProcess/5.3>, <http://id.unece.org/activities/subProcess/5.4>, <http://id.unece.org/activities/subProcess/5.5>, <http://id.unece.org/activities/subProcess/5.6>, <http://id.unece.org/activities/subProcess/5.7>, <http://id.unece.org/activities/subProcess/5.8>, <http://id.unece.org/activities/subProcess/6.1>, <http://id.unece.org/activities/subProcess/6.2>, <http://id.unece.org/activities/subProcess/6.3>, <http://id.unece.org/activities/subProcess/6.4>, <http://id.unece.org/activities/subProcess/6.5>, <http://id.unece.org/activities/subProcess/7.1>, <http://id.unece.org/activities/subProcess/7.2>, <http://id.unece.org/activities/subProcess/7.3>, <http://id.unece.org/activities/subProcess/7.4>, <http://id.unece.org/activities/subProcess/7.5>, <http://id.unece.org/activities/subProcess/8.1>, <http://id.unece.org/activities/subProcess/8.2>, <http://id.unece.org/activities/subProcess/8.3> ;
+        owl:someValuesFrom [ 
+            rdf:type owl:Class ;
+            owl:oneOf (
+                <http://id.unece.org/activities/subProcess/1.1>
+                <http://id.unece.org/activities/subProcess/1.2>
+                <http://id.unece.org/activities/subProcess/1.3>
+                <http://id.unece.org/activities/subProcess/1.4>
+                <http://id.unece.org/activities/subProcess/1.5>
+                <http://id.unece.org/activities/subProcess/1.6>
+                <http://id.unece.org/activities/subProcess/2.1>
+                <http://id.unece.org/activities/subProcess/2.2>
+                <http://id.unece.org/activities/subProcess/2.3>
+                <http://id.unece.org/activities/subProcess/2.4>
+                <http://id.unece.org/activities/subProcess/2.5>
+                <http://id.unece.org/activities/subProcess/2.6>
+                <http://id.unece.org/activities/subProcess/3.1>
+                <http://id.unece.org/activities/subProcess/3.2>
+                <http://id.unece.org/activities/subProcess/3.3>
+                <http://id.unece.org/activities/subProcess/3.4>
+                <http://id.unece.org/activities/subProcess/3.5>
+                <http://id.unece.org/activities/subProcess/3.6>
+                <http://id.unece.org/activities/subProcess/3.7>
+                <http://id.unece.org/activities/subProcess/4.1>
+                <http://id.unece.org/activities/subProcess/4.2>
+                <http://id.unece.org/activities/subProcess/4.3>
+                <http://id.unece.org/activities/subProcess/4.4>
+                <http://id.unece.org/activities/subProcess/5.1>
+                <http://id.unece.org/activities/subProcess/5.2>
+                <http://id.unece.org/activities/subProcess/5.3>
+                <http://id.unece.org/activities/subProcess/5.4>
+                <http://id.unece.org/activities/subProcess/5.5>
+                <http://id.unece.org/activities/subProcess/5.6>
+                <http://id.unece.org/activities/subProcess/5.7>
+                <http://id.unece.org/activities/subProcess/5.8>
+                <http://id.unece.org/activities/subProcess/6.1>
+                <http://id.unece.org/activities/subProcess/6.2>
+                <http://id.unece.org/activities/subProcess/6.3>
+                <http://id.unece.org/activities/subProcess/6.4>
+                <http://id.unece.org/activities/subProcess/6.5>
+                <http://id.unece.org/activities/subProcess/7.1>
+                <http://id.unece.org/activities/subProcess/7.2>
+                <http://id.unece.org/activities/subProcess/7.3>
+                <http://id.unece.org/activities/subProcess/7.4>
+                <http://id.unece.org/activities/subProcess/7.5>
+                <http://id.unece.org/activities/subProcess/8.1>
+                <http://id.unece.org/activities/subProcess/8.2>
+                <http://id.unece.org/activities/subProcess/8.3>
+            )
+        ] 
     ] ;
     rdfs:isDefinedBy <http://id.unece.org/def/coos> .
 
