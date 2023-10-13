@@ -88,15 +88,15 @@ coos:OverarchingActivity a rdfs:Class , owl:Class ;
                 owl:someValuesFrom [
                     rdf:type owl:Class ;
                     owl:oneOf ( 
+                        <http://id.unece.org/activities/activity/3.1>
+                        <http://id.unece.org/activities/activity/3.2>
                         <http://id.unece.org/activities/activity/3.3>
+                        <http://id.unece.org/activities/activity/3.4>
+                        <http://id.unece.org/activities/activity/3.5>
+                        <http://id.unece.org/activities/activity/3.6>
+                        <http://id.unece.org/activities/activity/3.7>
                         <http://id.unece.org/activities/activity/3.8>
                         <http://id.unece.org/activities/activity/3.9>
-                        <http://id.unece.org/activities/subProcess/3.1>
-                        <http://id.unece.org/activities/subProcess/3.2>
-                        <http://id.unece.org/activities/subProcess/3.4>
-                        <http://id.unece.org/activities/subProcess/3.5>
-                        <http://id.unece.org/activities/subProcess/3.6>
-                        <http://id.unece.org/activities/subProcess/3.7>
                     )
                 ]
             ]
