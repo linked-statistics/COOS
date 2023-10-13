@@ -79,7 +79,43 @@ coos:OverarchingActivity a rdfs:Class , owl:Class ;
     rdfs:comment "Activity defined as overarching process by the GSBPM."@en , "Activité définie comme processus transverse par le GSBPM."@fr , "Actividad definida como proceso transversal de acuerdo a GSBPM"@es ;
     skos:definition "Activity defined as overarching process by the GSBPM."@en , "Activité définie comme processus transverse par le GSBPM."@fr , "Actividad definida como proceso transversal de acuerdo a GSBPM"@es ;
     rdfs:subClassOf coos:ProductionActivity ;
-    rdfs:isDefinedBy <http://id.unece.org/def/coos> .
+    owl:equivalentClass [
+        rdf:type owl:Class ;
+        owl:unionOf ( 
+            [ 
+                rdf:type owl:Restriction ;
+                owl:onProperty dcterms:type ;
+                owl:someValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:oneOf ( 
+                        <http://id.unece.org/activities/activity/3.3>
+                        <http://id.unece.org/activities/activity/3.8>
+                        <http://id.unece.org/activities/activity/3.9>
+                        <http://id.unece.org/activities/subProcess/3.1>
+                        <http://id.unece.org/activities/subProcess/3.2>
+                        <http://id.unece.org/activities/subProcess/3.4>
+                        <http://id.unece.org/activities/subProcess/3.5>
+                        <http://id.unece.org/activities/subProcess/3.6>
+                        <http://id.unece.org/activities/subProcess/3.7>
+                    )
+                ]
+            ]
+            [
+                rdf:type owl:Restriction ;
+                owl:onProperty dcterms:type ;
+                owl:someValuesFrom [ 
+                    rdf:type owl:Class ;
+                    owl:oneOf ( 
+                        <http://id.unece.org/activities/overarchingActivity/0.1>
+                        <http://id.unece.org/activities/overarchingActivity/0.2>
+                        <http://id.unece.org/activities/overarchingActivity/0.3>
+                    )
+                ]
+            ]
+        )
+    ] ;
+    rdfs:isDefinedBy <http://id.unece.org/def/coos> 
+.
 
 coos:Phase a rdfs:Class , owl:Class ;
     rdfs:label "Statistical production process phase"@en , "Phase du processus de production statistique"@fr , "Fase del proceso de producción estadística"@es ;
